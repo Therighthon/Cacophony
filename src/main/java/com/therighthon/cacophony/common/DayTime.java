@@ -6,15 +6,10 @@ import net.dries007.tfc.util.calendar.Calendars;
 
 public enum DayTime
 {
-    DAWN(25, 20, 15, 15),
-    DAY(50, 20, 20, 20),
-    DUSK(30, 15, 10, 10),
-    DARK(100, 40, 40, 40);
-
-//    DAWN(250, 200, 150, 150),
-//    DAY(500, 200, 200, 200),
-//    DUSK(300, 150, 100, 100),
-//    DARK(1000, 400, 400, 400);
+    DAWN(250, 200, 150, 150),
+    DAY(500, 200, 200, 200),
+    DUSK(300, 150, 100, 100),
+    DARK(1000, 400, 400, 400);
 
     private final int soundRarityLeaves, soundRarityGrasses, soundRarityFreshwater, soundRaritySaltwater;
 

@@ -32,8 +32,8 @@ public class SoundPlayers
 
             // Then check blocks
             final Block block = state.getBlock();
-            if ((Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_EMERGENT_PLANTS) || Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_FLOATING_PLANTS)
-                && random.nextInt(time.getSoundRarityFreshwater()) == 0))
+            if ((Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_EMERGENT_PLANTS) || Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_FLOATING_PLANTS))
+                && random.nextInt(time.getSoundRarityFreshwater()) == 0)
             {
                 final SoundEvent sound = CacophonyHelpers.getValidSound(level, pos, random, time, FreshWaterEmergentSpecies.values());
 

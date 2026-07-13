@@ -4,8 +4,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 
-import net.dries007.tfc.util.Helpers;
-
 public class CacophonyTags
 {
     public static class Blocks
@@ -19,6 +17,6 @@ public class CacophonyTags
 
     private static TagKey<Block> tag(String name)
     {
-        return TagKey.create(Registries.BLOCK, Helpers.identifier(name));
+        return TagKey.create(Registries.BLOCK, CacophonyHelpers.identifier(name));
     }
 }

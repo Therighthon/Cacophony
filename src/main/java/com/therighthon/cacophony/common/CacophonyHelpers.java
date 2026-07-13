@@ -27,40 +27,4 @@ public class CacophonyHelpers
     {
         return resourceLocation(Cacophony.MOD_ID, name);
     }
-
-    @Nullable
-    public static SoundEvent getValidSound(Level level, BlockPos pos, RandomSource random, DayTime time, RegistrySpecies[] array)
-    {
-        final RegistrySpecies species = array[random.nextInt(array.length)];
-
-        // Check time first since we already have that value
-        if (species.validDayTimes().contains(time))
-        {
-            final float timeOfYear = Calendars.CLIENT.getCalendarFractionOfYear();
-            final float start = species.startYearFraction();
-            final float end = species.endYearFraction();
-            // Check time of year
-            if ((timeOfYear > start && timeOfYear < end) || (start > end && (timeOfYear < end || timeOfYear < start)))
-            {
-                // Finally, check climate
-                final float rain = ClimateRenderCache.INSTANCE.getAverageRainfall();
-                final float temp = ClimateRenderCache.INSTANCE.getAverageTemperature();
-                final float var = ClimateRenderCache.INSTANCE.getRainVariance();
-                final KoppenClimateClassification koppen = KoppenClimateClassification.classify(temp, rain, var, SolarCalculator.getInNorthernHemisphere(pos, level));
-
-                boolean isValid = false;
-                for (KoppenClimateClassification k : species.validClimates())
-                {
-                    isValid = k.equals(koppen);
-                    if (isValid) break;
-                }
-
-                if (isValid)
-                {
-                    return species.sound();
-                }
-            }
-        }
-        return null;
-    }
 }

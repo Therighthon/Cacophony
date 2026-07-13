@@ -3,28 +3,34 @@ package com.therighthon.cacophony.common;
 import java.util.List;
 import java.util.Locale;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.level.biome.Biome;
 
 import net.dries007.tfc.util.climate.KoppenClimateClassification;
 
 public enum FreshWaterEmergentSpecies implements RegistrySpecies
 {
-    REDWINGED_BLACKBIRD(Sounds.REDWINGED_BLACKBIRD.get(), List.of(DayTime.DAY, DayTime.DAWN, DayTime.DUSK), List.of(KoppenClimateClassification.CWA, KoppenClimateClassification.CWB, KoppenClimateClassification.CWC, KoppenClimateClassification.CFA, KoppenClimateClassification.CFB, KoppenClimateClassification.CFC, KoppenClimateClassification.CSA, KoppenClimateClassification.CSB, KoppenClimateClassification.CSC), 0, 1),
-    REDWINGED_BLACKBIRD_SUMMER(Sounds.REDWINGED_BLACKBIRD.get(), List.of(DayTime.DAY, DayTime.DAWN, DayTime.DUSK), List.of(KoppenClimateClassification.DWA, KoppenClimateClassification.DWB, KoppenClimateClassification.DWC, KoppenClimateClassification.DWD, KoppenClimateClassification.DSA, KoppenClimateClassification.DSB, KoppenClimateClassification.DSC, KoppenClimateClassification.DSD, KoppenClimateClassification.DFA, KoppenClimateClassification.DFB, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD), 0, 1);
+    REDWINGED_BLACKBIRD(Sounds.REDWINGED_BLACKBIRD.get(), List.of(DayTime.DAY, DayTime.DAWN, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.CWA, KoppenClimateClassification.CWB, KoppenClimateClassification.CWC, KoppenClimateClassification.CFA, KoppenClimateClassification.CFB, KoppenClimateClassification.CFC, KoppenClimateClassification.CSA, KoppenClimateClassification.CSB, KoppenClimateClassification.CSC), 0, 1, 60, 200),
+    REDWINGED_BLACKBIRD_SUMMER(Sounds.REDWINGED_BLACKBIRD.get(), List.of(DayTime.DAY, DayTime.DAWN, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DWA, KoppenClimateClassification.DWB, KoppenClimateClassification.DWC, KoppenClimateClassification.DWD, KoppenClimateClassification.DSA, KoppenClimateClassification.DSB, KoppenClimateClassification.DSC, KoppenClimateClassification.DSD, KoppenClimateClassification.DFA, KoppenClimateClassification.DFB, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD), 0, 1, 60, 200);
 
     private final String serializedName;
     final SoundEvent sound;
     final List<DayTime> times;
+    final List<Biome.Precipitation> weathers;
     final List<KoppenClimateClassification> climates;
     final float startYearFraction, endYearFraction;
+    final int minElevation, maxElevation;
 
-    FreshWaterEmergentSpecies(SoundEvent sound, List<DayTime> times, List<KoppenClimateClassification> climates, float startYearFraction, float endYearFraction)
+    FreshWaterEmergentSpecies(SoundEvent sound, List<DayTime> times, List<Biome.Precipitation> weathers, List<KoppenClimateClassification> climates, float startYearFraction, float endYearFraction, int minElevation, int maxElevation)
     {
         this.serializedName = name().toLowerCase(Locale.ROOT);
         this.sound = sound;
         this.times = times;
+        this.weathers = weathers;
         this.climates = climates;
         this.startYearFraction = startYearFraction;
         this.endYearFraction = endYearFraction;
+        this.minElevation = minElevation;
+        this.maxElevation = maxElevation;
     }
 
     @Override
@@ -37,6 +43,12 @@ public enum FreshWaterEmergentSpecies implements RegistrySpecies
     public List<DayTime> validDayTimes()
     {
         return times;
+    }
+
+    @Override
+    public List<Biome.Precipitation> validWeathers()
+    {
+        return weathers;
     }
 
     @Override
@@ -55,6 +67,18 @@ public enum FreshWaterEmergentSpecies implements RegistrySpecies
     public float endYearFraction()
     {
         return endYearFraction;
+    }
+
+    @Override
+    public int getMinElevation()
+    {
+        return minElevation;
+    }
+
+    @Override
+    public int getMaxElevation()
+    {
+        return maxElevation;
     }
 
     @Override

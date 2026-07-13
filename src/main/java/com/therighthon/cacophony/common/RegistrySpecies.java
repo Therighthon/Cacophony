@@ -3,6 +3,7 @@ package com.therighthon.cacophony.common;
 import java.util.List;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.StringRepresentable;
+import net.minecraft.world.level.biome.Biome;
 
 import net.dries007.tfc.util.climate.KoppenClimateClassification;
 
@@ -12,10 +13,16 @@ public interface RegistrySpecies extends StringRepresentable
 
     List<DayTime> validDayTimes();
 
+    List<Biome.Precipitation> validWeathers();
+
     SoundEvent sound();
 
     float startYearFraction();
 
     float endYearFraction();
+
+    int getMinElevation();
+
+    int getMaxElevation();
 
 }

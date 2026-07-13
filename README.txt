@@ -1,1 +1,1 @@
-This mod adds some roads. And also some roofs!
+This is an addon for TerraFirmaCraft, adding climate specific ambient sound effects, such as bird calls, frog songs, and cricket chirps.

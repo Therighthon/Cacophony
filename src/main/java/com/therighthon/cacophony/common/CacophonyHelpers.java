@@ -49,9 +49,9 @@ public class CacophonyHelpers
                 final KoppenClimateClassification koppen = KoppenClimateClassification.classify(temp, rain, var, SolarCalculator.getInNorthernHemisphere(pos, level));
 
                 boolean isValid = false;
-                for (KoppenClasses k : species.validClimates())
+                for (KoppenClimateClassification k : species.validClimates())
                 {
-                    isValid = k.getClassification().equals(koppen);
+                    isValid = k.equals(koppen);
                     if (isValid) break;
                 }
 

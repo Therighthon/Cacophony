@@ -15,6 +15,8 @@ public final class Sounds
 
     // Birds
     public static final Id REDWINGED_BLACKBIRD = register("ambient.bird.redwinged_blackbird");
+    public static final Id WESTERN_MEADOWLARK = register("ambient.bird.western_meadowlark");
+    public static final Id RAVEN = register("ambient.bird.raven");
 
     // Insects
 

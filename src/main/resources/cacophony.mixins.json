@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.therighthon.cacophony.mixin",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "PlantBlockMixin",
+    "TFCLeavesBlockMixin"
+  ],
+  "client": [
+  ],
+  "refmap": "afc.refmap.json"
+}

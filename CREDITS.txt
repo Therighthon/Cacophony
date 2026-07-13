@@ -1,0 +1,16 @@
+Mod by Therighthon
+
+This mod pulls most of its animal calls from free recordings on Wikipedia. A list of these recordings can be found below. All files were edited from their originals, generally to reduce length and background noises, and are converted to mono audio where some originals are stereo.
+
+WIKIPEDIA:
+
+Permission is granted to copy, distribute and/or modify the sound effects in this mod under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license may be found here:
+https://commons.wikimedia.org/wiki/Commons:GNU_Free_Documentation_License,_version_1.2
+
+Redwing Blackbird - https://en.wikipedia.org/wiki/File:Agelaius-phoeniceus-001.ogg
+Western Meadowlark - https://en.wikipedia.org/wiki/File:Sturnella_neglecta_-_Western_Meadowlark_-_XC76505.ogg
+Raven - https://en.wikipedia.org/wiki/File:Common_Raven_(Corvus_corax)_(W1CDR0001449_BD6).ogg
+
+FREESOUND.ORG:
+
+Raven - Raven Call.wav by filmmt -- https://freesound.org/s/219599/ -- License: Attribution 3.0

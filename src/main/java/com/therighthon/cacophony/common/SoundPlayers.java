@@ -2,7 +2,6 @@ package com.therighthon.cacophony.common;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
@@ -42,7 +41,7 @@ public class SoundPlayers
             if ((Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_EMERGENT_PLANTS) || Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_FLOATING_PLANTS))
                 && random.nextInt(time.getSoundRarityFreshwater()) == 0)
             {
-                final SoundEvent sound = getValidSound(level, pos, random, time, FreshWaterEmergentSpecies.values());
+                final SoundEvent sound = getValidSound(level, pos, random, time, FreshWaterEmergentRanges.values());
 
                 if (sound != null)
                 {
@@ -52,7 +51,7 @@ public class SoundPlayers
             else if (Helpers.isBlock(block, CacophonyTags.Blocks.TALL_GRASS)
                 && random.nextInt(time.getSoundRarityGrasses()) == 0)
             {
-                final SoundEvent sound = getValidSound(level, pos, random, time, GrassSpecies.values());
+                final SoundEvent sound = getValidSound(level, pos, random, time, GrassRanges.values());
 
                 if (sound != null)
                 {
@@ -63,7 +62,7 @@ public class SoundPlayers
                 && random.nextInt(time.getSoundRaritySaltwater()) == 0)
             {
                 // TODO: Saltwater Species
-                final SoundEvent sound = getValidSound(level, pos, random, time, FreshWaterEmergentSpecies.values());
+                final SoundEvent sound = getValidSound(level, pos, random, time, FreshWaterEmergentRanges.values());
 
                 if (sound != null)
                 {
@@ -92,7 +91,7 @@ public class SoundPlayers
 
             if (random.nextInt(time.getSoundRarityLeaves()) == 0)
             {
-                final SoundEvent sound = getValidSound(level, pos, random, time, LeavesSpecies.values());
+                final SoundEvent sound = getValidSound(level, pos, random, time, LeavesRanges.values());
 
                 if (sound != null)
                 {
@@ -103,9 +102,9 @@ public class SoundPlayers
     }
 
     @Nullable
-    public static SoundEvent getValidSound(Level level, BlockPos pos, RandomSource random, DayTime time, RegistrySpecies[] array)
+    public static SoundEvent getValidSound(Level level, BlockPos pos, RandomSource random, DayTime time, RegistryRange[] array)
     {
-        final RegistrySpecies species = array[random.nextInt(array.length)];
+        final RegistryRange species = array[random.nextInt(array.length)];
 
         // Check time first since we already have that value
         if (species.validDayTimes().contains(time))

@@ -7,7 +7,7 @@ import net.minecraft.world.level.biome.Biome;
 
 import net.dries007.tfc.util.climate.KoppenClimateClassification;
 
-public interface RegistrySpecies extends StringRepresentable
+public interface RegistryRange extends StringRepresentable
 {
     List<KoppenClimateClassification> validClimates();
 

@@ -12,10 +12,6 @@ public interface RegistrySpecies extends StringRepresentable
 
     SoundEvent sound();
 
-    int minForest();
-
-    int maxForest();
-
     float startYearFraction();
 
     float endYearFraction();

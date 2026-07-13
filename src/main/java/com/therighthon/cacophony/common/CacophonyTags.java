@@ -15,7 +15,6 @@ public class CacophonyTags
         public static final TagKey<Block> FRESH_FLOATING_PLANTS = tag("fresh_floating_plants");
         public static final TagKey<Block> SALTY_FLOATING_PLANTS = tag("salty_floating_plants");
         public static final TagKey<Block> TALL_GRASS = tag("tall_grass");
-
     }
 
     private static TagKey<Block> tag(String name)

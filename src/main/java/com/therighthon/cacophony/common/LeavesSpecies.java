@@ -9,7 +9,8 @@ import net.dries007.tfc.util.climate.KoppenClimateClassification;
 public enum LeavesSpecies implements RegistrySpecies
 {
     RAVEN_WINTER(Sounds.RAVEN.get(), List.of(DayTime.DAY, DayTime.DAWN, DayTime.DUSK), List.of(KoppenClimateClassification.CWA, KoppenClimateClassification.CWB, KoppenClimateClassification.CWC, KoppenClimateClassification.CFA, KoppenClimateClassification.CFB, KoppenClimateClassification.CFC, KoppenClimateClassification.CSA, KoppenClimateClassification.CSB, KoppenClimateClassification.CSC), 0, 1),
-    RAVEN_SUMMER(Sounds.RAVEN.get(), List.of(DayTime.DAY, DayTime.DAWN, DayTime.DUSK), List.of(KoppenClimateClassification.DWA, KoppenClimateClassification.DWB, KoppenClimateClassification.DWC, KoppenClimateClassification.DWD, KoppenClimateClassification.DSA, KoppenClimateClassification.DSB, KoppenClimateClassification.DSC, KoppenClimateClassification.DSD, KoppenClimateClassification.DFA, KoppenClimateClassification.DFB, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD), 0, 1);
+    RAVEN_SUMMER(Sounds.RAVEN.get(), List.of(DayTime.DAY, DayTime.DAWN, DayTime.DUSK), List.of(KoppenClimateClassification.DWA, KoppenClimateClassification.DWB, KoppenClimateClassification.DWC, KoppenClimateClassification.DWD, KoppenClimateClassification.DSA, KoppenClimateClassification.DSB, KoppenClimateClassification.DSC, KoppenClimateClassification.DSD, KoppenClimateClassification.DFA, KoppenClimateClassification.DFB, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD), 0, 1),
+    RESPLENDENT_QUETZAL(Sounds.RESPLENDENT_QUETZAL.get(), List.of(DayTime.DAY, DayTime.DAWN, DayTime.DUSK), List.of(KoppenClimateClassification.AF), 0, 1);
 
     private final String serializedName;
     final SoundEvent sound;

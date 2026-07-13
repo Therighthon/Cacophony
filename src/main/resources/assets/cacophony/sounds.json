@@ -26,5 +26,13 @@
       "cacophony:ambient/bird/raven_4",
       "cacophony:ambient/bird/raven_5"
     ]
+  },
+  "ambient.bird.resplendent_quetzal": {
+    "subtitle": "subtitles.ambient.bird.resplendent_quetzal",
+    "sounds": [
+      "cacophony:ambient/bird/resplendent_quetzal_0",
+      "cacophony:ambient/bird/resplendent_quetzal_1",
+      "cacophony:ambient/bird/resplendent_quetzal_2"
+    ]
   }
 }

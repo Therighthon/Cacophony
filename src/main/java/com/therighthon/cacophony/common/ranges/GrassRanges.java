@@ -1,5 +1,7 @@
-package com.therighthon.cacophony.common;
+package com.therighthon.cacophony.common.ranges;
 
+import com.therighthon.cacophony.common.DayTime;
+import com.therighthon.cacophony.common.Sounds;
 import java.util.List;
 import java.util.Locale;
 import net.minecraft.sounds.SoundEvent;
@@ -7,10 +9,10 @@ import net.minecraft.world.level.biome.Biome;
 
 import net.dries007.tfc.util.climate.KoppenClimateClassification;
 
-public enum FreshWaterEmergentRanges implements RegistryRange
+public enum GrassRanges implements RegistryRange
 {
-    REDWINGED_BLACKBIRD(Sounds.REDWINGED_BLACKBIRD.get(), List.of(DayTime.DAWN, DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.CSA, KoppenClimateClassification.CSB, KoppenClimateClassification.CSC, KoppenClimateClassification.CWA, KoppenClimateClassification.CWB, KoppenClimateClassification.CWC, KoppenClimateClassification.CFC, KoppenClimateClassification.CFB, KoppenClimateClassification.CFA), 0, 1, 60, 200),
-    REDWINGED_BLACKBIRD_SUMMER(Sounds.REDWINGED_BLACKBIRD.get(), List.of(DayTime.DAY, DayTime.DAWN, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DWA, KoppenClimateClassification.DWB, KoppenClimateClassification.DWC, KoppenClimateClassification.DWD, KoppenClimateClassification.DSA, KoppenClimateClassification.DSB, KoppenClimateClassification.DSC, KoppenClimateClassification.DSD, KoppenClimateClassification.DFA, KoppenClimateClassification.DFB, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD), 0, 1, 60, 200);
+    WESTERN_MEADOWLARK_WINTER(Sounds.WESTERN_MEADOWLARK.get(), List.of(DayTime.DAWN, DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.CSA, KoppenClimateClassification.CSB, KoppenClimateClassification.CSC, KoppenClimateClassification.CWA, KoppenClimateClassification.CWB, KoppenClimateClassification.CWC, KoppenClimateClassification.CFC, KoppenClimateClassification.CFB, KoppenClimateClassification.CFA), 0.75f, 0.25f, 60, 200),
+    WESTERN_MEADOWLARK_SUMMER(Sounds.WESTERN_MEADOWLARK.get(), List.of(DayTime.DAWN, DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DSA, KoppenClimateClassification.DSB, KoppenClimateClassification.DSC, KoppenClimateClassification.DSD, KoppenClimateClassification.DWA, KoppenClimateClassification.DWB, KoppenClimateClassification.DWC, KoppenClimateClassification.DWD, KoppenClimateClassification.DFA, KoppenClimateClassification.DFB, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD), 0.25f, 0.75f, 60, 200);
 
     private final String serializedName;
     final SoundEvent sound;
@@ -20,7 +22,7 @@ public enum FreshWaterEmergentRanges implements RegistryRange
     final float startYearFraction, endYearFraction;
     final int minElevation, maxElevation;
 
-    FreshWaterEmergentRanges(SoundEvent sound, List<DayTime> times, List<Biome.Precipitation> weathers, List<KoppenClimateClassification> climates, float startYearFraction, float endYearFraction, int minElevation, int maxElevation)
+    GrassRanges(SoundEvent sound, List<DayTime> times, List<Biome.Precipitation> weathers, List<KoppenClimateClassification> climates, float startYearFraction, float endYearFraction, int minElevation, int maxElevation)
     {
         this.serializedName = name().toLowerCase(Locale.ROOT);
         this.sound = sound;

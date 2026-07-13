@@ -1,5 +1,7 @@
-package com.therighthon.cacophony.common;
+package com.therighthon.cacophony.common.ranges;
 
+import com.therighthon.cacophony.common.DayTime;
+import com.therighthon.cacophony.common.Sounds;
 import java.util.List;
 import java.util.Locale;
 import net.minecraft.sounds.SoundEvent;
@@ -9,9 +11,8 @@ import net.dries007.tfc.util.climate.KoppenClimateClassification;
 
 public enum LeavesRanges implements RegistryRange
 {
-    RAVEN_WINTER(Sounds.RAVEN.get(), List.of(DayTime.DAY, DayTime.DAWN, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.CWA, KoppenClimateClassification.CWB, KoppenClimateClassification.CWC, KoppenClimateClassification.CFA, KoppenClimateClassification.CFB, KoppenClimateClassification.CFC, KoppenClimateClassification.CSA, KoppenClimateClassification.CSB, KoppenClimateClassification.CSC), 0, 1, 60, 200),
-    RAVEN_SUMMER(Sounds.RAVEN.get(), List.of(DayTime.DAY, DayTime.DAWN, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DWA, KoppenClimateClassification.DWB, KoppenClimateClassification.DWC, KoppenClimateClassification.DWD, KoppenClimateClassification.DSA, KoppenClimateClassification.DSB, KoppenClimateClassification.DSC, KoppenClimateClassification.DSD, KoppenClimateClassification.DFA, KoppenClimateClassification.DFB, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD), 0, 1, 60, 200),
-    RESPLENDENT_QUETZAL(Sounds.RESPLENDENT_QUETZAL.get(), List.of(DayTime.DAY, DayTime.DAWN, DayTime.DUSK), List.of(Biome.Precipitation.NONE, Biome.Precipitation.RAIN), List.of(KoppenClimateClassification.AF, KoppenClimateClassification.CFA), 0, 1, 80, 250);
+    RAVEN(Sounds.RAVEN.get(), List.of(DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DSA, KoppenClimateClassification.DSB, KoppenClimateClassification.DSC, KoppenClimateClassification.DSD, KoppenClimateClassification.DWA, KoppenClimateClassification.DWB, KoppenClimateClassification.DWC, KoppenClimateClassification.DWD, KoppenClimateClassification.DFA, KoppenClimateClassification.DFB, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD, KoppenClimateClassification.ET, KoppenClimateClassification.EF, KoppenClimateClassification.CFC, KoppenClimateClassification.CSC, KoppenClimateClassification.CSB), 0.75f, 0.25f, 60, 200),
+    RESPLENDENT_QUETZAL(Sounds.RESPLENDENT_QUETZAL.get(), List.of(DayTime.DAWN, DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE, Biome.Precipitation.RAIN), List.of(KoppenClimateClassification.AF, KoppenClimateClassification.CWA), 0f, 1f, 90, 320);
 
     private final String serializedName;
     final SoundEvent sound;

@@ -1,5 +1,6 @@
-package com.therighthon.cacophony.common;
+package com.therighthon.cacophony.common.ranges;
 
+import com.therighthon.cacophony.common.DayTime;
 import java.util.List;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.StringRepresentable;

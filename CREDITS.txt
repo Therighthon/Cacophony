@@ -7,9 +7,10 @@ WIKIPEDIA:
 Permission is granted to copy, distribute and/or modify the sound effects in this mod under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license may be found here:
 https://commons.wikimedia.org/wiki/Commons:GNU_Free_Documentation_License,_version_1.2
 
-Redwing Blackbird - https://en.wikipedia.org/wiki/File:Agelaius-phoeniceus-001.ogg
-Western Meadowlark - https://en.wikipedia.org/wiki/File:Sturnella_neglecta_-_Western_Meadowlark_-_XC76505.ogg
-Raven - https://en.wikipedia.org/wiki/File:Common_Raven_(Corvus_corax)_(W1CDR0001449_BD6).ogg
+redwinged_blackbird_0.ogg through redwinged_blackbird_3.ogg - User Mdf - https://en.wikipedia.org/wiki/File:Agelaius-phoeniceus-001.ogg
+western_meadowlark_0.ogg through western_meadowlark_2.ogg - Jonathon Jongsma - https://en.wikipedia.org/wiki/File:Sturnella_neglecta_-_Western_Meadowlark_-_XC76505.ogg
+raven_0.ogg through raven_5.ogg - Lawrence Shove - https://en.wikipedia.org/wiki/File:Common_Raven_(Corvus_corax)_(W1CDR0001449_BD6).ogg
+resplendent_quetzal_0.ogg through resplendent_quetzal_2.ogg - Leander Khil - https://en.wikipedia.org/wiki/File:Resplendent_Quetzal_song_(Pharomachrus_mocinno).ogg
 
 FREESOUND.ORG:
 

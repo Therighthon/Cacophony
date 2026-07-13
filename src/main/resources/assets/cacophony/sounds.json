@@ -1,38 +1,6 @@
 {
-  "ambient.bird.redwinged_blackbird": {
-    "subtitle": "subtitles.ambient.bird.redwinged_blackbird",
-    "sounds": [
-      "cacophony:ambient/bird/redwinged_blackbird_0",
-      "cacophony:ambient/bird/redwinged_blackbird_1",
-      "cacophony:ambient/bird/redwinged_blackbird_2",
-      "cacophony:ambient/bird/redwinged_blackbird_3"
-    ]
-  },
-  "ambient.bird.western_meadowlark": {
-    "subtitle": "subtitles.ambient.bird.western_meadowlark",
-    "sounds": [
-      "cacophony:ambient/bird/western_meadowlark_0",
-      "cacophony:ambient/bird/western_meadowlark_1",
-      "cacophony:ambient/bird/western_meadowlark_2"
-    ]
-  },
-  "ambient.bird.raven": {
-    "subtitle": "subtitles.ambient.bird.raven",
-    "sounds": [
-      "cacophony:ambient/bird/raven_0",
-      "cacophony:ambient/bird/raven_1",
-      "cacophony:ambient/bird/raven_2",
-      "cacophony:ambient/bird/raven_3",
-      "cacophony:ambient/bird/raven_4",
-      "cacophony:ambient/bird/raven_5"
-    ]
-  },
-  "ambient.bird.resplendent_quetzal": {
-    "subtitle": "subtitles.ambient.bird.resplendent_quetzal",
-    "sounds": [
-      "cacophony:ambient/bird/resplendent_quetzal_0",
-      "cacophony:ambient/bird/resplendent_quetzal_1",
-      "cacophony:ambient/bird/resplendent_quetzal_2"
-    ]
-  }
+  "ambient.bird.redwinged_blackbird": {"subtitle": "subtitles.ambient.bird.redwinged_blackbird","sounds": ["cacophony:ambient/bird/redwinged_blackbird_0","cacophony:ambient/bird/redwinged_blackbird_1","cacophony:ambient/bird/redwinged_blackbird_2","cacophony:ambient/bird/redwinged_blackbird_3"]},
+  "ambient.bird.western_meadowlark": {"subtitle": "subtitles.ambient.bird.western_meadowlark","sounds": ["cacophony:ambient/bird/western_meadowlark_0","cacophony:ambient/bird/western_meadowlark_1","cacophony:ambient/bird/western_meadowlark_2"]},
+  "ambient.bird.raven": {"subtitle": "subtitles.ambient.bird.raven","sounds": ["cacophony:ambient/bird/raven_0","cacophony:ambient/bird/raven_1","cacophony:ambient/bird/raven_2","cacophony:ambient/bird/raven_3","cacophony:ambient/bird/raven_4","cacophony:ambient/bird/raven_5"]},
+  "ambient.bird.resplendent_quetzal": {"subtitle": "subtitles.ambient.bird.resplendent_quetzal","sounds": ["cacophony:ambient/bird/resplendent_quetzal_0","cacophony:ambient/bird/resplendent_quetzal_1","cacophony:ambient/bird/resplendent_quetzal_2"]}
 }

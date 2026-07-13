@@ -1,5 +1,9 @@
 package com.therighthon.cacophony.common;
 
+import com.therighthon.cacophony.common.ranges.FreshWaterEmergentRanges;
+import com.therighthon.cacophony.common.ranges.GrassRanges;
+import com.therighthon.cacophony.common.ranges.LeavesRanges;
+import com.therighthon.cacophony.common.ranges.RegistryRange;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;

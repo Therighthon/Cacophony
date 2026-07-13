@@ -11,7 +11,7 @@ public enum LeavesSpecies implements RegistrySpecies
 {
     RAVEN_WINTER(Sounds.RAVEN.get(), List.of(DayTime.DAY, DayTime.DAWN, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.CWA, KoppenClimateClassification.CWB, KoppenClimateClassification.CWC, KoppenClimateClassification.CFA, KoppenClimateClassification.CFB, KoppenClimateClassification.CFC, KoppenClimateClassification.CSA, KoppenClimateClassification.CSB, KoppenClimateClassification.CSC), 0, 1, 60, 200),
     RAVEN_SUMMER(Sounds.RAVEN.get(), List.of(DayTime.DAY, DayTime.DAWN, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DWA, KoppenClimateClassification.DWB, KoppenClimateClassification.DWC, KoppenClimateClassification.DWD, KoppenClimateClassification.DSA, KoppenClimateClassification.DSB, KoppenClimateClassification.DSC, KoppenClimateClassification.DSD, KoppenClimateClassification.DFA, KoppenClimateClassification.DFB, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD), 0, 1, 60, 200),
-    RESPLENDENT_QUETZAL(Sounds.RESPLENDENT_QUETZAL.get(), List.of(DayTime.DAY, DayTime.DAWN, DayTime.DUSK), List.of(Biome.Precipitation.NONE, Biome.Precipitation.RAIN), List.of(KoppenClimateClassification.AF), 0, 1, 80, 250);
+    RESPLENDENT_QUETZAL(Sounds.RESPLENDENT_QUETZAL.get(), List.of(DayTime.DAY, DayTime.DAWN, DayTime.DUSK), List.of(Biome.Precipitation.NONE, Biome.Precipitation.RAIN), List.of(KoppenClimateClassification.AF, KoppenClimateClassification.CFA), 0, 1, 80, 250);
 
     private final String serializedName;
     final SoundEvent sound;

@@ -1,6 +1,6 @@
 Mod by Therighthon
 
-This mod pulls most of its animal calls from free recordings on Wikipedia. A list of these recordings can be found below. All files were edited from their originals, generally to reduce length and background noises, and are converted to mono audio where some originals are stereo.
+This mod pulls all of its sounds from sources licensed under Creative Commons and other similarly permissive licenses. A list of attributions for these recordings, and their associated licenses, can be found below. All files were edited from their originals, generally to reduce length and background noises, and are converted to mono audio where some originals are stereo.
 
 WIKIPEDIA:
 
@@ -8,10 +8,29 @@ Permission is granted to copy, distribute and/or modify the sound effects in thi
 https://commons.wikimedia.org/wiki/Commons:GNU_Free_Documentation_License,_version_1.2
 
 redwinged_blackbird_0.ogg through redwinged_blackbird_3.ogg - User Mdf - https://en.wikipedia.org/wiki/File:Agelaius-phoeniceus-001.ogg
+pacific_tree_frog_0.ogg through pacific_tree_frog_2.ogg - FrogsFLP.wav by daveincamas -- License: Attribution 4.0 - https://freesound.org/s/71964/
+spadefoot_toad_0.ogg through spadefoot_toad_5.ogg - Spadefoot Toad - Yellowstone National Park by Nivatius  -- License: Creative Commons 0 - https://freesound.org/s/519590/
+sahara_frog_0.ogg through sahara_frog_1.ogg - Alejandro Sanz - CC-BY-NC-ND - https://observation.org/sounds/302387/
+striped_rocket_frog_0.ogg through striped_rocket_frog_7.ogg - stemcellsareawesome - https://www.youtube.com/watch?v=WvFd-aB3rWA
+brazilian_torrent_frog_0.ogg through brazilian_torrent_frog_5.ogg - de Sá F, Zina J, Haddad C - https://commons.wikimedia.org/wiki/File:Sophisticated-Communication-in-the-Brazilian-Torrent-Frog-Hylodes-japi-pone.0145444.s001.oga
+purple_frog_0.ogg through purple_frog_3.ogg - Thomas A, Suyesh R, Biju S, Bee M - https://en.wikipedia.org/wiki/File:Vocal-Behavior-of-the-Elusive-Purple-Frog-of-India-(Nasikabatrachus-sahyadrensis)-a-Fossorial-pone.0084809.s005.ogv#filelinks
+marsh_frog_0.ogg through marsh_frog_1.ogg - Llivermore - https://commons.wikimedia.org/wiki/File:Marsh_frog_(Pelophylax_ridibundus)_call.ogg
+banded_bullfrog_0.ogg through banded_bullfrog_4.ogg - Inspector - https://commons.wikimedia.org/wiki/File:Banded_Bull_Frog_Call.ogg
+central_coast_stubfoot_toad_0.ogg through central_coast_stubfoot_toad_3.ogg - Boistel R, Aubin T, Cloetens P, Langer M, Gillet B, Josset P, Pollet N, Herrel A - https://commons.wikimedia.org/wiki/File:Atelopus_franciscus_male_territorial_call_-_pone.0022080.s002.oga
+northern_cricket_frog_0.ogg through northern_cricket_frog_3.ogg - Robert Benson - https://commons.wikimedia.org/wiki/File:Northern_Cricket_Frog_VOL_11-08_Dudley_T._Dougherty_Natural_Sounds_Collection.ogg
+ankarafa_skeleton_frog_0.ogg through ankarafa_skeleton_frog_1.ogg - Penny S, Andreone F, Crottini A, Holderied M, Rakotozafy L, Schwitzer C, Rosa G - https://commons.wikimedia.org/wiki/File:A-new-species-of-the-Boophis-rappiodes-group-(Anura-Mantellidae)-from-the-Sahamalaza-Peninsula-zookeys-435-111-s001.oga
+palau_frog_0.ogg through palau_frog_1.ogg - Devonpike - https://commons.wikimedia.org/wiki/File:Palau_Frog_Platymantis_pelewensis_calling_in_Palau,_May_2013,_recorded_by_Devon_Pike.ogg
+edible_frog_0.ogg through edible_frog_3.ogg - Kent Wang - https://commons.wikimedia.org/wiki/File:Edible_frog_(Pelophylax_kl._esculentus)_calling.webm
+motorbike_frog_0.ogg through motorbike_frog_0.ogg - SeanMack - https://en.wikipedia.org/wiki/File:Motorbike_Frogs_Call_SeanMack.ogg
+european_tree_frog_0.ogg through european_tree_frog_2.ogg - XN - https://en.wikipedia.org/wiki/File:XN_Hyla_arborea_01.ogg
 western_meadowlark_0.ogg through western_meadowlark_2.ogg - Jonathon Jongsma - https://en.wikipedia.org/wiki/File:Sturnella_neglecta_-_Western_Meadowlark_-_XC76505.ogg
+two_colored_oval_frog_0.ogg through two_colored_oval_frog_1.ogg - Vitor Moris - https://commons.wikimedia.org/wiki/File:E_bicolor.ogg
 raven_0.ogg through raven_5.ogg - Lawrence Shove - https://en.wikipedia.org/wiki/File:Common_Raven_(Corvus_corax)_(W1CDR0001449_BD6).ogg
 resplendent_quetzal_0.ogg through resplendent_quetzal_2.ogg - Leander Khil - https://en.wikipedia.org/wiki/File:Resplendent_Quetzal_song_(Pharomachrus_mocinno).ogg
-
-FREESOUND.ORG:
-
-Raven - Raven Call.wav by filmmt -- https://freesound.org/s/219599/ -- License: Attribution 3.0
+rainforest_rocket_frog_0.ogg through rainforest_rocket_frog_1.ogg - stemcellsareawesome - https://www.youtube.com/watch?v=nV0mM_ywmOw
+strawberry_poison_frog_0.ogg through strawberry_poison_frog_1.ogg - Captainstork - https://commons.wikimedia.org/wiki/File:Oophaga_pumilio_call.ogg
+himalaya_foam_nest_frog_0.ogg through himalaya_foam_nest_frog_1.ogg - 	Kingshuk Mondal - https://commons.wikimedia.org/wiki/File:Call_of_Annandale%27s_Bush_Frog_(Raorchestes_annandalii)_from_Darjeeling_hills,_West_Bengal.wav
+white_cheeked_barbet_0.ogg through white_cheeked_barbet_2.ogg - L. Shyamal - https://en.wikipedia.org/wiki/File:MegalaimaViridis.ogg
+malabar_gliding_frog_0.ogg through malabar_gliding_frog_2.ogg - Katie Hampson - https://commons.wikimedia.org/wiki/File:Malabar_Flying_Frog_(Rhacophorus_malabaricus)_(W1CDR0000639_BD4).ogg
+stumpffia_megsoni_0.ogg through stumpffia_megsoni_3.ogg - Mark D. Scherz - https://commons.wikimedia.org/wiki/File:Stumpffia_megsoni_calling_on_Montagne_d%27Ambre,_Madagascar.webm
+copes_gray_tree_frog_0.ogg through copes_gray_tree_frog_3.ogg - Fredlyfish4 - https://commons.wikimedia.org/wiki/File:Hyla_chrysoscelis_call_2.ogg

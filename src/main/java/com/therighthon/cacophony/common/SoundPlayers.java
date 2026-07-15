@@ -4,6 +4,7 @@ import com.therighthon.cacophony.common.ranges.FreshWaterEmergentRanges;
 import com.therighthon.cacophony.common.ranges.GrassRanges;
 import com.therighthon.cacophony.common.ranges.LeavesRanges;
 import com.therighthon.cacophony.common.ranges.RegistryRange;
+import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
@@ -108,41 +109,50 @@ public class SoundPlayers
     @Nullable
     public static SoundEvent getValidSound(Level level, BlockPos pos, RandomSource random, DayTime time, RegistryRange[] array)
     {
-        final RegistryRange species = array[random.nextInt(array.length)];
+        List<SoundEvent> possibleSounds = List.of();
 
         // Check time first since we already have that value
-        if (species.validDayTimes().contains(time))
+        for (RegistryRange species : array)
         {
-            // Check elevation
-            if (pos.getY() > species.getMinElevation() && pos.getY() < species.getMaxElevation())
+            if (species.validDayTimes().contains(time))
             {
-                // Check time of year
-                final float timeOfYear = Calendars.CLIENT.getCalendarFractionOfYear();
-                final float start = species.startYearFraction();
-                final float end = species.endYearFraction();
-                if ((timeOfYear > start && timeOfYear < end) || (start > end && (timeOfYear < end || timeOfYear < start)))
+                // Check elevation
+                if (pos.getY() > species.getMinElevation() && pos.getY() < species.getMaxElevation())
                 {
-                    // Check current weather
-                    Biome.Precipitation precipitation = WeatherHelpers.getPrecipitationAt(level, pos, Biome.Precipitation.NONE);
-
-                    if (species.validWeathers().contains(precipitation))
+                    // Check time of year
+                    final float timeOfYear = Calendars.CLIENT.getCalendarFractionOfYear();
+                    final float start = species.startYearFraction();
+                    final float end = species.endYearFraction();
+                    if ((timeOfYear > start && timeOfYear < end) || (start > end && (timeOfYear < end || timeOfYear < start)))
                     {
-                        // Finally, check climate
-                        final float rain = ClimateRenderCache.INSTANCE.getAverageRainfall();
-                        final float temp = ClimateRenderCache.INSTANCE.getAverageTemperature();
-                        final float var = ClimateRenderCache.INSTANCE.getRainVariance();
-                        final KoppenClimateClassification koppen = KoppenClimateClassification.classify(temp, rain, var, SolarCalculator.getInNorthernHemisphere(pos, level));
+                        // Check current weather
+                        Biome.Precipitation precipitation = WeatherHelpers.getPrecipitationAt(level, pos, Biome.Precipitation.NONE);
 
-                        boolean isValid;
-                        for (KoppenClimateClassification k : species.validClimates())
+                        if (species.validWeathers().contains(precipitation))
                         {
-                            isValid = k.equals(koppen);
-                            if (isValid) return species.sound();
+                            // Finally, check climate
+                            final float rain = ClimateRenderCache.INSTANCE.getAverageRainfall();
+                            final float temp = ClimateRenderCache.INSTANCE.getAverageTemperature();
+                            final float var = ClimateRenderCache.INSTANCE.getRainVariance();
+                            final KoppenClimateClassification koppen = KoppenClimateClassification.classify(temp, rain, var, SolarCalculator.getInNorthernHemisphere(pos, level));
+
+                            boolean isValid;
+                            for (KoppenClimateClassification k : species.validClimates())
+                            {
+                                isValid = k.equals(koppen);
+                                if (isValid)
+                                {
+                                    possibleSounds.add(species.sound());
+                                }
+                            }
                         }
                     }
                 }
             }
         }
-        return null;
+
+        if (possibleSounds.isEmpty()) return null;
+        
+        return possibleSounds.get(random.nextInt(possibleSounds.size()));
     }
 }

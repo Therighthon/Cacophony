@@ -6,10 +6,10 @@ import net.dries007.tfc.util.calendar.Calendars;
 
 public enum DayTime
 {
-    DAWN(500, 200, 150, 150),
-    DAY(800, 200, 200, 200),
-    DUSK(400, 150, 100, 100),
-    DARK(1600, 400, 400, 400);
+    DAWN(500, 250, 200, 200),
+    DAY(800, 300, 250, 250),
+    DUSK(500, 200, 150, 150),
+    DARK(1600, 500, 500, 500);
 
     private final int soundRarityLeaves, soundRarityGrasses, soundRarityFreshwater, soundRaritySaltwater;
 
@@ -24,15 +24,15 @@ public enum DayTime
     public static DayTime getDayTimeFromTicks(int z)
     {
         final int dayTime = SolarCalculator.getSunBasedDayTime(z, ClimateRenderCache.INSTANCE.getHemisphereScale(), Calendars.CLIENT.getCalendarFractionOfYear(), Calendars.CLIENT.getCalendarFractionOfDay());
-        if (dayTime > 23_500 || dayTime < 1_500)
+        if (dayTime > 22_000 || dayTime < 2_000)
         {
             return DayTime.DAWN;
         }
-        else if (dayTime > 13_000)
+        else if (dayTime > 14_000)
         {
             return DayTime.DARK;
         }
-        else if (dayTime > 11_000)
+        else if (dayTime > 10_000)
         {
             return DayTime.DUSK;
         }

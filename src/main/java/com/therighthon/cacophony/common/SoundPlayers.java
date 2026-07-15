@@ -110,7 +110,7 @@ public class SoundPlayers
     @Nullable
     public static SoundEvent getValidSound(Level level, BlockPos pos, RandomSource random, DayTime time, RegistryRange[] array)
     {
-        ArrayList<SoundEvent> possibleSounds = new ArrayList<>(List.of());
+        ArrayList<RegistryRange> possibleSounds = new ArrayList<>(List.of());
 
         // Check time first since we already have that value
         for (RegistryRange species : array)
@@ -143,7 +143,7 @@ public class SoundPlayers
                                 isValid = k.equals(koppen);
                                 if (isValid)
                                 {
-                                    possibleSounds.add(species.sound());
+                                    possibleSounds.add(species);
                                 }
                             }
                         }
@@ -154,6 +154,13 @@ public class SoundPlayers
 
         if (possibleSounds.isEmpty()) return null;
 
-        return possibleSounds.get(random.nextInt(possibleSounds.size()));
+        final RegistryRange species = possibleSounds.get(random.nextInt(possibleSounds.size()));
+
+        if (random.nextInt(species.getChance()) == 0)
+        {
+            return species.sound();
+        }
+
+        return null;
     }
 }

@@ -26,4 +26,5 @@ public interface RegistryRange extends StringRepresentable
 
     int getMaxElevation();
 
+    int getChance();
 }

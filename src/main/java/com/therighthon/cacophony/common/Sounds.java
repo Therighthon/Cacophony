@@ -30,6 +30,20 @@ public final class Sounds
     public static final Id EDIBLE_FROG = register("ambient.frog.edible_frog");
     public static final Id MOTORBIKE_FROG = register("ambient.frog.motorbike_frog");
     public static final Id EUROPEAN_TREE_FROG = register("ambient.frog.european_tree_frog");
+    public static final Id BOREAL_DIGGING_FROG = register("ambient.frog.boreal_digging_frog");
+    public static final Id DYBOWSKIS_FROG = register("ambient.frog.dybowskis_frog");
+    public static final Id WOOD_FROG = register("ambient.frog.wood_frog");
+    public static final Id TALYSH_TOAD = register("ambient.frog.talysh_toad");
+    public static final Id OLIVE_TOAD = register("ambient.frog.olive_toad");
+    public static final Id CENTRAL_ASIAN_TOAD = register("ambient.frog.central_asian_toad");
+    public static final Id SPECTACLED_TOAD = register("ambient.frog.spectacled_toad");
+    public static final Id HAINAN_TOAD = register("ambient.frog.hainan_toad");
+    public static final Id TENGCHONG_LEAF_LITTER_TOAD = register("ambient.frog.tengchong_leaf_litter_toad");
+    public static final Id PAINTED_CHORUS_FROG = register("ambient.frog.painted_chorus_frog");
+    public static final Id DARK_SPOTTED_FROG = register("ambient.frog.dark_spotted_frog");
+    public static final Id FIRE_BELLIED_TOAD = register("ambient.frog.fire_bellied_toad");
+    public static final Id CASCADES_FROG = register("ambient.frog.cascades_frog");
+    public static final Id CANE_TOAD = register("ambient.frog.cane_toad");
     public static final Id WESTERN_MEADOWLARK = register("ambient.bird.western_meadowlark");
     public static final Id TWO_COLORED_OVAL_FROG = register("ambient.frog.two_colored_oval_frog");
     public static final Id RAVEN = register("ambient.bird.raven");
@@ -41,6 +55,13 @@ public final class Sounds
     public static final Id MALABAR_GLIDING_FROG = register("ambient.frog.malabar_gliding_frog");
     public static final Id STUMPFFIA_MEGSONI = register("ambient.frog.stumpffia_megsoni");
     public static final Id COPES_GRAY_TREE_FROG = register("ambient.frog.copes_gray_tree_frog");
+    public static final Id BRILLIANT_THIGHED_POISON_FROG = register("ambient.frog.brilliant_thighed_poison_frog");
+    public static final Id STEPHENS_ROCKET_FROG = register("ambient.frog.stephens_rocket_frog");
+    public static final Id HOLTS_ROBBER_FROG = register("ambient.frog.holts_robber_frog");
+    public static final Id AMAZON_TOAD = register("ambient.frog.amazon_toad");
+    public static final Id PEBAS_STUBFOOT_TOAD = register("ambient.frog.pebas_stubfoot_toad");
+    public static final Id GRANULAR_TOAD = register("ambient.frog.granular_toad");
+    public static final Id BLACKSMITH_FROG = register("ambient.frog.blacksmith_frog");
 
 
     private static Id register(String name)

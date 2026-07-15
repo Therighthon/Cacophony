@@ -3,9 +3,15 @@ Mod by Therighthon
 This mod pulls all of its sounds from sources licensed under Creative Commons and other similarly permissive licenses. A list of attributions for these recordings, and their associated licenses, can be found below. All files were edited from their originals, generally to reduce length and background noises, and are converted to mono audio where some originals are stereo.
 
 WIKIPEDIA:
-
 Permission is granted to copy, distribute and/or modify the sound effects in this mod under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license may be found here:
 https://commons.wikimedia.org/wiki/Commons:GNU_Free_Documentation_License,_version_1.2
+
+AMPHIBIAWEB:
+Sounds from the list below that have URLs pointing to amphibiaweb were procured from that site, which is cited below, and are CC-BY-NC unless noted otherwise.
+
+Citation: AmphibiaWeb. 2026. <https://amphibiaweb.org> University of California, Berkeley, CA, USA. Accessed 14 Jul 2026.
+
+Individual Sound Credits:
 
 redwinged_blackbird_0.ogg through redwinged_blackbird_3.ogg - User Mdf - https://en.wikipedia.org/wiki/File:Agelaius-phoeniceus-001.ogg
 pacific_tree_frog_0.ogg through pacific_tree_frog_2.ogg - FrogsFLP.wav by daveincamas -- License: Attribution 4.0 - https://freesound.org/s/71964/
@@ -23,6 +29,20 @@ palau_frog_0.ogg through palau_frog_1.ogg - Devonpike - https://commons.wikimedi
 edible_frog_0.ogg through edible_frog_3.ogg - Kent Wang - https://commons.wikimedia.org/wiki/File:Edible_frog_(Pelophylax_kl._esculentus)_calling.webm
 motorbike_frog_0.ogg through motorbike_frog_0.ogg - SeanMack - https://en.wikipedia.org/wiki/File:Motorbike_Frogs_Call_SeanMack.ogg
 european_tree_frog_0.ogg through european_tree_frog_2.ogg - XN - https://en.wikipedia.org/wiki/File:XN_Hyla_arborea_01.ogg
+boreal_digging_frog_0.ogg through boreal_digging_frog_3.ogg - https://www.youtube.com/shorts/FPMx5NtH0BI - https://www.youtube.com/@%EC%9D%B8%EC%B2%9C%EC%97%85%EC%82%AC%EC%9D%B4%ED%81%B4%EC%97%90%EC%BD%94%EC%84%BC%ED%84%B0/shorts
+dybowskis_frog_0.ogg through dybowskis_frog_1.ogg - 이화여대 자연사박물관 Natural History Museum - https://www.youtube.com/watch?v=OQ3K-HkK-sk
+wood_frog_0.ogg through wood_frog_1.ogg - D. Gordon E. Robertson - https://en.wikipedia.org/wiki/File:Wood_Frogs_calling_in_spring.ogg
+talysh_toad_0.ogg through talysh_toad_4.ogg - 	Parham Beyhaghi  - https://amphibiaweb.org/cgi/amphib_query?special=call&genus=Bufo&species=eichwaldi
+olive_toad_0.ogg through olive_toad_4.ogg - Hamid Khavanin Zadeh - https://amphibiaweb.org/cgi/amphib_query?special=call&genus=Duttaphrynus&species=olivaceus
+central_asian_toad_0.ogg through central_asian_toad_3.ogg - Melika Alami - https://amphibiaweb.org/cgi/amphib_query?where-genus=Bufotes&where-species=oblongus
+spectacled_toad_0.ogg through spectacled_toad_1.ogg - Zaharil Dzulkafly - https://amphibiaweb.org/cgi/amphib_query?special=call&genus=Duttaphrynus&species=melanostictus
+hainan_toad_0.ogg through hainan_toad_2.ogg - Jianhuan YANG - https://amphibiaweb.org/cgi/amphib_query?where-genus=Parapelophryne&where-species=scalpta
+tengchong_leaf_litter_toad_0.ogg through tengchong_leaf_litter_toad_1.ogg - 	Jianhuan YANG - https://amphibiaweb.org/cgi/amphib_query?special=call&genus=Leptobrachella&species=tengchongensis
+painted_chorus_frog_0.ogg through painted_chorus_frog_2.ogg - Katie Holzer & Robert Bayers - https://amphibiaweb.org/cgi/amphib_query?special=call&genus=Microhyla&species=butleri
+dark_spotted_frog_0.ogg through dark_spotted_frog_2.ogg - Shuangqi Liu, XC891768. Accessible at www.xeno-canto.org/891768. and Stuart Fisher, XC883292. Accessible at www.xeno-canto.org/883292. - https://xeno-canto.org/891768 and https://xeno-canto.org/883292
+fire_bellied_toad_0.ogg through fire_bellied_toad_1.ogg - Creative Commons Media - https://www.youtube.com/watch?v=pAExMiuVKm4
+cascades_frog_0.ogg through cascades_frog_2.ogg - Western Soundscape Archive at the University of Utah J. Willard Marriott Library - https://amphibiaweb.org/cgi/amphib_query?special=call&genus=Rana&species=cascadae
+cane_toad_0.ogg through cane_toad_0.ogg - Karl Mokross, Albertina P. Lima, William E. Magnusson, Marcelo Menin, Luciana K. Erdtmann, Domingos J. Rodrigues, Claudia Keller, and Walter Hödl - https://amphibiaweb.org/cgi/amphib_query?special=call&genus=Rhinella&species=marina
 western_meadowlark_0.ogg through western_meadowlark_2.ogg - Jonathon Jongsma - https://en.wikipedia.org/wiki/File:Sturnella_neglecta_-_Western_Meadowlark_-_XC76505.ogg
 two_colored_oval_frog_0.ogg through two_colored_oval_frog_1.ogg - Vitor Moris - https://commons.wikimedia.org/wiki/File:E_bicolor.ogg
 raven_0.ogg through raven_5.ogg - Lawrence Shove - https://en.wikipedia.org/wiki/File:Common_Raven_(Corvus_corax)_(W1CDR0001449_BD6).ogg
@@ -34,3 +54,10 @@ white_cheeked_barbet_0.ogg through white_cheeked_barbet_2.ogg - L. Shyamal - htt
 malabar_gliding_frog_0.ogg through malabar_gliding_frog_2.ogg - Katie Hampson - https://commons.wikimedia.org/wiki/File:Malabar_Flying_Frog_(Rhacophorus_malabaricus)_(W1CDR0000639_BD4).ogg
 stumpffia_megsoni_0.ogg through stumpffia_megsoni_3.ogg - Mark D. Scherz - https://commons.wikimedia.org/wiki/File:Stumpffia_megsoni_calling_on_Montagne_d%27Ambre,_Madagascar.webm
 copes_gray_tree_frog_0.ogg through copes_gray_tree_frog_3.ogg - Fredlyfish4 - https://commons.wikimedia.org/wiki/File:Hyla_chrysoscelis_call_2.ogg
+brilliant_thighed_poison_frog_0.ogg through brilliant_thighed_poison_frog_1.ogg - Karl Mokross, Albertina P. Lima, William E. Magnusson, Marcelo Menin, Luciana K. Erdtmann, Domingos J. Rodrigues, Claudia Keller, and Walter Hödl - https://amphibiaweb.org/cgi/amphib_query?special=call&genus=Allobates&species=femoralis
+stephens_rocket_frog_0.ogg through stephens_rocket_frog_1.ogg - Karl Mokross, Albertina P. Lima, William E. Magnusson, Marcelo Menin, Luciana K. Erdtmann, Domingos J. Rodrigues, Claudia Keller, and Walter Hödl - https://amphibiaweb.org/cgi/amphib_query?special=call&genus=Anomaloglossus&species=stepheni
+holts_robber_frog_0.ogg through holts_robber_frog_2.ogg - 	Mario Sacramento - https://amphibiaweb.org/cgi/amphib_query?special=call&genus=Ischnocnema&species=holti
+amazon_toad_0.ogg through amazon_toad_2.ogg - Karl Mokross, Albertina P. Lima, William E. Magnusson, Marcelo Menin, Luciana K. Erdtmann, Domingos J. Rodrigues, Claudia Keller, and Walter Hödl - https://amphibiaweb.org/cgi/amphib_query?special=call&genus=Amazophrynella&species=minuta
+pebas_stubfoot_toad_0.ogg through pebas_stubfoot_toad_0.ogg - Karl Mokross, Albertina P. Lima, William E. Magnusson, Marcelo Menin, Luciana K. Erdtmann, Domingos J. Rodrigues, Claudia Keller, and Walter Hödl - https://amphibiaweb.org/cgi/amphib_query?special=call&genus=Atelopus&species=spumarius
+granular_toad_0.ogg through granular_toad_0.ogg - Karl Mokross, Albertina P. Lima, William E. Magnusson, Marcelo Menin, Luciana K. Erdtmann, Domingos J. Rodrigues, Claudia Keller, and Walter Hödl - https://amphibiaweb.org/cgi/amphib_query?where-genus=Rhinella&where-species=granulosa
+blacksmith_frog_0.ogg through blacksmith_frog_2.ogg - Rodrigo Dela Rosa - https://amphibiaweb.org/cgi/amphib_query?special=call&genus=Boana&species=faber

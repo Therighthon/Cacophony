@@ -20,6 +20,9 @@ public abstract class TFCLeavesBlockMixin
     @Inject(method = "animateTick", at = @At("HEAD"), remap = false)
     public void playAmbientSounds(BlockState state, Level level, BlockPos pos, RandomSource random, CallbackInfo ci)
     {
-        SoundPlayers.playLeafSound(state, level, pos, random);
+        if (random.nextInt(100) == 0)
+        {
+            SoundPlayers.playLeafSound(state, level, pos, random);
+        }
     }
 }

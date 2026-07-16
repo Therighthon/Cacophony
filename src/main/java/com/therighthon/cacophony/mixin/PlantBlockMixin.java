@@ -20,7 +20,10 @@ public abstract class PlantBlockMixin
     @Inject(method="animateTick", at=@At("HEAD"), remap = false)
     public void playAmbientSounds(BlockState state, Level level, BlockPos pos, RandomSource random, CallbackInfo ci)
     {
-        SoundPlayers.playPlantSound(state, level, pos, random);
+        if (random.nextInt(100) == 0)
+        {
+            SoundPlayers.playPlantSound(state, level, pos, random);
+        }
         // TODO: Other blocks to mixin to:
         // Sand and Gravel - desolate noises in dry places, beach noises in correct biomes
         // Snow/snow piles - desolate winter noises

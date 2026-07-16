@@ -39,43 +39,37 @@ public class SoundPlayers
         }
         else
         {
-            // If no wind sound, check daytime
-            final DayTime time = DayTime.getDayTimeFromTicks(pos.getZ());
-
-            // Then check blocks
+            // If no wind sound, check blocks
             final Block block = state.getBlock();
-            if ((Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_EMERGENT_PLANTS) || Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_FLOATING_PLANTS))
-                && random.nextInt(time.getSoundRarityFreshwater()) == 0)
+            final RegistryRange[] ranges;
+            if ((Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_EMERGENT_PLANTS) || Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_FLOATING_PLANTS)))
             {
-                final SoundEvent sound = getValidSound(level, pos, random, time, FreshWaterEmergentRanges.values());
-
-                if (sound != null)
-                {
-                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), sound, SoundSource.AMBIENT, 1.0f, 1.0f, false);
-                }
+                ranges = FreshWaterEmergentRanges.values();
             }
-            else if (Helpers.isBlock(block, CacophonyTags.Blocks.TALL_GRASS)
-                && random.nextInt(time.getSoundRarityGrasses()) == 0)
+            else if (Helpers.isBlock(block, CacophonyTags.Blocks.TALL_GRASS))
             {
-                final SoundEvent sound = getValidSound(level, pos, random, time, GrassRanges.values());
-
-                if (sound != null)
-                {
-                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), sound, SoundSource.AMBIENT, 1.0f, 1.0f, false);
-                }
+                ranges = GrassRanges.values();
             }
-            else if ((Helpers.isBlock(block, CacophonyTags.Blocks.SALTY_EMERGENT_PLANTS) || Helpers.isBlock(block, CacophonyTags.Blocks.SALTY_FLOATING_PLANTS))
-                && random.nextInt(time.getSoundRaritySaltwater()) == 0)
+            else if ((Helpers.isBlock(block, CacophonyTags.Blocks.SALTY_EMERGENT_PLANTS) || Helpers.isBlock(block, CacophonyTags.Blocks.SALTY_FLOATING_PLANTS)))
             {
                 // TODO: Saltwater Species
-                final SoundEvent sound = getValidSound(level, pos, random, time, FreshWaterEmergentRanges.values());
+                ranges = FreshWaterEmergentRanges.values();
+            }
+            else
+            {
+                return;
+            }
 
+            final DayTime dayTime = DayTime.getFuzzyDaytime(pos.getZ(), random);
+
+            if (random.nextInt(dayTime.getSoundRarity()) == 0)
+            {
+                final SoundEvent sound = getValidSound(level, pos, random, dayTime, ranges);
                 if (sound != null)
                 {
                     level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), sound, SoundSource.AMBIENT, 1.0f, 1.0f, false);
                 }
             }
-
         }
     }
 
@@ -93,9 +87,9 @@ public class SoundPlayers
         else
         {
             // If no wind sound, check daytime
-            final DayTime time = DayTime.getDayTimeFromTicks(pos.getZ());
+            final DayTime time = DayTime.getFuzzyDaytime(pos.getZ(), random);
 
-            if (random.nextInt(time.getSoundRarityLeaves()) == 0)
+            if (random.nextInt(time.getSoundRarity() * 5) == 0)
             {
                 final SoundEvent sound = getValidSound(level, pos, random, time, LeavesRanges.values());
 

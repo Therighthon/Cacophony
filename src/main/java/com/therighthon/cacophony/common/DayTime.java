@@ -1,29 +1,33 @@
 package com.therighthon.cacophony.common;
 
+import net.minecraft.util.RandomSource;
+
 import net.dries007.tfc.client.ClimateRenderCache;
 import net.dries007.tfc.client.overworld.SolarCalculator;
 import net.dries007.tfc.util.calendar.Calendars;
 
 public enum DayTime
 {
-    DAWN(10, 5, 4, 4),
-    DAY(16, 6, 6, 5),
-    DUSK(10, 4, 3, 3),
-    DARK(24, 10, 8, 10);
+    DAWN(6),
+    DAY(8),
+    DUSK(5),
+    DARK(12);
 
-    private final int soundRarityLeaves, soundRarityGrasses, soundRarityFreshwater, soundRaritySaltwater;
+    private final int soundRarity;
 
-    DayTime(int soundRarityLeaves, int soundRarityGrasses, int soundRarityFreshwater, int soundRaritySaltwater)
+    DayTime(int soundRarity)
     {
-        this.soundRarityLeaves = soundRarityLeaves;
-        this.soundRarityGrasses = soundRarityGrasses;
-        this.soundRarityFreshwater = soundRarityFreshwater;
-        this.soundRaritySaltwater = soundRaritySaltwater;
+        this.soundRarity = soundRarity;
     }
 
-    public static DayTime getDayTimeFromTicks(int z)
+    public static DayTime getFuzzyDaytime(int z, RandomSource random)
     {
-        final int dayTime = SolarCalculator.getSunBasedDayTime(z, ClimateRenderCache.INSTANCE.getHemisphereScale(), Calendars.CLIENT.getCalendarFractionOfYear(), Calendars.CLIENT.getCalendarFractionOfDay());
+        int dayTime = SolarCalculator.getSunBasedDayTime(z, ClimateRenderCache.INSTANCE.getHemisphereScale(), Calendars.CLIENT.getCalendarFractionOfYear(), Calendars.CLIENT.getCalendarFractionOfDay());
+        dayTime = (dayTime + random.nextInt(1000) - 500);
+        if (dayTime > 24_000)
+        {
+            dayTime = dayTime - 24_000;
+        }
         if (dayTime > 22_000 || dayTime < 2_000)
         {
             return DayTime.DAWN;
@@ -43,23 +47,8 @@ public enum DayTime
     }
 
 
-    public int getSoundRarityFreshwater()
+    public int getSoundRarity()
     {
-        return soundRarityFreshwater;
-    }
-
-    public int getSoundRaritySaltwater()
-    {
-        return soundRaritySaltwater;
-    }
-
-    public int getSoundRarityGrasses()
-    {
-        return soundRarityGrasses;
-    }
-
-    public int getSoundRarityLeaves()
-    {
-        return soundRarityLeaves;
+        return soundRarity;
     }
 }

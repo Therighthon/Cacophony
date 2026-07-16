@@ -20,7 +20,7 @@ public abstract class PlantBlockMixin
     @Inject(method="animateTick", at=@At("HEAD"), remap = false)
     public void playAmbientSounds(BlockState state, Level level, BlockPos pos, RandomSource random, CallbackInfo ci)
     {
-        if (random.nextInt(100) == 0)
+        if (random.nextInt(50) == 0)
         {
             SoundPlayers.playPlantSound(state, level, pos, random);
         }

@@ -89,7 +89,7 @@ public class SoundPlayers
             // If no wind sound, check daytime
             final DayTime time = DayTime.getFuzzyDaytime(pos.getZ(), random);
 
-            if (random.nextInt(time.getSoundRarity() * 5) == 0)
+            if (random.nextInt(time.getSoundRarity()) == 0)
             {
                 final SoundEvent sound = getValidSound(level, pos, random, time, LeavesRanges.values());
 

@@ -86,6 +86,7 @@ public final class Sounds
     public static final Id LEAVES_IN_WIND_STRONG = register("ambient.wind.leaves_in_wind_strong");
     public static final Id WIND_IN_GRASS = register("ambient.wind.wind_in_grass");
     public static final Id WIND_IN_GRASS_STRONG = register("ambient.wind.wind_in_grass_strong");
+    public static final Id ICE_CREAK = register("ambient.ice.ice_creak");
 
 
     private static Id register(String name)

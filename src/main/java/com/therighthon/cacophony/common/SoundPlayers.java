@@ -26,15 +26,25 @@ import net.dries007.tfc.util.tracker.WeatherHelpers;
 
 public class SoundPlayers
 {
+    public static float WIND_NOISE_THRESHOLD = 0.06f;
+    public static float STRONG_WIND_NOISE_THRESHOLD = 0.6f;
+
     public static void playPlantSound(BlockState state, Level level, BlockPos pos, RandomSource random)
     {
         // Wind sounds have a constant likelihood
-        if (random.nextInt(100) == 0)
+        if (random.nextInt(20) == 0 && Climate.get(level).getWind(level, pos).lengthSquared() > 0.06)
         {
-            float wind = Climate.get(level).getWind(level, pos).lengthSquared();
-            if (wind > 1.0f)
+            final Block windBlock = state.getBlock();
+            if ((Helpers.isBlock(windBlock, CacophonyTags.Blocks.FRESH_EMERGENT_PLANTS) || Helpers.isBlock(windBlock, CacophonyTags.Blocks.SALTY_EMERGENT_PLANTS)) || Helpers.isBlock(windBlock, CacophonyTags.Blocks.TALL_GRASS))
             {
-                // TODO: play some appropriate wind noises
+                if (Climate.get(level).getWind(level, pos).lengthSquared() > STRONG_WIND_NOISE_THRESHOLD && random.nextInt(2) == 0)
+                {
+                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), Sounds.WIND_IN_GRASS_STRONG.get(), SoundSource.AMBIENT, 1.0f, 1.0f, false);
+                }
+                else
+                {
+                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), Sounds.WIND_IN_GRASS.get(), SoundSource.AMBIENT, 1.0f, 1.0f, false);
+                }
             }
         }
         else
@@ -76,12 +86,15 @@ public class SoundPlayers
     public static void playLeafSound(BlockState state, Level level, BlockPos pos, RandomSource random)
     {
         // Wind sounds have a constant likelihood
-        if (random.nextInt(100) == 0)
+        if (random.nextInt(20) == 0 && Climate.get(level).getWind(level, pos).lengthSquared() > WIND_NOISE_THRESHOLD)
         {
-            float wind = Climate.get(level).getWind(level, pos).lengthSquared();
-            if (wind > 1.0f)
+            if (Climate.get(level).getWind(level, pos).lengthSquared() > STRONG_WIND_NOISE_THRESHOLD && random.nextInt(2) == 0)
             {
-                // TODO: play some appropriate wind noises
+                level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), Sounds.LEAVES_IN_WIND_STRONG.get(), SoundSource.AMBIENT, 1.0f, 1.0f, false);
+            }
+            else
+            {
+                level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), Sounds.LEAVES_IN_WIND.get(), SoundSource.AMBIENT, 1.0f, 1.0f, false);
             }
         }
         else

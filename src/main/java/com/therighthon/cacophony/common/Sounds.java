@@ -82,6 +82,10 @@ public final class Sounds
     public static final Id PEBAS_STUBFOOT_TOAD = register("ambient.frog.pebas_stubfoot_toad");
     public static final Id GRANULAR_TOAD = register("ambient.frog.granular_toad");
     public static final Id BLACKSMITH_FROG = register("ambient.frog.blacksmith_frog");
+    public static final Id LEAVES_IN_WIND = register("ambient.wind.leaves_in_wind");
+    public static final Id LEAVES_IN_WIND_STRONG = register("ambient.wind.leaves_in_wind_strong");
+    public static final Id WIND_IN_GRASS = register("ambient.wind.wind_in_grass");
+    public static final Id WIND_IN_GRASS_STRONG = register("ambient.wind.wind_in_grass_strong");
 
 
     private static Id register(String name)

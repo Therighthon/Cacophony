@@ -34,7 +34,7 @@ public enum GrassRanges implements RegistryRange
     FIELD_CRICKET(Sounds.FIELD_CRICKET.get(), 2, List.of(DayTime.DUSK, DayTime.DARK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.CSB, KoppenClimateClassification.CSC, KoppenClimateClassification.CFB, KoppenClimateClassification.CFC, KoppenClimateClassification.DFA), 0.166666666666667f, 0.833333333333333f, 60, 320),
     OCEANIC_FIELD_CRICKET(Sounds.OCEANIC_FIELD_CRICKET.get(), 2, List.of(DayTime.DUSK, DayTime.DARK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.AF), 0.166666666666667f, 0.833333333333333f, 60, 320),
     BROWN_SPOTTED_BUSH_CRICKET(Sounds.BROWN_SPOTTED_BUSH_CRICKET.get(), 2, List.of(DayTime.DUSK, DayTime.DARK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DSA, KoppenClimateClassification.DSB, KoppenClimateClassification.DSC, KoppenClimateClassification.DSD), 0.166666666666667f, 0.833333333333333f, 60, 320);
-    
+
     private final String serializedName;
     final SoundEvent sound;
     final List<DayTime> times;

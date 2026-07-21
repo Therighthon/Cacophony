@@ -34,15 +34,15 @@ public class LoopingSoundPlayer
         final Level level = ClientHelpers.getLevel();
         if (level != null && !Minecraft.getInstance().isPaused())
         {
-            // Every second...
-            if (level.getGameTime() % (20) == 0)
+            // TODO: This is such a bad implementation...
+            // Every 15 seconds...
+            if (level.getGameTime() % (15 * 20) == 0)
             {
                 final Player player = ClientHelpers.getPlayer();
                 final float windSq = Climate.get(level).getWind(level, player.blockPosition()).lengthSquared();
                 if (windSq > WIND_NOISE_THRESHOLD)
                 {
-                    if (windSound == null)
-                        startPlayingWindSound(Sounds.WIND_LOOP.get());
+                    startPlayingWindSound(Sounds.WIND_LOOP.get());
                 }
                 else
                 {

@@ -7,6 +7,8 @@ import net.minecraft.sounds.SoundSource;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 
+import net.dries007.tfc.client.ClientHelpers;
+
 public class LoopingSoundPlayer
 {
     private final Minecraft minecraft;
@@ -21,15 +23,17 @@ public class LoopingSoundPlayer
     @SubscribeEvent
     public void onClientTick(ClientTickEvent.Post event)
     {
-        if (windSound == null)
+        if (ClientHelpers.getLevel() != null && !Minecraft.getInstance().isPaused())
         {
-            this.windSound = new WindSoundInstance(Sounds.WIND_LOOP.get(), SoundSource.AMBIENT);
+            if (windSound == null)
+            {
+                this.windSound = new WindSoundInstance(Sounds.WIND_LOOP.get(), SoundSource.AMBIENT);
+            }
+            else if (!this.minecraft.getSoundManager().isActive(windSound))
+            {
+                this.minecraft.getSoundManager().queueTickingSound(windSound);
+            }
         }
-        else
-        {
-            this.minecraft.getSoundManager().queueTickingSound(windSound);
-        }
-
     }
 
 }

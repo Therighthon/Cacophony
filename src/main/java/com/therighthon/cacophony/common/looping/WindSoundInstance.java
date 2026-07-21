@@ -9,9 +9,11 @@ import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec2;
 
 import net.dries007.tfc.client.ClientHelpers;
 import net.dries007.tfc.util.climate.Climate;
+import net.dries007.tfc.world.noise.FastNoiseLite;
 
 import static com.therighthon.cacophony.common.SoundPlayers.*;
 
@@ -24,24 +26,26 @@ public class WindSoundInstance extends AbstractTickableSoundInstance
         this.looping = true;
         this.delay = 0;
         this.volume = 0f;
+        this.attenuation = Attenuation.NONE;
     }
 
     @Override
     public void tick()
     {
         final Level level = ClientHelpers.getLevel();
-        if (level != null)
+        final Player player = ClientHelpers.getPlayer();
+        if (level != null && player != null)
         {
-            final Player player = ClientHelpers.getPlayer();
-            final float windSq = Climate.get(level).getWind(level, player.blockPosition()).lengthSquared();
+            final Vec2 wind = Climate.get(level).getWind(level, player.blockPosition());
+            final float windSq = wind.lengthSquared();
 
             if (windSq > WIND_NOISE_THRESHOLD)
             {
-                // TODO: We should just be playing directly to the player
-                this.x = player.getX();
-                this.y = player.getY();
-                this.z = player.getZ();
-                this.pitch = Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), this.getMinPitch(), this.getMaxPitch());
+                // Keep upwind of the player
+                this.x = player.getX() + 2 * wind.x * wind.x / windSq;
+                this.y = player.getY() + 1;
+                this.z = player.getZ() - 2 * wind.y * wind.y / windSq;
+                this.pitch = Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.7f, 1.3f);
                 this.volume = Mth.clampedMap(windSq, 0.07f, 0.2f, 0.1f, 1.5f);
             }
             else
@@ -50,20 +54,6 @@ public class WindSoundInstance extends AbstractTickableSoundInstance
                 this.volume = 0.0F;
             }
         }
-        else
-        {
-            this.stop();
-        }
-    }
-
-    private float getMinPitch()
-    {
-        return 0.7F;
-    }
-
-    private float getMaxPitch()
-    {
-        return 1.3F;
     }
 
     @Override

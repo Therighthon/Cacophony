@@ -41,10 +41,11 @@ public class WindSoundInstance extends AbstractTickableSoundInstance
 
             if (windSq > WIND_NOISE_THRESHOLD)
             {
-                // Keep upwind of the player
-                this.x = player.getX() + 2 * wind.x * wind.x / windSq;
+                // Play sound from upwind of player so that it sounds like you are facing into the wind when you are
+                // Take a sqrt, or draw 20
+                this.x = player.getX() - 2 * Math.signum(wind.x) * wind.x * wind.x / windSq;
                 this.y = player.getY() + 1;
-                this.z = player.getZ() + 2 * wind.y * wind.y / windSq;
+                this.z = player.getZ() - 2 * Math.signum(wind.y) * wind.y * wind.y / windSq;
                 this.pitch = Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.7f, 1.3f);
                 this.volume = Mth.clampedMap(windSq, 0.07f, 0.2f, 0.1f, 1.5f);
             }

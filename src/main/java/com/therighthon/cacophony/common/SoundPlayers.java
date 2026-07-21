@@ -6,6 +6,7 @@ import com.therighthon.cacophony.common.ranges.LeavesRanges;
 import com.therighthon.cacophony.common.ranges.RegistryRange;
 import java.util.ArrayList;
 import java.util.List;
+import net.minecraft.client.sounds.SoundManager;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
@@ -26,7 +27,7 @@ import net.dries007.tfc.util.tracker.WeatherHelpers;
 
 public class SoundPlayers
 {
-    public static float WIND_NOISE_THRESHOLD = 0.06f;
+    public static float WIND_NOISE_THRESHOLD = 0.07f;
     public static float STRONG_WIND_NOISE_THRESHOLD = 0.6f;
 
     public static void playPlantSound(BlockState state, Level level, BlockPos pos, RandomSource random)

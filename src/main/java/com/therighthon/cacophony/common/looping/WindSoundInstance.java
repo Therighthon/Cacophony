@@ -1,19 +1,16 @@
 package com.therighthon.cacophony.common.looping;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.sounds.AbstractTickableSoundInstance;
 import net.minecraft.client.resources.sounds.SoundInstance;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec2;
 
 import net.dries007.tfc.client.ClientHelpers;
 import net.dries007.tfc.util.climate.Climate;
-import net.dries007.tfc.world.noise.FastNoiseLite;
 
 import static com.therighthon.cacophony.common.SoundPlayers.*;
 

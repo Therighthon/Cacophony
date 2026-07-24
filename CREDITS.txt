@@ -13,7 +13,7 @@ Citation: AmphibiaWeb. 2026. <https://amphibiaweb.org> University of California,
 
 Individual Sound Credits:
 
-redwinged_blackbird_0.ogg through redwinged_blackbird_3.ogg - User Mdf - https://en.wikipedia.org/wiki/File:Agelaius-phoeniceus-001.ogg
+"redwinged_blackbird_0.ogg through redwinged_blackbird_3.ogg - User Mdf - https://en.wikipedia.org/wiki/File:Agelaius-phoeniceus-001.ogg
 pacific_tree_frog_0.ogg through pacific_tree_frog_2.ogg - FrogsFLP.wav by daveincamas -- License: Attribution 4.0 - https://freesound.org/s/71964/
 spadefoot_toad_0.ogg through spadefoot_toad_5.ogg - Spadefoot Toad - Yellowstone National Park by Nivatius  -- License: Creative Commons 0 - https://freesound.org/s/519590/
 sahara_frog_0.ogg through sahara_frog_1.ogg - Alejandro Sanz - CC-BY-NC-ND - https://observation.org/sounds/302387/
@@ -43,8 +43,65 @@ dark_spotted_frog_0.ogg through dark_spotted_frog_2.ogg - Shuangqi Liu, XC891768
 fire_bellied_toad_0.ogg through fire_bellied_toad_1.ogg - Creative Commons Media - https://www.youtube.com/watch?v=pAExMiuVKm4
 cascades_frog_0.ogg through cascades_frog_2.ogg - Western Soundscape Archive at the University of Utah J. Willard Marriott Library - https://amphibiaweb.org/cgi/amphib_query?special=call&genus=Rana&species=cascadae
 cane_toad_0.ogg through cane_toad_0.ogg - Karl Mokross, Albertina P. Lima, William E. Magnusson, Marcelo Menin, Luciana K. Erdtmann, Domingos J. Rodrigues, Claudia Keller, and Walter Hödl - https://amphibiaweb.org/cgi/amphib_query?special=call&genus=Rhinella&species=marina
+striolated_bunting_0.ogg through striolated_bunting_1.ogg - David Darrell-Lambert, XC1104515. Accessible at www.xeno-canto.org/1104515. - .
+marsh_wren_0.ogg through marsh_wren_2.ogg - Andrew McCafferty, XC1139414. Accessible at www.xeno-canto.org/1139414. - .
+pallas_grasshopper_warbler_0.ogg through pallas_grasshopper_warbler_2.ogg - Bo Shunqi 薄顺奇, XC1098964. Accessible at www.xeno-canto.org/1098964. - .
+collared_kingfisher_0.ogg through collared_kingfisher_3.ogg - David Darrell-Lambert, XC1151956. Accessible at www.xeno-canto.org/1151956. - .
+spotted_towhee_0.ogg through spotted_towhee_2.ogg - Ron Overholtz, XC559006. Accessible at www.xeno-canto.org/559006. - .
+common_loon_0.ogg through common_loon_5.ogg - Jorge Valella Robledo, XC1061801. Accessible at www.xeno-canto.org/1061801. Yoann Blanchon, XC824906. Accessible at www.xeno-canto.org/824906. - .
+spring_peeper_0.ogg through spring_peeper_1.ogg - Doug Hynes, XC936293. Accessible at www.xeno-canto.org/936293. - .
+boreal_chorus_frog_0.ogg through boreal_chorus_frog_2.ogg - Jonathon Jongsma, XC138641. Accessible at www.xeno-canto.org/138641. - .
+canada_warbler_0.ogg through canada_warbler_0.ogg - Stanislas Wroza, XC1015017. Accessible at www.xeno-canto.org/1015017. - .
+oriental_reed_warbler_0.ogg through oriental_reed_warbler_3.ogg - Bo Shunqi 薄顺奇, XC995413. Accessible at www.xeno-canto.org/995413. - .
+oriental_skylark_0.ogg through oriental_skylark_2.ogg - Ashwini Bhatia, XC1096009. Accessible at www.xeno-canto.org/1096009. - .
+dja_river_scrub_warbler_0.ogg through dja_river_scrub_warbler_2.ogg - BurBenj, XC669310. Accessible at www.xeno-canto.org/669310. - .
+banded_banana_frog_0.ogg through banded_banana_frog_1.ogg - Ben (Tremarctos Photography), XC986097. Accessible at www.xeno-canto.org/986097. - .
+louisiana_waterthrush_0.ogg through louisiana_waterthrush_2.ogg - Bobby Wilcox, XC1036413. Accessible at www.xeno-canto.org/1036413. - .
+scrub_blackbird_0.ogg through scrub_blackbird_3.ogg - Jerome Fischer, XC774821. Accessible at www.xeno-canto.org/774821. - .
+northern_waterthrush_0.ogg through northern_waterthrush_2.ogg - Gabriel Levac, XC554810. Accessible at www.xeno-canto.org/554810. - .
 western_meadowlark_0.ogg through western_meadowlark_2.ogg - Jonathon Jongsma - https://en.wikipedia.org/wiki/File:Sturnella_neglecta_-_Western_Meadowlark_-_XC76505.ogg
 two_colored_oval_frog_0.ogg through two_colored_oval_frog_1.ogg - Vitor Moris - https://commons.wikimedia.org/wiki/File:E_bicolor.ogg
+slender_heath_katydid_0.ogg through slender_heath_katydid_2.ogg - K.-G. Heller, XC875029. Accessible at www.xeno-canto.org/875029. - .
+mediterranean_katydid_0.ogg through mediterranean_katydid_1.ogg - Fraser Simpson, XC830150. Accessible at www.xeno-canto.org/830150 - .
+black_legged_meadow_katydid_0.ogg through black_legged_meadow_katydid_1.ogg - K.-G. Heller, XC875063. Accessible at www.xeno-canto.org/875063. - .
+spotted_meadow_katydid_0.ogg through spotted_meadow_katydid_5.ogg - Ray Tsu 诸仁, XC1053503. Accessible at www.xeno-canto.org/1053503. - .
+eurasian_meadow_katydid_0.ogg through eurasian_meadow_katydid_2.ogg - Dragan Chobanov, XC907637. Accessible at www.xeno-canto.org/907637. - .
+straight_lanced_katydid_0.ogg through straight_lanced_katydid_0.ogg - K.-G. Heller, XC874770. Accessible at www.xeno-canto.org/874770. - .
+african_meadow_katydid_0.ogg through african_meadow_katydid_1.ogg - Stanislas Wroza, XC928492. Accessible at www.xeno-canto.org/928492. - .
+drumming_katydid_0.ogg through drumming_katydid_3.ogg - S. Ingrisch, XC865260. Accessible at www.xeno-canto.org/865260. - .
+broad_winged_bush_katydid_0.ogg through broad_winged_bush_katydid_1.ogg - Doug Hynes, XC934482. Accessible at www.xeno-canto.org/934482. - .
+caribbean_meadow_katydid_0.ogg through caribbean_meadow_katydid_2.ogg - Baudewijn Odé, XC876113. Accessible at www.xeno-canto.org/876113. - .
+leaf_ladybird_cricket_0.ogg through leaf_ladybird_cricket_1.ogg - K.-G. Heller, XC875074. Accessible at www.xeno-canto.org/875076. - .
+two_spotted_clicket_0.ogg through two_spotted_clicket_2.ogg - Karim Haddad, XC931404. Accessible at www.xeno-canto.org/931404. - .
+steppe_cricket_0.ogg through steppe_cricket_2.ogg - K.-G. Heller, XC875022. Accessible at www.xeno-canto.org/875022. - .
+mongolian_cricket_0.ogg through mongolian_cricket_0.ogg - K.-G. Heller, XC875019. Accessible at www.xeno-canto.org/875019. - .
+common_green_grasshopper_0.ogg through common_green_grasshopper_0.ogg - K.-G. Heller, XC875056. Accessible at www.xeno-canto.org/875056. - .
+indomalayan_field_cricket_0.ogg through indomalayan_field_cricket_2.ogg - S. Ingrisch, XC873563. Accessible at www.xeno-canto.org/873563. - .
+sumatran_brown_cricket_0.ogg through sumatran_brown_cricket_3.ogg - S. Ingrisch, XC873327. Accessible at www.xeno-canto.org/873327. - .
+field_cricket_0.ogg through field_cricket_4.ogg - João Tomás, XC902044. Accessible at www.xeno-canto.org/902044. - .
+oceanic_field_cricket_0.ogg through oceanic_field_cricket_1.ogg - S. Ingrisch, XC874399. Accessible at www.xeno-canto.org/874399. - .
+brown_spotted_bush_cricket_0.ogg through brown_spotted_bush_cricket_2.ogg - Baudewijn Odé, XC753405. Accessible at www.xeno-canto.org/753405. - .
+bronzy_sunbird_0.ogg through bronzy_sunbird_3.ogg - Ranive, XC928636. Accessible at www.xeno-canto.org/928636.  Anne Ndung'u, XC366805. Accessible at www.xeno-canto.org/366805. - .
+streaky_seedeater_0.ogg through streaky_seedeater_1.ogg - François Morand, XC1053322. Accessible at www.xeno-canto.org/1053322. - .
+graceful_prinia_0.ogg through graceful_prinia_1.ogg - David Darrell-Lambert, XC1150549. Accessible at www.xeno-canto.org/1150549. - .
+greater_whitethroat_0.ogg through greater_whitethroat_2.ogg - Sunny Tseng, XC1152291. Accessible at www.xeno-canto.org/1152291. - .
+common_myna_0.ogg through common_myna_3.ogg - Albert Noorlander, XC1103046. Accessible at www.xeno-canto.org/1103046. - .
+asian_desert_warbler_0.ogg through asian_desert_warbler_2.ogg - Stanislas Wroza, XC951277. Accessible at www.xeno-canto.org/951277. - .
+white_winged_snowfinch_0.ogg through white_winged_snowfinch_1.ogg - Marcin Sołowiej, XC778619. Accessible at www.xeno-canto.org/778619. - .
+asian_short_toed_lark_0.ogg through asian_short_toed_lark_2.ogg - Stanislas Wroza, XC766078. Accessible at www.xeno-canto.org/766078. - .
+peruvian_meadowlark_0.ogg through peruvian_meadowlark_2.ogg - Dries Van de Loock, XC386966. Accessible at www.xeno-canto.org/386966. - .
+meadow_bunting_0.ogg through meadow_bunting_2.ogg - wu555, XC1018428. Accessible at www.xeno-canto.org/1018428. - .
+long_tailed_meadowlark_0.ogg through long_tailed_meadowlark_2.ogg - Cristian Pinto Fernandez, XC669694. Accessible at www.xeno-canto.org/669694. - .
+patagonian_sierra_finch_0.ogg through patagonian_sierra_finch_4.ogg - Étienne Leroy, XC508099. Accessible at www.xeno-canto.org/508099. - .
+northern_carmine_bee_eater_0.ogg through northern_carmine_bee_eater_1.ogg - Julien Birard, XC1085418. Accessible at www.xeno-canto.org/1085418. - .
+african_paradise_flycatcher_0.ogg through african_paradise_flycatcher_1.ogg - JJSUN, XC1080072. Accessible at www.xeno-canto.org/1080072. - .
+eastern_meadowlark_0.ogg through eastern_meadowlark_1.ogg - Manuel Grosselet, XC1106121. Accessible at www.xeno-canto.org/1106121. - .
+barn_swallow_0.ogg through barn_swallow_2.ogg - András Schmidt, XC1068668. Accessible at www.xeno-canto.org/1068668. - .
+yellow_headed_blackbird_0.ogg through yellow_headed_blackbird_4.ogg - Paul Marvin, XC720282. Accessible at www.xeno-canto.org/720282. - .
+song_sparrow_0.ogg through song_sparrow_1.ogg - Thomas Magarian, XC540242. Accessible at www.xeno-canto.org/540242. - .
+rufous_collared_sparrow_0.ogg through rufous_collared_sparrow_2.ogg - Jerome Fischer, XC528029. Accessible at www.xeno-canto.org/528029. - .
+common_starling_0.ogg through common_starling_1.ogg - Beatrix Saadi-Varchmin, XC980213. Accessible at www.xeno-canto.org/980213. - .
+snow_bunting_0.ogg through snow_bunting_1.ogg - bert de bruin, XC1143779. Accessible at www.xeno-canto.org/1143779. - .
 raven_0.ogg through raven_5.ogg - Lawrence Shove - https://en.wikipedia.org/wiki/File:Common_Raven_(Corvus_corax)_(W1CDR0001449_BD6).ogg
 resplendent_quetzal_0.ogg through resplendent_quetzal_2.ogg - Leander Khil - https://en.wikipedia.org/wiki/File:Resplendent_Quetzal_song_(Pharomachrus_mocinno).ogg
 rainforest_rocket_frog_0.ogg through rainforest_rocket_frog_1.ogg - stemcellsareawesome - https://www.youtube.com/watch?v=nV0mM_ywmOw
@@ -61,3 +118,77 @@ amazon_toad_0.ogg through amazon_toad_2.ogg - Karl Mokross, Albertina P. Lima, W
 pebas_stubfoot_toad_0.ogg through pebas_stubfoot_toad_0.ogg - Karl Mokross, Albertina P. Lima, William E. Magnusson, Marcelo Menin, Luciana K. Erdtmann, Domingos J. Rodrigues, Claudia Keller, and Walter Hödl - https://amphibiaweb.org/cgi/amphib_query?special=call&genus=Atelopus&species=spumarius
 granular_toad_0.ogg through granular_toad_0.ogg - Karl Mokross, Albertina P. Lima, William E. Magnusson, Marcelo Menin, Luciana K. Erdtmann, Domingos J. Rodrigues, Claudia Keller, and Walter Hödl - https://amphibiaweb.org/cgi/amphib_query?where-genus=Rhinella&where-species=granulosa
 blacksmith_frog_0.ogg through blacksmith_frog_2.ogg - Rodrigo Dela Rosa - https://amphibiaweb.org/cgi/amphib_query?special=call&genus=Boana&species=faber
+great_kiskadee_0.ogg through great_kiskadee_3.ogg - Juan Freile, XC1155341. Accessible at www.xeno-canto.org/1155341. - .
+thrush_nightingale_0.ogg through thrush_nightingale_1.ogg - User Mysid - https://en.wikipedia.org/wiki/File:Luscinia_luscinia.ogg
+black_capped_chickadee_0.ogg through black_capped_chickadee_1.ogg - Aidan Place, XC399153. Accessible at www.xeno-canto.org/399153. - .
+mourning_dove_0.ogg through mourning_dove_2.ogg - Richard E. Webster, XC583580. Accessible at www.xeno-canto.org/583580. - .
+eurasian_eagle_owl_0.ogg through eurasian_eagle_owl_1.ogg - User SanoAK - https://en.wikipedia.org/wiki/File:BuboBuboMariankaSlovakia2012.ogg
+tawny_owl_0.ogg through tawny_owl_2.ogg - Aubrey John Williams. User Ndalyrose - https://en.wikipedia.org/wiki/File:Tawny_Owl_(Strix_aluco)_(W1CDR0001519_BD8).ogg
+long_eared_owl_0.ogg through long_eared_owl_4.ogg - Romuald Mikusek, XC1104665. Accessible at www.xeno-canto.org/1104665. - .
+snowy_owl_0.ogg through snowy_owl_2.ogg - Tero Linjama, XC343144. Accessible at www.xeno-canto.org/343144. - .
+common_cuckoo_0.ogg through common_cuckoo_4.ogg - 	Vladimir Yu. Arkhipov, Arkhivov - https://en.wikipedia.org/wiki/File:Cuculus_canorus.ogg
+black_and_white_casqued_hornbill_0.ogg through black_and_white_casqued_hornbill_1.ogg - Jonathan Onongo, XC1009711. Accessible at www.xeno-canto.org/1009711. - .
+green_backed_camaroptera_0.ogg through green_backed_camaroptera_2.ogg - Walter Wallner, XC1142477. Accessible at www.xeno-canto.org/1142477. - .
+spotted_dove_0.ogg through spotted_dove_2.ogg - Sam Hambly, XC1054704. Accessible at www.xeno-canto.org/1054704. - .
+oriental_bay_owl_0.ogg through oriental_bay_owl_1.ogg - Okamoto Keita Sin, XC578801. Accessible at www.xeno-canto.org/578801. - .
+coppersmith_barbet_0.ogg through coppersmith_barbet_0.ogg - Joan Theng, XC1103040. Accessible at www.xeno-canto.org/1103040. - .
+large_frogmouth_0.ogg through large_frogmouth_1.ogg - Mike Nelson, XC216881. Accessible at www.xeno-canto.org/216881. - .
+bold_striped_tit_babbler_0.ogg through bold_striped_tit_babbler_1.ogg - Nelson, XC445082. Accessible at www.xeno-canto.org/445082. - .
+blue_eared_barbet_0.ogg through blue_eared_barbet_1.ogg - Arend Wassink, XC1069886. Accessible at www.xeno-canto.org/1069886. - .
+rufous_tailed_tailorbird_0.ogg through rufous_tailed_tailorbird_1.ogg - Dillen Ng, XC1101191. Accessible at www.xeno-canto.org/1101191. - .
+yellow_vented_bulbul_0.ogg through yellow_vented_bulbul_0.ogg - David Darrell-Lambert, XC1069296. Accessible at www.xeno-canto.org/1069296. - .
+plaintive_cuckoo_0.ogg through plaintive_cuckoo_2.ogg - Greg Irving, XC1006783. Accessible at www.xeno-canto.org/1006783. - .
+wilsons_bird_of_paradise_0.ogg through wilsons_bird_of_paradise_1.ogg - Carlos Bocos, XC1143411. Accessible at www.xeno-canto.org/1143411. - .
+palm_cockatoo_0.ogg through palm_cockatoo_2.ogg - Phil Gregory, XC615916. Accessible at www.xeno-canto.org/615916. - .
+blue_winged_kookaburra_0.ogg through blue_winged_kookaburra_1.ogg - Phil Gregory, XC613921. Accessible at www.xeno-canto.org/613921. - .
+superb_pitta_0.ogg through superb_pitta_2.ogg - Phil Gregory, XC800925. Accessible at www.xeno-canto.org/800925. - .
+papuan_king_parrot_0.ogg through papuan_king_parrot_2.ogg - Scott Connop, XC596208. Accessible at www.xeno-canto.org/596208. - .
+magnificent_bird_of_paradise_0.ogg through magnificent_bird_of_paradise_1.ogg - Scott Connop, XC591466. Accessible at www.xeno-canto.org/591466. - .
+sulphur_crested_cockatoo_0.ogg through sulphur_crested_cockatoo_1.ogg - JJSUN, XC1088472. Accessible at www.xeno-canto.org/1088472. - .
+pacific_wren_0.ogg through pacific_wren_1.ogg - Andrew McCafferty, XC1153921. Accessible at www.xeno-canto.org/1153921. - .
+american_robin_0.ogg through american_robin_1.ogg - David A. Brinkman, XC1089129. Accessible at www.xeno-canto.org/1089129. - .
+barred_owl_0.ogg through barred_owl_0.ogg - steve, XC1002439. Accessible at www.xeno-canto.org/1002439. - .
+dark_eyed_junko_0.ogg through dark_eyed_junko_2.ogg - Ed Pandolfino, XC1153566. Accessible at www.xeno-canto.org/1153566. - .
+great_horned_owl_0.ogg through great_horned_owl_1.ogg - Scott Olmstead, XC1140509. Accessible at www.xeno-canto.org/1140509. - .
+raggiana_bird_of_paradise_0.ogg through raggiana_bird_of_paradise_2.ogg - Scott Connop, XC589502. Accessible at www.xeno-canto.org/589502. - .
+tropical_mockingbird_0.ogg through tropical_mockingbird_3.ogg - Odirlei Vieira da Fonseca, XC1139553. Accessible at www.xeno-canto.org/1139553. - .
+lewis_woodpecker_0.ogg through lewis_woodpecker_2.ogg - Ed Pandolfino, XC443429. Accessible at www.xeno-canto.org/443429. - .
+rufous_collared_sparrow_0.ogg through rufous_collared_sparrow_2.ogg - Jerome Fischer, XC528029. Accessible at www.xeno-canto.org/528029. - .
+yellow_backed_oriole_0.ogg through yellow_backed_oriole_2.ogg - Jerome Fischer, XC576034. Accessible at www.xeno-canto.org/576034. - .
+keel_billed_toucan_0.ogg through keel_billed_toucan_2.ogg - Jerome Fischer, XC454095. Accessible at www.xeno-canto.org/454095. - .
+yellow_throated_toucan_0.ogg through yellow_throated_toucan_2.ogg - Scott Olmstead, XC1150128. Accessible at www.xeno-canto.org/1150128. - .
+crimson_backed_tanager_0.ogg through crimson_backed_tanager_1.ogg - Jerome Fischer, XC567307. Accessible at www.xeno-canto.org/567307. - .
+slate_colored_grosbeak_0.ogg through slate_colored_grosbeak_1.ogg - Jacob Wijpkema, XC1009064. Accessible at www.xeno-canto.org/1009064. - .
+spectacled_owl_0.ogg through spectacled_owl_1.ogg - Paul Driver, XC796964. Accessible at www.xeno-canto.org/796964. - .
+collared_trogon_0.ogg through collared_trogon_0.ogg - Cid Espínola, XC1030164. Accessible at www.xeno-canto.org/1030164. - .
+pale_breasted_thrush_0.ogg through pale_breasted_thrush_2.ogg - Jacob Wijpkema, XC1157080. Accessible at www.xeno-canto.org/1157080. - .
+mountain_wren_0.ogg through mountain_wren_2.ogg - Jerome Fischer, XC965409. Accessible at www.xeno-canto.org/965409. - .
+great_antshrike_0.ogg through great_antshrike_0.ogg - Sue Riffe, XC1071639. Accessible at www.xeno-canto.org/1071639. - .
+red_lored_amazon_0.ogg through red_lored_amazon_2.ogg - Jerome Fischer, XC454080. Accessible at www.xeno-canto.org/454080. - .
+montezuma_oropendola_0.ogg through montezuma_oropendola_2.ogg - Scott Olmstead, XC956677. Accessible at www.xeno-canto.org/956677. - .
+northern_cardinal_0.ogg through northern_cardinal_1.ogg - Scott Crabtree, XC1151504. Accessible at www.xeno-canto.org/1151504. - .
+eastern_wood_pewee_0.ogg through eastern_wood_pewee_2.ogg - Stanislas Wroza, XC1014933. Accessible at www.xeno-canto.org/1014933. - .
+wood_thrush_0.ogg through wood_thrush_3.ogg - Stanislas Wroza, XC1013067. Accessible at www.xeno-canto.org/1013067. - .
+american_goldfinch_0.ogg through american_goldfinch_1.ogg - Stanislas Wroza, XC1021832. Accessible at www.xeno-canto.org/1021832. - .
+fox_sparrow_0.ogg through fox_sparrow_2.ogg - Ron Overholtz, XC557052. Accessible at www.xeno-canto.org/557052. - .
+great_tit_0.ogg through great_tit_2.ogg - Gobi, XC991062. Accessible at www.xeno-canto.org/991062. - .
+meditteranean_tree_frog_0.ogg through meditteranean_tree_frog_2.ogg - Olivier SWIFT, XC952251. Accessible at www.xeno-canto.org/952251. - .
+two_barred_crossbill_0.ogg through two_barred_crossbill_4.ogg - Doug Hynes, XC613110. Accessible at www.xeno-canto.org/613110. - .
+varied_thrush_0.ogg through varied_thrush_2.ogg - AUDEVARD Aurélien, XC1048897. Accessible at www.xeno-canto.org/1048897. - .
+chinese_tree_frog_0.ogg through chinese_tree_frog_1.ogg - Shuangqi Liu, XC955652. Accessible at www.xeno-canto.org/955652. - .
+moltrechts_green_tree_frog_0.ogg through moltrechts_green_tree_frog_2.ogg - Lars Lachmann, XC1045295. Accessible at www.xeno-canto.org/1045295. - .
+brown_bulbul_0.ogg through brown_bulbul_0.ogg - Uku Paal, XC1016616. Accessible at www.xeno-canto.org/1016616. - .
+japanese_bush_warbler_0.ogg through japanese_bush_warbler_2.ogg - Dillen Ng, XC1101246. Accessible at www.xeno-canto.org/1101246. - .
+azure_winged_magpie_0.ogg through azure_winged_magpie_2.ogg - wu555, XC1016672. Accessible at www.xeno-canto.org/1016672. - .
+taiwan_barbet_0.ogg through taiwan_barbet_4.ogg - Lars Lachmann, XC1034473. Accessible at www.xeno-canto.org/1034473. - .
+asian_koel_0.ogg through asian_koel_1.ogg - Albert Noorlander, XC1136884. Accessible at www.xeno-canto.org/1136884. - .
+beijing_babbler_0.ogg through beijing_babbler_2.ogg - Jim Holmes, XC182820. Accessible at www.xeno-canto.org/182820. - .
+whistling_cisticola_0.ogg through whistling_cisticola_1.ogg - Bram Piot, XC1063934. Accessible at www.xeno-canto.org/1063934. - .
+chalk_browed_mockingbird_0.ogg through chalk_browed_mockingbird_1.ogg - Pedro Sanetti, XC1090727. Accessible at www.xeno-canto.org/1090727. - .
+laughing_kookaburra_0.ogg through laughing_kookaburra_0.ogg - Tom Cooney, XC1104895. Accessible at www.xeno-canto.org/1104895. - .
+western_nicator_0.ogg through western_nicator_2.ogg - Étienne Leroy, XC513778. Accessible at www.xeno-canto.org/513778. - .
+yellow_billed_turaco__0.ogg through yellow_billed_turaco__0.ogg - BurBenj, XC1120094. Accessible at www.xeno-canto.org/1120094. - .
+tambourine_dove_0.ogg through tambourine_dove_1.ogg - Budongo Conservation Field Station, XC1057572. Accessible at www.xeno-canto.org/1057572. - .
+superb_lyrebird_0.ogg through superb_lyrebird_2.ogg - Romuald Mikusek, XC1103947. Accessible at www.xeno-canto.org/1103947. - .
+willie_wagtail_0.ogg through willie_wagtail_2.ogg - Richard E. Webster, XC1074924. Accessible at www.xeno-canto.org/1074924. - .
+green_imperial_pigeon_0.ogg through green_imperial_pigeon_0.ogg - Pankaj Lad, XC214013. Accessible at www.xeno-canto.org/214013. - ."

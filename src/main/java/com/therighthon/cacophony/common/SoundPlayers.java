@@ -6,7 +6,6 @@ import com.therighthon.cacophony.common.ranges.LeavesRanges;
 import com.therighthon.cacophony.common.ranges.RegistryRange;
 import java.util.ArrayList;
 import java.util.List;
-import net.minecraft.client.sounds.SoundManager;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
@@ -119,6 +118,7 @@ public class SoundPlayers
     public static SoundEvent getValidSound(Level level, BlockPos pos, RandomSource random, DayTime time, RegistryRange[] array)
     {
         ArrayList<RegistryRange> possibleSounds = new ArrayList<>(List.of());
+        final long ticks = Calendars.CLIENT.getTicks();
 
         // Check time first since we already have that value
         for (RegistryRange species : array)
@@ -151,7 +151,12 @@ public class SoundPlayers
                                 isValid = k.equals(koppen);
                                 if (isValid)
                                 {
-                                    possibleSounds.add(species);
+                                    // Pack the list with multiple copes of animals with higher weighs right now
+                                    final int weight = species.getNoisyWeight(ticks);
+                                    for (int i = 0; i < weight; i++)
+                                    {
+                                        possibleSounds.add(species);
+                                    }
                                 }
                             }
                         }

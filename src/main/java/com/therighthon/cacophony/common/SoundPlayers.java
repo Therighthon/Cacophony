@@ -4,6 +4,7 @@ import com.therighthon.cacophony.common.ranges.FreshWaterEmergentRanges;
 import com.therighthon.cacophony.common.ranges.GrassRanges;
 import com.therighthon.cacophony.common.ranges.LeavesRanges;
 import com.therighthon.cacophony.common.ranges.RegistryRange;
+import com.therighthon.cacophony.common.ranges.SaltMarshRanges;
 import com.therighthon.cacophony.common.ranges.SnowRanges;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +20,7 @@ import org.jetbrains.annotations.Nullable;
 
 import net.dries007.tfc.client.ClimateRenderCache;
 import net.dries007.tfc.client.overworld.SolarCalculator;
+import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.climate.Climate;
@@ -36,7 +38,7 @@ public class SoundPlayers
         if (random.nextInt(20) == 0 && Climate.get(level).getWind(level, pos).lengthSquared() > 0.06)
         {
             final Block windBlock = state.getBlock();
-            if ((Helpers.isBlock(windBlock, CacophonyTags.Blocks.FRESH_EMERGENT_PLANTS) || Helpers.isBlock(windBlock, CacophonyTags.Blocks.SALTY_EMERGENT_PLANTS)) || Helpers.isBlock(windBlock, CacophonyTags.Blocks.TALL_GRASS))
+            if ((Helpers.isBlock(windBlock, CacophonyTags.Blocks.FRESH_EMERGENT_PLANTS) || Helpers.isBlock(windBlock, TFCTags.Blocks.HALOPHYTE)) || Helpers.isBlock(windBlock, CacophonyTags.Blocks.TALL_GRASS))
             {
                 if (Climate.get(level).getWind(level, pos).lengthSquared() > STRONG_WIND_NOISE_THRESHOLD && random.nextInt(2) == 0)
                 {
@@ -61,10 +63,10 @@ public class SoundPlayers
             {
                 ranges = GrassRanges.values();
             }
-            else if ((Helpers.isBlock(block, CacophonyTags.Blocks.SALTY_EMERGENT_PLANTS) || Helpers.isBlock(block, CacophonyTags.Blocks.SALTY_FLOATING_PLANTS)))
+            else if ((Helpers.isBlock(block, TFCTags.Blocks.HALOPHYTE)))
             {
-                // TODO: Saltwater Species
-                ranges = FreshWaterEmergentRanges.values();
+                // Not using salty floating plants as those are also on beaches
+                ranges = SaltMarshRanges.values();
             }
             else
             {

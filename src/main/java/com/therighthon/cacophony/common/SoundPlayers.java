@@ -4,6 +4,7 @@ import com.therighthon.cacophony.common.ranges.FreshWaterEmergentRanges;
 import com.therighthon.cacophony.common.ranges.GrassRanges;
 import com.therighthon.cacophony.common.ranges.LeavesRanges;
 import com.therighthon.cacophony.common.ranges.RegistryRange;
+import com.therighthon.cacophony.common.ranges.SnowRanges;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.core.BlockPos;
@@ -114,6 +115,22 @@ public class SoundPlayers
         }
     }
 
+    public static void playSnowSound(BlockState state, Level level, BlockPos pos, RandomSource random)
+    {
+        // check daytime
+        final DayTime time = DayTime.getFuzzyDaytime(pos.getZ(), random);
+
+        if (random.nextInt(time.getSoundRarity()) == 0)
+        {
+            final SoundEvent sound = getValidSound(level, pos, random, time, SnowRanges.values());
+
+            if (sound != null)
+            {
+                level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), sound, SoundSource.AMBIENT, 1.0f, 1.0f, false);
+            }
+        }
+    }
+
     @Nullable
     public static SoundEvent getValidSound(Level level, BlockPos pos, RandomSource random, DayTime time, RegistryRange[] array)
     {
@@ -165,7 +182,8 @@ public class SoundPlayers
             }
         }
 
-        if (possibleSounds.isEmpty()) return null;
+        if (possibleSounds.isEmpty())
+            return null;
 
         final RegistryRange species = possibleSounds.get(random.nextInt(possibleSounds.size()));
 

@@ -49,7 +49,6 @@ public final class Sounds
     public static final Id PALLAS_GRASSHOPPER_WARBLER = register("ambient.bird.pallas_grasshopper_warbler");
     public static final Id COLLARED_KINGFISHER = register("ambient.bird.collared_kingfisher");
     public static final Id SPOTTED_TOWHEE = register("ambient.bird.spotted_towhee");
-    public static final Id COMMON_LOON = register("ambient.bird.common_loon");
     public static final Id SPRING_PEEPER = register("ambient.frog.spring_peeper");
     public static final Id BOREAL_CHORUS_FROG = register("ambient.frog.boreal_chorus_frog");
     public static final Id CANADA_WARBLER = register("ambient.bird.canada_warbler");
@@ -198,6 +197,29 @@ public final class Sounds
     public static final Id WIND_IN_GRASS_STRONG = register("ambient.wind.wind_in_grass_strong");
     public static final Id ICE_CREAK = register("ambient.ice.ice_creak");
     public static final Id WIND_LOOP = register("ambient.wind.wind_loop");
+    public static final Id GLAUCOUS_WINGED_GULL = register("ambient.bird.glaucous_winged_gull");
+    public static final Id PIGEOIN_GUILLEMOT = register("ambient.bird.pigeoin_guillemot");
+    public static final Id BONAPARTES_GULL = register("ambient.bird.bonapartes_gull");
+    public static final Id COMMON_LOON = register("ambient.bird.common_loon");
+    public static final Id BLACK_OYSTERCATCHER = register("ambient.bird.black_oystercatcher");
+    public static final Id SEMIPALMATED_PLOVER = register("ambient.bird.semipalmated_plover");
+    public static final Id SHORT_TAILED_SHEARWATER = register("ambient.bird.short-tailed_shearwater");
+    public static final Id SLATY_BACKED_GULL = register("ambient.bird.slaty_backed_gull");
+    public static final Id NORTHERN_FULMAR = register("ambient.bird.northern_fulmar");
+    public static final Id FORK_TAILED_STORM_PETREL = register("ambient.bird.fork_tailed_storm_petrel");
+    public static final Id LAYSAN_ALBATROSS = register("ambient.bird.laysan_albatross");
+    public static final Id BLACK_TAILED_GULL = register("ambient.bird.black_tailed_gull");
+    public static final Id POMARINE_JAEGER = register("ambient.bird.pomarine_jaeger");
+    public static final Id HARLEQUIN_DUCK = register("ambient.bird.harlequin_duck");
+    public static final Id GREY_TAILED_TATTLER = register("ambient.bird.grey_tailed_tattler");
+    public static final Id WHITE_TAILED_TROPICBIRD = register("ambient.bird.white_tailed_tropicbird");
+    public static final Id RED_FOOTED_BOOBY = register("ambient.bird.red_footed_booby");
+    public static final Id WEDGE_TAILED_SHEARWATER = register("ambient.bird.wedge_tailed_shearwater");
+    public static final Id GREAT_FRIGATEBIRD = register("ambient.bird.great_frigatebird");
+    public static final Id WESTERN_OSPREY = register("ambient.bird.western_osprey");
+    public static final Id GREAT_BLACK_BACKED_GULL = register("ambient.bird.great_black_backed_gull");
+    public static final Id BLACK_BILLED_KITTIWAKE = register("ambient.bird.black_billed_kittiwake");
+    public static final Id YELLOW_LEGGED_GULL = register("ambient.bird.yellow_legged_gull");
 
 
     private static Id register(String name)

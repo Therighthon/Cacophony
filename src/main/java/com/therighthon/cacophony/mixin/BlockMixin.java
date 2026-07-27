@@ -1,10 +1,10 @@
 package com.therighthon.cacophony.mixin;
 
-import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
-import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.therighthon.cacophony.common.CacophonyTags;
 import com.therighthon.cacophony.common.SoundPlayers;
 import com.therighthon.cacophony.common.Sounds;
+import com.therighthon.cacophony.common.ranges.ShoreRanges;
+import com.therighthon.cacophony.common.ranges.SnowRanges;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
@@ -13,11 +13,13 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.IceBlock;
 import net.minecraft.world.level.block.SnowLayerBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.common.Tags;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import net.dries007.tfc.common.TFCTags;
 import net.dries007.tfc.util.Helpers;
 
 @Mixin(Block.class)
@@ -40,10 +42,14 @@ abstract class BlockMixin
                 {
                     level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), Sounds.ICE_CREAK.get(), SoundSource.AMBIENT, 1.0f, 1.0f, false);
                 }
+                else if (Helpers.isBlock(block, Tags.Blocks.SANDS) || Helpers.isBlock(block, Tags.Blocks.GRAVELS) || Helpers.isBlock(block, TFCTags.Blocks.MUD))
+                {
+                    SoundPlayers.playSoundFromRange(state, level, pos, random, ShoreRanges.values());
+                }
             }
             else if (block instanceof SnowLayerBlock)
             {
-                SoundPlayers.playSnowSound(state, level, pos, random);
+                SoundPlayers.playSoundFromRange(state, level, pos, random, SnowRanges.values());
             }
 
         }

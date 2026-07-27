@@ -2,8 +2,10 @@ package com.therighthon.cacophony.common.ranges;
 
 import com.therighthon.cacophony.common.DayTime;
 import java.util.List;
+import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.StringRepresentable;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 
 import net.dries007.tfc.util.climate.KoppenClimateClassification;
@@ -29,4 +31,9 @@ public interface RegistryRange extends StringRepresentable
     int getChance();
 
     int getNoisyWeight(long ticks);
+
+    default boolean isValidBiome(Holder<Biome> biome)
+    {
+        return true;
+    }
 }

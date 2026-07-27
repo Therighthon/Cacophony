@@ -6,11 +6,15 @@ import com.therighthon.cacophony.common.Sounds;
 import com.therighthon.cacophony.common.CacophonyTags;
 import java.util.List;
 import java.util.Locale;
+import net.minecraft.core.Holder;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 import net.neoforged.neoforge.common.Tags;
 
+import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.climate.KoppenClimateClassification;
 
 public enum ShoreRanges implements RegistryRange
@@ -152,5 +156,16 @@ public enum ShoreRanges implements RegistryRange
     public String getSerializedName()
     {
         return serializedName;
+    }
+
+    @Override
+    public boolean isValidBiome(Holder<Biome> biome)
+    {
+        boolean ret = false;
+        for (TagKey<Biome> tag : this.biomes)
+        {
+            ret |= biome.is(tag);
+        }
+        return ret;
     }
 }

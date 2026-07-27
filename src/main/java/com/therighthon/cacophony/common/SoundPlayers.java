@@ -5,6 +5,7 @@ import com.therighthon.cacophony.common.ranges.GrassRanges;
 import com.therighthon.cacophony.common.ranges.LeavesRanges;
 import com.therighthon.cacophony.common.ranges.RegistryRange;
 import com.therighthon.cacophony.common.ranges.SaltMarshRanges;
+import com.therighthon.cacophony.common.ranges.ShoreRanges;
 import com.therighthon.cacophony.common.ranges.SnowRanges;
 import java.util.ArrayList;
 import java.util.List;
@@ -117,14 +118,14 @@ public class SoundPlayers
         }
     }
 
-    public static void playSnowSound(BlockState state, Level level, BlockPos pos, RandomSource random)
+    public static void playSoundFromRange(BlockState state, Level level, BlockPos pos, RandomSource random, RegistryRange[] range)
     {
         // check daytime
         final DayTime time = DayTime.getFuzzyDaytime(pos.getZ(), random);
 
         if (random.nextInt(time.getSoundRarity()) == 0)
         {
-            final SoundEvent sound = getValidSound(level, pos, random, time, SnowRanges.values());
+            final SoundEvent sound = getValidSound(level, pos, random, time, range);
 
             if (sound != null)
             {
@@ -147,34 +148,37 @@ public class SoundPlayers
                 // Check elevation
                 if (pos.getY() > species.getMinElevation() && pos.getY() < species.getMaxElevation())
                 {
-                    // Check time of year
-                    final float timeOfYear = Calendars.CLIENT.getCalendarFractionOfYear();
-                    final float start = species.startYearFraction();
-                    final float end = species.endYearFraction();
-                    if ((timeOfYear > start && timeOfYear < end) || (start > end && (timeOfYear < end || timeOfYear < start)))
+                    if (species.isValidBiome(level.getBiome(pos)))
                     {
-                        // Check current weather
-                        Biome.Precipitation precipitation = WeatherHelpers.getPrecipitationAt(level, pos, Biome.Precipitation.NONE);
-
-                        if (species.validWeathers().contains(precipitation))
+                        // Check time of year
+                        final float timeOfYear = Calendars.CLIENT.getCalendarFractionOfYear();
+                        final float start = species.startYearFraction();
+                        final float end = species.endYearFraction();
+                        if ((timeOfYear > start && timeOfYear < end) || (start > end && (timeOfYear < end || timeOfYear < start)))
                         {
-                            // Finally, check climate
-                            final float rain = ClimateRenderCache.INSTANCE.getAverageRainfall();
-                            final float temp = ClimateRenderCache.INSTANCE.getAverageTemperature();
-                            final float var = ClimateRenderCache.INSTANCE.getRainVariance();
-                            final KoppenClimateClassification koppen = KoppenClimateClassification.classify(temp, rain, var, SolarCalculator.getInNorthernHemisphere(pos, level));
+                            // Check current weather
+                            Biome.Precipitation precipitation = WeatherHelpers.getPrecipitationAt(level, pos, Biome.Precipitation.NONE);
 
-                            boolean isValid;
-                            for (KoppenClimateClassification k : species.validClimates())
+                            if (species.validWeathers().contains(precipitation))
                             {
-                                isValid = k.equals(koppen);
-                                if (isValid)
+                                // Finally, check climate
+                                final float rain = ClimateRenderCache.INSTANCE.getAverageRainfall();
+                                final float temp = ClimateRenderCache.INSTANCE.getAverageTemperature();
+                                final float var = ClimateRenderCache.INSTANCE.getRainVariance();
+                                final KoppenClimateClassification koppen = KoppenClimateClassification.classify(temp, rain, var, SolarCalculator.getInNorthernHemisphere(pos, level));
+
+                                boolean isValid;
+                                for (KoppenClimateClassification k : species.validClimates())
                                 {
-                                    // Pack the list with multiple copes of animals with higher weighs right now
-                                    final int weight = species.getNoisyWeight(ticks);
-                                    for (int i = 0; i < weight; i++)
+                                    isValid = k.equals(koppen);
+                                    if (isValid)
                                     {
-                                        possibleSounds.add(species);
+                                        // Pack the list with multiple copes of animals with higher weighs right now
+                                        final int weight = species.getNoisyWeight(ticks);
+                                        for (int i = 0; i < weight; i++)
+                                        {
+                                            possibleSounds.add(species);
+                                        }
                                     }
                                 }
                             }

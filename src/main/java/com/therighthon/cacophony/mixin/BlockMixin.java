@@ -29,7 +29,7 @@ abstract class BlockMixin
     public void playAmbientSounds(BlockState state, Level level, BlockPos pos, RandomSource random, CallbackInfo ci)
     {
         final int rInt = random.nextInt(5000);
-        if (rInt < 11)
+        if (rInt < 21)
         {
             final Block block = state.getBlock();
             if (rInt == 0)
@@ -42,16 +42,15 @@ abstract class BlockMixin
                 {
                     level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), Sounds.ICE_CREAK.get(), SoundSource.AMBIENT, 1.0f, 1.0f, false);
                 }
-                else if (Helpers.isBlock(block, Tags.Blocks.SANDS) || Helpers.isBlock(block, Tags.Blocks.GRAVELS) || Helpers.isBlock(block, TFCTags.Blocks.MUD))
-                {
-                    SoundPlayers.playSoundFromRange(state, level, pos, random, ShoreRanges.values());
-                }
             }
-            else if (block instanceof SnowLayerBlock)
+            else if (rInt < 11 && block instanceof SnowLayerBlock)
             {
                 SoundPlayers.playSoundFromRange(state, level, pos, random, SnowRanges.values());
             }
-
+            else if (Helpers.isBlock(block, Tags.Blocks.SANDS) || Helpers.isBlock(block, Tags.Blocks.GRAVELS) || Helpers.isBlock(block, TFCTags.Blocks.MUD) || Helpers.isFluid(state.getFluidState(), TFCTags.Fluids.ANY_INFINITE_WATER))
+            {
+                SoundPlayers.playSoundFromRange(state, level, pos.above(25), random, ShoreRanges.values());
+            }
         }
     }
 }

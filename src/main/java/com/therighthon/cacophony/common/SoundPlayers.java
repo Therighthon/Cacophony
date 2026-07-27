@@ -167,13 +167,11 @@ public class SoundPlayers
                                 final float var = ClimateRenderCache.INSTANCE.getRainVariance();
                                 final KoppenClimateClassification koppen = KoppenClimateClassification.classify(temp, rain, var, SolarCalculator.getInNorthernHemisphere(pos, level));
 
-                                boolean isValid;
                                 for (KoppenClimateClassification k : species.validClimates())
                                 {
-                                    isValid = k.equals(koppen);
-                                    if (isValid)
+                                    if (k.equals(koppen))
                                     {
-                                        // Pack the list with multiple copes of animals with higher weighs right now
+                                        // Pack the list with multiple copies of animals with higher weighs right now
                                         final int weight = species.getNoisyWeight(ticks);
                                         for (int i = 0; i < weight; i++)
                                         {
@@ -189,7 +187,7 @@ public class SoundPlayers
         }
 
         if (possibleSounds.isEmpty())
-            return null;
+           return null;
 
         final RegistryRange species = possibleSounds.get(random.nextInt(possibleSounds.size()));
 

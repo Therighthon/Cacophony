@@ -36,11 +36,11 @@ abstract class BlockMixin
             {
                 if (block instanceof IceBlock)
                 {
-                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), Sounds.ICE_CREAK.get(), SoundSource.AMBIENT, 1.0f, 1.0f, false);
+                    SoundPlayers.playLocalSound(level, pos, Sounds.ICE_CREAK.get());
                 }
                 else if (Helpers.isBlock(block, CacophonyTags.Blocks.ICE) && (random.nextInt(10) == 0))
                 {
-                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), Sounds.ICE_CREAK.get(), SoundSource.AMBIENT, 1.0f, 1.0f, false);
+                    SoundPlayers.playLocalSound(level, pos, Sounds.ICE_CREAK.get());
                 }
             }
             else if (rInt < 11 && block instanceof SnowLayerBlock)

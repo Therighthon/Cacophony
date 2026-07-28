@@ -1,12 +1,11 @@
 package com.therighthon.cacophony.common;
 
+import com.therighthon.cacophony.CacophonyConfig;
 import com.therighthon.cacophony.common.ranges.FreshWaterEmergentRanges;
 import com.therighthon.cacophony.common.ranges.GrassRanges;
 import com.therighthon.cacophony.common.ranges.LeavesRanges;
 import com.therighthon.cacophony.common.ranges.RegistryRange;
 import com.therighthon.cacophony.common.ranges.SaltMarshRanges;
-import com.therighthon.cacophony.common.ranges.ShoreRanges;
-import com.therighthon.cacophony.common.ranges.SnowRanges;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.core.BlockPos;
@@ -43,11 +42,11 @@ public class SoundPlayers
             {
                 if (Climate.get(level).getWind(level, pos).lengthSquared() > STRONG_WIND_NOISE_THRESHOLD && random.nextInt(2) == 0)
                 {
-                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), Sounds.WIND_IN_GRASS_STRONG.get(), SoundSource.AMBIENT, 1.0f, 1.0f, false);
+                    playLocalSound(level, pos, Sounds.WIND_IN_GRASS_STRONG.get());
                 }
                 else
                 {
-                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), Sounds.WIND_IN_GRASS.get(), SoundSource.AMBIENT, 1.0f, 1.0f, false);
+                    playLocalSound(level, pos, Sounds.WIND_IN_GRASS.get());
                 }
             }
         }
@@ -76,12 +75,12 @@ public class SoundPlayers
 
             final DayTime dayTime = DayTime.getFuzzyDaytime(pos.getZ(), random);
 
-            if (random.nextInt(dayTime.getSoundRarity()) == 0)
+            if (dayTime.shouldPlaySound(random))
             {
                 final SoundEvent sound = getValidSound(level, pos, random, dayTime, ranges);
                 if (sound != null)
                 {
-                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), sound, SoundSource.AMBIENT, 1.0f, 1.0f, false);
+                    playLocalSound(level, pos, sound);
                 }
             }
         }
@@ -94,11 +93,11 @@ public class SoundPlayers
         {
             if (Climate.get(level).getWind(level, pos).lengthSquared() > STRONG_WIND_NOISE_THRESHOLD && random.nextInt(2) == 0)
             {
-                level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), Sounds.LEAVES_IN_WIND_STRONG.get(), SoundSource.AMBIENT, 1.0f, 1.0f, false);
+                playLocalSound(level, pos, Sounds.LEAVES_IN_WIND_STRONG.get());
             }
             else
             {
-                level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), Sounds.LEAVES_IN_WIND.get(), SoundSource.AMBIENT, 1.0f, 1.0f, false);
+                playLocalSound(level, pos, Sounds.LEAVES_IN_WIND.get());
             }
         }
         else
@@ -106,13 +105,13 @@ public class SoundPlayers
             // If no wind sound, check daytime
             final DayTime time = DayTime.getFuzzyDaytime(pos.getZ(), random);
 
-            if (random.nextInt(time.getSoundRarity()) == 0)
+            if (time.shouldPlaySound(random))
             {
                 final SoundEvent sound = getValidSound(level, pos, random, time, LeavesRanges.values());
 
                 if (sound != null)
                 {
-                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), sound, SoundSource.AMBIENT, 1.0f, 1.0f, false);
+                    playLocalSound(level, pos, sound);
                 }
             }
         }
@@ -123,13 +122,13 @@ public class SoundPlayers
         // check daytime
         final DayTime time = DayTime.getFuzzyDaytime(pos.getZ(), random);
 
-        if (random.nextInt(time.getSoundRarity()) == 0)
+        if (time.shouldPlaySound(random))
         {
             final SoundEvent sound = getValidSound(level, pos, random, time, range);
 
             if (sound != null)
             {
-                level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), sound, SoundSource.AMBIENT, 1.0f, 1.0f, false);
+                playLocalSound(level, pos, sound);
             }
         }
     }
@@ -197,5 +196,14 @@ public class SoundPlayers
         }
 
         return null;
+    }
+
+    public static void playLocalSound(Level level, BlockPos pos, SoundEvent sound)
+    {
+        playLocalSound(level, pos, sound, 1f, 1f, false);
+    }
+    public static void playLocalSound(Level level, BlockPos pos, SoundEvent sound, float volume, float pitch, boolean distanceDelay)
+    {
+        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), sound, SoundSource.AMBIENT, CacophonyConfig.CLIENT.ambientSoundsScale.get().floatValue() * volume, pitch, distanceDelay);
     }
 }

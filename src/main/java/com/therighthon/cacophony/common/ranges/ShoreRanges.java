@@ -1,5 +1,7 @@
 package com.therighthon.cacophony.common.ranges;
 
+import com.therighthon.cacophony.CacophonyClientConfig;
+import com.therighthon.cacophony.CacophonyConfig;
 import com.therighthon.cacophony.common.DayTime;
 import com.therighthon.cacophony.common.Noise1D;
 import com.therighthon.cacophony.common.Sounds;
@@ -16,7 +18,7 @@ import net.dries007.tfc.util.climate.KoppenClimateClassification;
 
 public enum ShoreRanges implements RegistryRange
 {
-    GLAUCOUS_WINGED_GULL(Sounds.GLAUCOUS_WINGED_GULL.get(), 2, new Noise1D(17000, 10, 300), List.of(CacophonyTags.Biomes.IS_SALT_MARSH, CacophonyTags.Biomes.IS_OCEANIC_MOUNTAINS, CacophonyTags.Biomes.IS_ISOLATED_ISLAND, Tags.Biomes.IS_BEACH), List.of(DayTime.DAY, DayTime.DAWN), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DSA, KoppenClimateClassification.DSB, KoppenClimateClassification.DSC, KoppenClimateClassification.DSD, KoppenClimateClassification.CSA, KoppenClimateClassification.CSB, KoppenClimateClassification.CSC), 0f, 1f, 83, 200),
+    GLAUCOUS_WINGED_GULL(Sounds.GLAUCOUS_WINGED_GULL.get(), CacophonyConfig.CLIENT.birdGlaucousWingedGullSoundRarity.get(), new Noise1D(17000, 10, 300), List.of(CacophonyTags.Biomes.IS_SALT_MARSH, CacophonyTags.Biomes.IS_OCEANIC_MOUNTAINS, CacophonyTags.Biomes.IS_ISOLATED_ISLAND, Tags.Biomes.IS_BEACH), List.of(DayTime.DAY, DayTime.DAWN), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DSA, KoppenClimateClassification.DSB, KoppenClimateClassification.DSC, KoppenClimateClassification.DSD, KoppenClimateClassification.CSA, KoppenClimateClassification.CSB, KoppenClimateClassification.CSC), 0f, 1f, 83, 200),
     PIGEOIN_GUILLEMOT(Sounds.PIGEOIN_GUILLEMOT.get(), 5, new Noise1D(17001, 10, 300), List.of(CacophonyTags.Biomes.IS_CLIFFY_SHORE, CacophonyTags.Biomes.IS_ISOLATED_ISLAND), List.of(DayTime.DAY), List.of(Biome.Precipitation.NONE, Biome.Precipitation.RAIN), List.of(KoppenClimateClassification.DSA, KoppenClimateClassification.DSB, KoppenClimateClassification.DSC, KoppenClimateClassification.DSD, KoppenClimateClassification.CSA, KoppenClimateClassification.CSB, KoppenClimateClassification.CSC, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD), 0f, 1f, 83, 200),
     BONAPARTES_GULL_SUMMER(Sounds.BONAPARTES_GULL.get(), 2, new Noise1D(17002, 10, 300), List.of(CacophonyTags.Biomes.IS_SURFACE_LAKE), List.of(DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DSA, KoppenClimateClassification.DSB, KoppenClimateClassification.DSC, KoppenClimateClassification.DSD, KoppenClimateClassification.DFA, KoppenClimateClassification.DFB, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD), 0.416666666666667f, 0.666666666666667f, 83, 200),
     BONAPARTES_GULL_AUTUMN(Sounds.BONAPARTES_GULL.get(), 2, new Noise1D(17003, 10, 300), List.of(CacophonyTags.Biomes.IS_SURFACE_LAKE, Tags.Biomes.IS_BEACH, CacophonyTags.Biomes.IS_OCEANIC_MOUNTAINS), List.of(DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.CSC, KoppenClimateClassification.CFC, KoppenClimateClassification.DFA, KoppenClimateClassification.DSA), 0.666666666666667f, 0.833333333333333f, 83, 200),

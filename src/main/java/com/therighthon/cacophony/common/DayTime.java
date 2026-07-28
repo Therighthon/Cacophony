@@ -1,5 +1,6 @@
 package com.therighthon.cacophony.common;
 
+import com.therighthon.cacophony.CacophonyConfig;
 import net.minecraft.util.RandomSource;
 
 import net.dries007.tfc.client.ClimateRenderCache;
@@ -8,10 +9,10 @@ import net.dries007.tfc.util.calendar.Calendars;
 
 public enum DayTime
 {
-    DAWN(6),
-    DAY(8),
-    DUSK(5),
-    DARK(12);
+    DAWN(CacophonyConfig.CLIENT.dawnSoundRarity.get()),
+    DAY(CacophonyConfig.CLIENT.daySoundRarity.get()),
+    DUSK(CacophonyConfig.CLIENT.duskSoundRarity.get()),
+    DARK(CacophonyConfig.CLIENT.darkSoundRarity.get());
 
     private final int soundRarity;
 
@@ -46,9 +47,15 @@ public enum DayTime
         }
     }
 
-
-    public int getSoundRarity()
+    public boolean shouldPlaySound(RandomSource random)
     {
-        return soundRarity;
+        if (soundRarity == 0)
+        {
+            return false;
+        }
+        else
+        {
+            return random.nextInt(soundRarity) == 0;
+        }
     }
 }

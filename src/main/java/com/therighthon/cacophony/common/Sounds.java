@@ -197,6 +197,11 @@ public final class Sounds
     public static final Id WIND_IN_GRASS_STRONG = register("ambient.wind.wind_in_grass_strong");
     public static final Id ICE_CREAK = register("ambient.ice.ice_creak");
     public static final Id WIND_LOOP = register("ambient.wind.wind_loop");
+    public static final Id CALIFORNIA_CRICKETS = register("ambient.cricket.looping.california_crickets");
+    public static final Id SOUTH_AFRICA_CRICKETS = register("ambient.cricket.looping.south_africa_crickets");
+    public static final Id FRANCE_CRICKETS = register("ambient.cricket.looping.france_crickets");
+    public static final Id BRAZIL_CRICKETS = register("ambient.cricket.looping.brazil_crickets");
+    public static final Id CHINA_CRICKETS = register("ambient.cricket.looping.china_crickets");
     public static final Id GLAUCOUS_WINGED_GULL = register("ambient.bird.glaucous_winged_gull");
     public static final Id PIGEON_GUILLEMOT = register("ambient.bird.pigeon_guillemot");
     public static final Id BONAPARTES_GULL = register("ambient.bird.bonapartes_gull");

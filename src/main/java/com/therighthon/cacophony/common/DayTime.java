@@ -11,7 +11,8 @@ public enum DayTime
     DAWN(6),
     DAY(8),
     DUSK(5),
-    DARK(12);
+    DARK(12),
+    BYPASS(1);
 
     private final int defaultSoundRarity;
 

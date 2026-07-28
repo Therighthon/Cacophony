@@ -9,16 +9,16 @@ import net.dries007.tfc.util.calendar.Calendars;
 
 public enum DayTime
 {
-    DAWN(CacophonyConfig.CLIENT.dawnSoundRarity.get()),
-    DAY(CacophonyConfig.CLIENT.daySoundRarity.get()),
-    DUSK(CacophonyConfig.CLIENT.duskSoundRarity.get()),
-    DARK(CacophonyConfig.CLIENT.darkSoundRarity.get());
+    DAWN(6),
+    DAY(8),
+    DUSK(5),
+    DARK(12);
 
-    private final int soundRarity;
+    private final int defaultSoundRarity;
 
     DayTime(int soundRarity)
     {
-        this.soundRarity = soundRarity;
+        this.defaultSoundRarity = soundRarity;
     }
 
     public static DayTime getFuzzyDaytime(int z, RandomSource random)
@@ -47,15 +47,21 @@ public enum DayTime
         }
     }
 
+    public int getDefaultSoundRarity()
+    {
+        return this.defaultSoundRarity;
+    }
+
     public boolean shouldPlaySound(RandomSource random)
     {
-        if (soundRarity == 0)
+        int val = CacophonyConfig.CLIENT.dayTimeSoundRarities.getOrDefault(this, this::getDefaultSoundRarity).get();
+        if (val == 0)
         {
             return false;
         }
         else
         {
-            return random.nextInt(soundRarity) == 0;
+            return random.nextInt(val) == 0;
         }
     }
 }

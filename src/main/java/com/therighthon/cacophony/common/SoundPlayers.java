@@ -190,7 +190,7 @@ public class SoundPlayers
 
         final RegistryRange species = possibleSounds.get(random.nextInt(possibleSounds.size()));
 
-        if (random.nextInt(species.getChance()) == 0)
+        if (species.shouldRandomlyCall(random))
         {
             return species.sound();
         }

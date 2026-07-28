@@ -1,11 +1,13 @@
 package com.therighthon.cacophony.common.ranges;
 
+import com.therighthon.cacophony.CacophonyConfig;
 import com.therighthon.cacophony.common.DayTime;
 import com.therighthon.cacophony.common.Noise1D;
 import com.therighthon.cacophony.common.Sounds;
 import java.util.List;
 import java.util.Locale;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.biome.Biome;
 
 import net.dries007.tfc.util.climate.KoppenClimateClassification;
@@ -197,7 +199,15 @@ public enum LeavesRanges implements RegistryRange
     }
 
     @Override
-    public int getChance()
+    public boolean shouldRandomlyCall(RandomSource random)
+    {
+        int val = CacophonyConfig.CLIENT.leavesSoundRarities.getOrDefault(this, this::defaultRarity).get();
+        if (val == 0) return false;
+        return random.nextInt(val) == 0;
+    }
+
+    @Override
+    public int defaultRarity()
     {
         return chance;
     }

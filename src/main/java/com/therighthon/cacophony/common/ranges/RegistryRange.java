@@ -4,6 +4,7 @@ import com.therighthon.cacophony.common.DayTime;
 import java.util.List;
 import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
@@ -28,7 +29,9 @@ public interface RegistryRange extends StringRepresentable
 
     int getMaxElevation();
 
-    int getChance();
+    int defaultRarity();
+
+    public boolean shouldRandomlyCall(RandomSource random);
 
     int getNoisyWeight(long ticks);
 

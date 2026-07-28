@@ -28,7 +28,7 @@ public enum GrassRanges implements RegistryRange
     BROAD_WINGED_BUSH_KATYDID(Sounds.BROAD_WINGED_BUSH_KATYDID.get(), 3, new Noise1D(32011, 10, 300), List.of(DayTime.DUSK, DayTime.DARK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DFC, KoppenClimateClassification.DFB), 0.166666666666667f, 0.833333333333333f, 60, 320),
     CARIBBEAN_MEADOW_KATYDID(Sounds.CARIBBEAN_MEADOW_KATYDID.get(), 4, new Noise1D(32012, 10, 300), List.of(DayTime.DUSK, DayTime.DARK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.AF, KoppenClimateClassification.AM), 0f, 1f, 60, 320),
     LEAF_LADYBIRD_CRICKET(Sounds.LEAF_LADYBIRD_CRICKET.get(), 3, new Noise1D(32013, 10, 300), List.of(DayTime.DUSK, DayTime.DARK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.AM, KoppenClimateClassification.AW, KoppenClimateClassification.AS), 0f, 1f, 60, 320),
-    TWO_SPOTTED_CLICKET(Sounds.TWO_SPOTTED_CLICKET.get(), 3, new Noise1D(32014, 10, 300), List.of(DayTime.DUSK, DayTime.DARK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.BWH, KoppenClimateClassification.BWK), 0.166666666666667f, 0.833333333333333f, 60, 320),
+    TWO_SPOTTED_CRICKET(Sounds.TWO_SPOTTED_CRICKET.get(), 3, new Noise1D(32014, 10, 300), List.of(DayTime.DUSK, DayTime.DARK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.BWH, KoppenClimateClassification.BWK), 0.166666666666667f, 0.833333333333333f, 60, 320),
     STEPPE_CRICKET(Sounds.STEPPE_CRICKET.get(), 3, new Noise1D(32015, 10, 300), List.of(DayTime.DUSK, DayTime.DARK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.BSK, KoppenClimateClassification.DWB, KoppenClimateClassification.DWC, KoppenClimateClassification.DWD), 0.333333333333333f, 0.833333333333333f, 60, 320),
     MONGOLIAN_CRICKET(Sounds.MONGOLIAN_CRICKET.get(), 3, new Noise1D(32016, 10, 300), List.of(DayTime.DUSK, DayTime.DARK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.BSK, KoppenClimateClassification.DWB, KoppenClimateClassification.DWC, KoppenClimateClassification.BWK), 0.166666666666667f, 0.666666666666667f, 60, 320),
     COMMON_GREEN_GRASSHOPPER(Sounds.COMMON_GREEN_GRASSHOPPER.get(), 3, new Noise1D(32017, 10, 300), List.of(DayTime.DUSK, DayTime.DARK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DFB, KoppenClimateClassification.DFA, KoppenClimateClassification.CFC), 0.166666666666667f, 0.833333333333333f, 60, 320),
@@ -144,9 +144,10 @@ public enum GrassRanges implements RegistryRange
     @Override
     public boolean shouldRandomlyCall(RandomSource random)
     {
-        int val = CacophonyConfig.CLIENT.grassSoundRarities.getOrDefault(this, this::defaultRarity).get();
-        if (val == 0) return false;
-        return random.nextInt(val) == 0;
+//        int val = CacophonyConfig.CLIENT.grassSoundRarities.getOrDefault(this, this::defaultRarity).get();
+//        if (val == 0) return false;
+//        return random.nextInt(val) == 0;
+        return random.nextInt(defaultRarity()) == 0;
     }
 
     @Override

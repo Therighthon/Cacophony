@@ -28,7 +28,7 @@ public class Cacophony
     public Cacophony(ModContainer modContainer, IEventBus modBus)
     {
         modBus.addListener(this::clientSetup);
-        modContainer.registerConfig(ModConfig.Type.CLIENT, TFCConfig.CLIENT.spec());
+//        modContainer.registerConfig(ModConfig.Type.CLIENT, TFCConfig.CLIENT.spec());
         if (FMLEnvironment.dist == Dist.CLIENT)
         {
             NeoForge.EVENT_BUS.register(new LoopingSoundPlayer(Minecraft.getInstance()));

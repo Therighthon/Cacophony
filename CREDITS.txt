@@ -71,7 +71,7 @@ drumming_katydid_0.ogg through drumming_katydid_3.ogg - S. Ingrisch, XC865260. A
 broad_winged_bush_katydid_0.ogg through broad_winged_bush_katydid_1.ogg - Doug Hynes, XC934482. Accessible at www.xeno-canto.org/934482.
 caribbean_meadow_katydid_0.ogg through caribbean_meadow_katydid_2.ogg - Baudewijn Odé, XC876113. Accessible at www.xeno-canto.org/876113.
 leaf_ladybird_cricket_0.ogg through leaf_ladybird_cricket_1.ogg - K.-G. Heller, XC875074. Accessible at www.xeno-canto.org/875076.
-two_spotted_clicket_0.ogg through two_spotted_clicket_2.ogg - Karim Haddad, XC931404. Accessible at www.xeno-canto.org/931404.
+two_spotted_cricket_0.ogg through two_spotted_cricket_2.ogg - Karim Haddad, XC931404. Accessible at www.xeno-canto.org/931404.
 steppe_cricket_0.ogg through steppe_cricket_2.ogg - K.-G. Heller, XC875022. Accessible at www.xeno-canto.org/875022.
 mongolian_cricket_0.ogg through mongolian_cricket_0.ogg - K.-G. Heller, XC875019. Accessible at www.xeno-canto.org/875019.
 common_green_grasshopper_0.ogg through common_green_grasshopper_0.ogg - K.-G. Heller, XC875056. Accessible at www.xeno-canto.org/875056.
@@ -170,7 +170,7 @@ wood_thrush_0.ogg through wood_thrush_3.ogg - Stanislas Wroza, XC1013067. Access
 american_goldfinch_0.ogg through american_goldfinch_1.ogg - Stanislas Wroza, XC1021832. Accessible at www.xeno-canto.org/1021832.
 fox_sparrow_0.ogg through fox_sparrow_2.ogg - Ron Overholtz, XC557052. Accessible at www.xeno-canto.org/557052.
 great_tit_0.ogg through great_tit_2.ogg - Gobi, XC991062. Accessible at www.xeno-canto.org/991062.
-meditteranean_tree_frog_0.ogg through meditteranean_tree_frog_2.ogg - Olivier SWIFT, XC952251. Accessible at www.xeno-canto.org/952251.
+mediterranean_tree_frog_0.ogg through mediterranean_tree_frog_2.ogg - Olivier SWIFT, XC952251. Accessible at www.xeno-canto.org/952251.
 two_barred_crossbill_0.ogg through two_barred_crossbill_4.ogg - Doug Hynes, XC613110. Accessible at www.xeno-canto.org/613110.
 varied_thrush_0.ogg through varied_thrush_2.ogg - AUDEVARD Aurélien, XC1048897. Accessible at www.xeno-canto.org/1048897.
 chinese_tree_frog_0.ogg through chinese_tree_frog_1.ogg - Shuangqi Liu, XC955652. Accessible at www.xeno-canto.org/955652.
@@ -185,13 +185,13 @@ whistling_cisticola_0.ogg through whistling_cisticola_1.ogg - Bram Piot, XC10639
 chalk_browed_mockingbird_0.ogg through chalk_browed_mockingbird_1.ogg - Pedro Sanetti, XC1090727. Accessible at www.xeno-canto.org/1090727.
 laughing_kookaburra_0.ogg through laughing_kookaburra_0.ogg - Tom Cooney, XC1104895. Accessible at www.xeno-canto.org/1104895.
 western_nicator_0.ogg through western_nicator_2.ogg - Étienne Leroy, XC513778. Accessible at www.xeno-canto.org/513778.
-yellow_billed_turaco__0.ogg through yellow_billed_turaco__0.ogg - BurBenj, XC1120094. Accessible at www.xeno-canto.org/1120094.
+yellow_billed_turaco_0.ogg through yellow_billed_turaco_0.ogg - BurBenj, XC1120094. Accessible at www.xeno-canto.org/1120094.
 tambourine_dove_0.ogg through tambourine_dove_1.ogg - Budongo Conservation Field Station, XC1057572. Accessible at www.xeno-canto.org/1057572.
 superb_lyrebird_0.ogg through superb_lyrebird_2.ogg - Romuald Mikusek, XC1103947. Accessible at www.xeno-canto.org/1103947.
 willie_wagtail_0.ogg through willie_wagtail_2.ogg - Richard E. Webster, XC1074924. Accessible at www.xeno-canto.org/1074924.
 green_imperial_pigeon_0.ogg through green_imperial_pigeon_0.ogg - Pankaj Lad, XC214013. Accessible at www.xeno-canto.org/214013.
 glaucous_winged_gull_0.ogg through glaucous_winged_gull_1.ogg - Peter Ward and Ken Hall, XC612331. Accessible at www.xeno-canto.org/612331.
-pigeoin_guillemot_0.ogg through pigeoin_guillemot_2.ogg - Rachel Hudson, XC818942. Accessible atwww.xeno-canto.org/818942..
+pigeon_guillemot_0.ogg through pigeon_guillemot_2.ogg - Rachel Hudson, XC818942. Accessible atwww.xeno-canto.org/818942..
 bonapartes_gull_0.ogg through bonapartes_gull_2.ogg - Stanislas Wroza, XC1013580. Accessible at www.xeno-canto.org/1013580.
 common_loon_0.ogg through common_loon_5.ogg - Jorge Valella Robledo, XC1061801. Accessible at www.xeno-canto.org/1061801. Yoann Blanchon, XC824906. Accessible at www.xeno-canto.org/824906.
 black_oystercatcher_0.ogg through black_oystercatcher_2.ogg - Bruce Lagerquist, XC351803. Accessible at www.xeno-canto.org/351803.

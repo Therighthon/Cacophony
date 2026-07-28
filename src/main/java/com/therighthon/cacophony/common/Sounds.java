@@ -72,7 +72,7 @@ public final class Sounds
     public static final Id BROAD_WINGED_BUSH_KATYDID = register("ambient.cricket.broad_winged_bush_katydid");
     public static final Id CARIBBEAN_MEADOW_KATYDID = register("ambient.cricket.caribbean_meadow_katydid");
     public static final Id LEAF_LADYBIRD_CRICKET = register("ambient.cricket.leaf_ladybird_cricket");
-    public static final Id TWO_SPOTTED_CLICKET = register("ambient.cricket.two_spotted_clicket");
+    public static final Id TWO_SPOTTED_CRICKET = register("ambient.cricket.two_spotted_cricket");
     public static final Id STEPPE_CRICKET = register("ambient.cricket.steppe_cricket");
     public static final Id MONGOLIAN_CRICKET = register("ambient.cricket.mongolian_cricket");
     public static final Id COMMON_GREEN_GRASSHOPPER = register("ambient.cricket.common_green_grasshopper");
@@ -171,7 +171,7 @@ public final class Sounds
     public static final Id AMERICAN_GOLDFINCH = register("ambient.bird.american_goldfinch");
     public static final Id FOX_SPARROW = register("ambient.bird.fox_sparrow");
     public static final Id GREAT_TIT = register("ambient.bird.great_tit");
-    public static final Id MEDITTERANEAN_TREE_FROG = register("ambient.frog.meditteranean_tree_frog");
+    public static final Id MEDITERRANEAN_TREE_FROG = register("ambient.frog.mediterranean_tree_frog");
     public static final Id TWO_BARRED_CROSSBILL = register("ambient.bird.two_barred_crossbill");
     public static final Id VARIED_THRUSH = register("ambient.bird.varied_thrush");
     public static final Id CHINESE_TREE_FROG = register("ambient.frog.chinese_tree_frog");
@@ -186,7 +186,7 @@ public final class Sounds
     public static final Id CHALK_BROWED_MOCKINGBIRD = register("ambient.bird.chalk_browed_mockingbird");
     public static final Id LAUGHING_KOOKABURRA = register("ambient.bird.laughing_kookaburra");
     public static final Id WESTERN_NICATOR = register("ambient.bird.western_nicator");
-    public static final Id YELLOW_BILLED_TURACO_ = register("ambient.bird.yellow_billed_turaco_");
+    public static final Id YELLOW_BILLED_TURACO = register("ambient.bird.yellow_billed_turaco");
     public static final Id TAMBOURINE_DOVE = register("ambient.bird.tambourine_dove");
     public static final Id SUPERB_LYREBIRD = register("ambient.bird.superb_lyrebird");
     public static final Id WILLIE_WAGTAIL = register("ambient.bird.willie_wagtail");
@@ -198,12 +198,12 @@ public final class Sounds
     public static final Id ICE_CREAK = register("ambient.ice.ice_creak");
     public static final Id WIND_LOOP = register("ambient.wind.wind_loop");
     public static final Id GLAUCOUS_WINGED_GULL = register("ambient.bird.glaucous_winged_gull");
-    public static final Id PIGEOIN_GUILLEMOT = register("ambient.bird.pigeoin_guillemot");
+    public static final Id PIGEON_GUILLEMOT = register("ambient.bird.pigeon_guillemot");
     public static final Id BONAPARTES_GULL = register("ambient.bird.bonapartes_gull");
     public static final Id COMMON_LOON = register("ambient.bird.common_loon");
     public static final Id BLACK_OYSTERCATCHER = register("ambient.bird.black_oystercatcher");
     public static final Id SEMIPALMATED_PLOVER = register("ambient.bird.semipalmated_plover");
-    public static final Id SHORT_TAILED_SHEARWATER = register("ambient.bird.short-tailed_shearwater");
+    public static final Id SHORT_TAILED_SHEARWATER = register("ambient.bird.short_tailed_shearwater");
     public static final Id SLATY_BACKED_GULL = register("ambient.bird.slaty_backed_gull");
     public static final Id NORTHERN_FULMAR = register("ambient.bird.northern_fulmar");
     public static final Id FORK_TAILED_STORM_PETREL = register("ambient.bird.fork_tailed_storm_petrel");
@@ -220,7 +220,6 @@ public final class Sounds
     public static final Id GREAT_BLACK_BACKED_GULL = register("ambient.bird.great_black_backed_gull");
     public static final Id BLACK_BILLED_KITTIWAKE = register("ambient.bird.black_billed_kittiwake");
     public static final Id YELLOW_LEGGED_GULL = register("ambient.bird.yellow_legged_gull");
-
 
     private static Id register(String name)
     {

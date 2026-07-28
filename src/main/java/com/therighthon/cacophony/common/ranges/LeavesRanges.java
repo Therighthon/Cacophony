@@ -75,6 +75,7 @@ public enum LeavesRanges implements RegistryRange
     TROPICAL_MOCKINGBIRD(Sounds.TROPICAL_MOCKINGBIRD.get(), 5, new Noise1D(69058, 10, 300), List.of(DayTime.DAWN, DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.AW, KoppenClimateClassification.AS), 0f, 1f, 60, 200),
     LEWIS_WOODPECKER_SUMMER(Sounds.LEWIS_WOODPECKER.get(), 5, new Noise1D(69059, 10, 300), List.of(DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.CSC, KoppenClimateClassification.DSA, KoppenClimateClassification.DSB, KoppenClimateClassification.BSK), 0.25f, 0.75f, 60, 200),
     LEWIS_WOODPECKER_WINTER(Sounds.LEWIS_WOODPECKER.get(), 5, new Noise1D(69060, 10, 300), List.of(DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.CSC, KoppenClimateClassification.DSA, KoppenClimateClassification.CSA, KoppenClimateClassification.CSB, KoppenClimateClassification.BSK), 0.75f, 0.25f, 60, 200),
+
     YELLOW_BACKED_ORIOLE(Sounds.YELLOW_BACKED_ORIOLE.get(), 5, new Noise1D(69062, 10, 300), List.of(DayTime.DAWN, DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.AS, KoppenClimateClassification.AW), 0f, 1f, 60, 100),
     KEEL_BILLED_TOUCAN(Sounds.KEEL_BILLED_TOUCAN.get(), 5, new Noise1D(69063, 10, 300), List.of(DayTime.DAWN, DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.AF, KoppenClimateClassification.AW, KoppenClimateClassification.AS), 0f, 1f, 60, 200),
     YELLOW_THROATED_TOUCAN(Sounds.YELLOW_THROATED_TOUCAN.get(), 5, new Noise1D(69064, 10, 300), List.of(DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.AF), 0f, 1f, 60, 110),
@@ -101,7 +102,7 @@ public enum LeavesRanges implements RegistryRange
     FOX_SPARROW_WINTER(Sounds.FOX_SPARROW.get(), 5, new Noise1D(69085, 10, 300), List.of(DayTime.DAWN, DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.CFA, KoppenClimateClassification.CFB, KoppenClimateClassification.CFC), 0.833333333333333f, 0.333333333333333f, 60, 200),
     FOX_SPARROW_SPRING(Sounds.FOX_SPARROW.get(), 5, new Noise1D(69086, 10, 300), List.of(DayTime.DAWN, DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DFA, KoppenClimateClassification.DFB, KoppenClimateClassification.DFC), 0.166666666666667f, 0.333333333333333f, 60, 200),
     GREAT_TIT(Sounds.GREAT_TIT.get(), 5, new Noise1D(69087, 10, 300), List.of(DayTime.DAWN, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.CSA, KoppenClimateClassification.CSB, KoppenClimateClassification.CFB, KoppenClimateClassification.CFC, KoppenClimateClassification.DFA, KoppenClimateClassification.DFB, KoppenClimateClassification.DFC), 0f, 1f, 60, 200),
-    MEDITTERANEAN_TREE_FROG(Sounds.MEDITTERANEAN_TREE_FROG.get(), 2, new Noise1D(69088, 10, 300), List.of(DayTime.DUSK, DayTime.DARK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.CSA, KoppenClimateClassification.CSB, KoppenClimateClassification.CSC), 0.166666666666667f, 0.583333333333333f, 60, 200),
+    MEDITERRANEAN_TREE_FROG(Sounds.MEDITERRANEAN_TREE_FROG.get(), 2, new Noise1D(69088, 10, 300), List.of(DayTime.DUSK, DayTime.DARK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.CSA, KoppenClimateClassification.CSB, KoppenClimateClassification.CSC), 0.166666666666667f, 0.583333333333333f, 60, 200),
     TWO_BARRED_CROSSBILL(Sounds.TWO_BARRED_CROSSBILL.get(), 5, new Noise1D(69089, 10, 300), List.of(DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DSC, KoppenClimateClassification.DSD, KoppenClimateClassification.DWC, KoppenClimateClassification.DWD, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD), 0f, 1f, 60, 200),
     VARIED_THRUSH_SUMMER(Sounds.VARIED_THRUSH.get(), 5, new Noise1D(69090, 10, 300), List.of(DayTime.DAWN, DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE, Biome.Precipitation.SNOW), List.of(KoppenClimateClassification.DSA, KoppenClimateClassification.DSB, KoppenClimateClassification.DSC, KoppenClimateClassification.DSD, KoppenClimateClassification.DFC), 0.416666666666667f, 0.666666666666667f, 110, 300),
     VARIED_THRUSH_WINTER(Sounds.VARIED_THRUSH.get(), 5, new Noise1D(69091, 10, 300), List.of(DayTime.DAWN, DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE, Biome.Precipitation.SNOW), List.of(KoppenClimateClassification.CSA, KoppenClimateClassification.CSB, KoppenClimateClassification.CSC, KoppenClimateClassification.DSA), 0.666666666666667f, 0.416666666666667f, 110, 300),
@@ -120,7 +121,7 @@ public enum LeavesRanges implements RegistryRange
     CHALK_BROWED_MOCKINGBIRD(Sounds.CHALK_BROWED_MOCKINGBIRD.get(), 5, new Noise1D(69104, 10, 300), List.of(DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.AW, KoppenClimateClassification.AS), 0f, 1f, 60, 200),
     LAUGHING_KOOKABURRA(Sounds.LAUGHING_KOOKABURRA.get(), 12, new Noise1D(69105, 10, 300), List.of(DayTime.DAWN, DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.BSH, KoppenClimateClassification.CFA), 0f, 1f, 60, 200),
     WESTERN_NICATOR(Sounds.WESTERN_NICATOR.get(), 5, new Noise1D(69106, 10, 300), List.of(DayTime.DAWN, DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.AF, KoppenClimateClassification.AW, KoppenClimateClassification.AS, KoppenClimateClassification.AM), 0f, 1f, 60, 200),
-    YELLOW_BILLED_TURACO_(Sounds.YELLOW_BILLED_TURACO_.get(), 5, new Noise1D(69107, 10, 300), List.of(DayTime.DAWN, DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.AW, KoppenClimateClassification.AS), 0f, 1f, 60, 200),
+    YELLOW_BILLED_TURACO(Sounds.YELLOW_BILLED_TURACO.get(), 5, new Noise1D(69107, 10, 300), List.of(DayTime.DAWN, DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.AW, KoppenClimateClassification.AS), 0f, 1f, 60, 200),
     TAMBOURINE_DOVE(Sounds.TAMBOURINE_DOVE.get(), 5, new Noise1D(69108, 10, 300), List.of(DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.AF, KoppenClimateClassification.AM, KoppenClimateClassification.AW, KoppenClimateClassification.AS), 0f, 1f, 60, 200),
     SUPERB_LYREBIRD(Sounds.SUPERB_LYREBIRD.get(), 12, new Noise1D(69109, 10, 300), List.of(DayTime.DAWN, DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.BSH, KoppenClimateClassification.CFA, KoppenClimateClassification.AW, KoppenClimateClassification.AS), 0f, 1f, 60, 200),
     WILLIE_WAGTAIL(Sounds.WILLIE_WAGTAIL.get(), 5, new Noise1D(69110, 10, 300), List.of(DayTime.DUSK, DayTime.DARK, DayTime.DAWN), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.BWH, KoppenClimateClassification.BWK), 0f, 1f, 60, 200),
@@ -201,9 +202,10 @@ public enum LeavesRanges implements RegistryRange
     @Override
     public boolean shouldRandomlyCall(RandomSource random)
     {
-        int val = CacophonyConfig.CLIENT.leavesSoundRarities.getOrDefault(this, this::defaultRarity).get();
-        if (val == 0) return false;
-        return random.nextInt(val) == 0;
+//        int val = CacophonyConfig.CLIENT.leavesSoundRarities.getOrDefault(this, this::defaultRarity).get();
+//        if (val == 0) return false;
+//        return random.nextInt(val) == 0;
+        return random.nextInt(defaultRarity()) == 0;
     }
 
     @Override

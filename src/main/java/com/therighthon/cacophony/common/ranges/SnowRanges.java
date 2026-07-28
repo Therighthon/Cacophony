@@ -96,9 +96,10 @@ public enum SnowRanges implements RegistryRange
     @Override
     public boolean shouldRandomlyCall(RandomSource random)
     {
-        int val = CacophonyConfig.CLIENT.snowSoundRarities.get(this).get();
-        if (val == 0) return false;
-        return random.nextInt(val) == 0;
+//        int val = CacophonyConfig.CLIENT.snowSoundRarities.get(this).get();
+//        if (val == 0) return false;
+//        return random.nextInt(val) == 0;
+        return random.nextInt(defaultRarity()) == 0;
     }
 
     @Override

@@ -75,7 +75,7 @@ public class SoundPlayers
 
             final DayTime dayTime = DayTime.getFuzzyDaytime(pos.getZ(), random);
 
-            if (dayTime.shouldPlaySound(random))
+            if (dayTime.shouldPlayRandomSound(random))
             {
                 final SoundEvent sound = getValidSound(level, pos, random, dayTime, ranges);
                 if (sound != null)
@@ -105,7 +105,7 @@ public class SoundPlayers
             // If no wind sound, check daytime
             final DayTime time = DayTime.getFuzzyDaytime(pos.getZ(), random);
 
-            if (time.shouldPlaySound(random))
+            if (time.shouldPlayRandomSound(random))
             {
                 final SoundEvent sound = getValidSound(level, pos, random, time, LeavesRanges.values());
 
@@ -122,7 +122,7 @@ public class SoundPlayers
         // check daytime
         final DayTime time = DayTime.getFuzzyDaytime(pos.getZ(), random);
 
-        if (time.shouldPlaySound(random))
+        if (time.shouldPlayRandomSound(random))
         {
             final SoundEvent sound = getValidSound(level, pos, random, time, range);
 
@@ -204,6 +204,7 @@ public class SoundPlayers
     }
     public static void playLocalSound(Level level, BlockPos pos, SoundEvent sound, float volume, float pitch, boolean distanceDelay)
     {
-        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), sound, SoundSource.AMBIENT, CacophonyConfig.CLIENT.ambientSoundsScale.get().floatValue() * volume, pitch, distanceDelay);
+        // TODO: Config value to scale volume
+        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), sound, SoundSource.AMBIENT, volume, pitch, distanceDelay);
     }
 }

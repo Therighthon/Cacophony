@@ -13,7 +13,6 @@ public final class Sounds
 {
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(Registries.SOUND_EVENT, Cacophony.MOD_ID);
 
-    // Animals
     public static final Id REDWINGED_BLACKBIRD = register("ambient.bird.redwinged_blackbird");
     public static final Id PACIFIC_TREE_FROG = register("ambient.frog.pacific_tree_frog");
     public static final Id SPADEFOOT_TOAD = register("ambient.frog.spadefoot_toad");
@@ -191,12 +190,22 @@ public final class Sounds
     public static final Id SUPERB_LYREBIRD = register("ambient.bird.superb_lyrebird");
     public static final Id WILLIE_WAGTAIL = register("ambient.bird.willie_wagtail");
     public static final Id GREEN_IMPERIAL_PIGEON = register("ambient.bird.green_imperial_pigeon");
+    public static final Id JAPANESE_CICADA = register("ambient.cicada.japanese_cicada");
+    public static final Id BRAZILIAN_CICADA = register("ambient.cicada.brazilian_cicada");
+    public static final Id CROATIAN_CICADA = register("ambient.cicada.croatian_cicada");
+    public static final Id CICADA = register("ambient.cicada.cicada");
+    public static final Id CAMBODIAN_CICADA = register("ambient.cicada.cambodian_cicada");
     public static final Id LEAVES_IN_WIND = register("ambient.wind.leaves_in_wind");
     public static final Id LEAVES_IN_WIND_STRONG = register("ambient.wind.leaves_in_wind_strong");
     public static final Id WIND_IN_GRASS = register("ambient.wind.wind_in_grass");
     public static final Id WIND_IN_GRASS_STRONG = register("ambient.wind.wind_in_grass_strong");
     public static final Id ICE_CREAK = register("ambient.ice.ice_creak");
     public static final Id WIND_LOOP = register("ambient.wind.wind_loop");
+    public static final Id CALIFORNIA_CRICKETS = register("ambient.cricket.looping.california_crickets");
+    public static final Id SOUTH_AFRICA_CRICKETS = register("ambient.cricket.looping.south_africa_crickets");
+    public static final Id FRANCE_CRICKETS = register("ambient.cricket.looping.france_crickets");
+    public static final Id BRAZIL_CRICKETS = register("ambient.cricket.looping.brazil_crickets");
+    public static final Id CHINA_CRICKETS = register("ambient.cricket.looping.china_crickets");
     public static final Id GLAUCOUS_WINGED_GULL = register("ambient.bird.glaucous_winged_gull");
     public static final Id PIGEON_GUILLEMOT = register("ambient.bird.pigeon_guillemot");
     public static final Id BONAPARTES_GULL = register("ambient.bird.bonapartes_gull");

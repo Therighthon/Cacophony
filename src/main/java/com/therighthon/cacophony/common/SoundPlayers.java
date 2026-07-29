@@ -11,6 +11,7 @@ import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
@@ -35,18 +36,19 @@ public class SoundPlayers
     public static void playPlantSound(BlockState state, Level level, BlockPos pos, RandomSource random)
     {
         // Wind sounds have a constant likelihood
-        if (random.nextInt(20) == 0 && Climate.get(level).getWind(level, pos).lengthSquared() > 0.06)
+        final float windSq = Climate.get(level).getWind(level, pos).lengthSquared();
+        if (random.nextInt(20) == 0 && windSq > 0.06)
         {
             final Block windBlock = state.getBlock();
             if ((Helpers.isBlock(windBlock, CacophonyTags.Blocks.FRESH_EMERGENT_PLANTS) || Helpers.isBlock(windBlock, TFCTags.Blocks.HALOPHYTE)) || Helpers.isBlock(windBlock, CacophonyTags.Blocks.TALL_GRASS))
             {
                 if (Climate.get(level).getWind(level, pos).lengthSquared() > STRONG_WIND_NOISE_THRESHOLD && random.nextInt(2) == 0)
                 {
-                    playLocalSound(level, pos, Sounds.WIND_IN_GRASS_STRONG.get());
+                    playLocalSound(level, pos, Sounds.WIND_IN_GRASS_STRONG.get(), Mth.clampedMap(windSq, 0.07f, 0.2f, 0.1f, 1.5f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
                 }
                 else
                 {
-                    playLocalSound(level, pos, Sounds.WIND_IN_GRASS.get());
+                    playLocalSound(level, pos, Sounds.WIND_IN_GRASS.get(), Mth.clampedMap(windSq, 0.07f, 0.2f, 0.1f, 1.5f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
                 }
             }
         }
@@ -89,15 +91,16 @@ public class SoundPlayers
     public static void playLeafSound(BlockState state, Level level, BlockPos pos, RandomSource random)
     {
         // Wind sounds have a constant likelihood
-        if (random.nextInt(20) == 0 && Climate.get(level).getWind(level, pos).lengthSquared() > WIND_NOISE_THRESHOLD)
+        final float windSq = Climate.get(level).getWind(level, pos).lengthSquared();
+        if (random.nextInt(20) == 0 && windSq > WIND_NOISE_THRESHOLD)
         {
             if (Climate.get(level).getWind(level, pos).lengthSquared() > STRONG_WIND_NOISE_THRESHOLD && random.nextInt(2) == 0)
             {
-                playLocalSound(level, pos, Sounds.LEAVES_IN_WIND_STRONG.get());
+                playLocalSound(level, pos, Sounds.LEAVES_IN_WIND_STRONG.get(), Mth.clampedMap(windSq, 0.07f, 0.2f, 0.1f, 1.5f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
             }
             else
             {
-                playLocalSound(level, pos, Sounds.LEAVES_IN_WIND.get());
+                playLocalSound(level, pos, Sounds.LEAVES_IN_WIND.get(), Mth.clampedMap(windSq, 0.07f, 0.2f, 0.1f, 1.5f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
             }
         }
         else

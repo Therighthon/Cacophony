@@ -28,8 +28,10 @@ abstract class BlockMixin
     @Inject(method = "animateTick", at = @At("HEAD"), remap = false)
     public void playAmbientSounds(BlockState state, Level level, BlockPos pos, RandomSource random, CallbackInfo ci)
     {
+        // Yeah, sometimes I write hard to read things in an attempt to optimize the number of times I call a random int
+        // Does it make anything faster? No idea. Deal with it.
         final int rInt = random.nextInt(5000);
-        if (rInt < 21)
+        if (rInt < 14)
         {
             final Block block = state.getBlock();
             if (rInt == 0)

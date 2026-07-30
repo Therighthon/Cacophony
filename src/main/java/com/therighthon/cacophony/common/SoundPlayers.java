@@ -1,6 +1,5 @@
 package com.therighthon.cacophony.common;
 
-import com.therighthon.cacophony.CacophonyConfig;
 import com.therighthon.cacophony.common.ranges.FreshWaterEmergentRanges;
 import com.therighthon.cacophony.common.ranges.GrassRanges;
 import com.therighthon.cacophony.common.ranges.LeavesRanges;
@@ -37,7 +36,8 @@ public class SoundPlayers
     {
         // Wind sounds have a constant likelihood
         final float windSq = Climate.get(level).getWind(level, pos).lengthSquared();
-        if (random.nextInt(20) == 0 && windSq > 0.06)
+        final int rInt = random.nextInt(20);
+        if (rInt == 0 && windSq > 0.06)
         {
             final Block windBlock = state.getBlock();
             if ((Helpers.isBlock(windBlock, CacophonyTags.Blocks.FRESH_EMERGENT_PLANTS) || Helpers.isBlock(windBlock, TFCTags.Blocks.HALOPHYTE)) || Helpers.isBlock(windBlock, CacophonyTags.Blocks.TALL_GRASS))
@@ -57,15 +57,15 @@ public class SoundPlayers
             // If no wind sound, check blocks
             final Block block = state.getBlock();
             final RegistryRange[] ranges;
-            if ((Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_EMERGENT_PLANTS) || Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_FLOATING_PLANTS)))
+            if (rInt < 5 && (Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_EMERGENT_PLANTS) || Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_FLOATING_PLANTS)))
             {
                 ranges = FreshWaterEmergentRanges.values();
             }
-            else if (Helpers.isBlock(block, CacophonyTags.Blocks.TALL_GRASS))
+            else if ((Helpers.isBlock(block, CacophonyTags.Blocks.TALL_GRASS) || Helpers.isBlock(block, CacophonyTags.Blocks.DRY_PLANTS) || Helpers.isBlock(block, CacophonyTags.Blocks.CACTI)))
             {
                 ranges = GrassRanges.values();
             }
-            else if ((Helpers.isBlock(block, TFCTags.Blocks.HALOPHYTE)))
+            else if (rInt < 5 && (Helpers.isBlock(block, TFCTags.Blocks.HALOPHYTE)))
             {
                 // Not using salty floating plants as those are also on beaches
                 ranges = SaltMarshRanges.values();

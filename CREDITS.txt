@@ -2,6 +2,10 @@ Mod by Therighthon
 
 This mod pulls all of its sounds from sources licensed under Creative Commons and other similarly permissive licenses. A list of attributions for these recordings, and their associated licenses, can be found below. All files were edited from their originals, generally to reduce length and background noises, and are converted to mono audio where some originals are stereo.
 
+Mod Icon credit:
+Marcel_Pepin - CC-BY - https://www.inaturalist.org/observations/386123986
+
+
 WIKIPEDIA:
 Permission is granted to copy, distribute and/or modify the sound effects in this mod under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license may be found here:
 https://commons.wikimedia.org/wiki/Commons:GNU_Free_Documentation_License,_version_1.2

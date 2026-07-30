@@ -11,9 +11,12 @@ public class CacophonyTags
 {
     public static class Blocks
     {
+        // TODO: On TFC Update
         public static final TagKey<Block> FRESH_EMERGENT_PLANTS = blockTag("fresh_emergent_plants");
         public static final TagKey<Block> FRESH_FLOATING_PLANTS = blockTag("fresh_floating_plants");
         public static final TagKey<Block> TALL_GRASS = blockTag("tall_grass");
+        public static final TagKey<Block> DRY_PLANTS = blockTag("dry_plants");
+        public static final TagKey<Block> CACTI = blockTag("cacti");
 
         public static final TagKey<Block> ICE = mcTag("ice");
     }

@@ -12,9 +12,14 @@ import org.jetbrains.annotations.Nullable;
 
 import net.dries007.tfc.client.ClimateRenderCache;
 import net.dries007.tfc.client.overworld.SolarCalculator;
+import net.dries007.tfc.common.blocks.TFCBlocks;
+import net.dries007.tfc.common.blocks.plant.Plant;
 import net.dries007.tfc.util.Helpers;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.climate.KoppenClimateClassification;
+import net.dries007.tfc.world.biome.BiomeExtension;
+import net.dries007.tfc.world.biome.TFCBiomes;
+import net.dries007.tfc.world.layer.TFCLayers;
 
 import static net.dries007.tfc.util.Helpers.*;
 

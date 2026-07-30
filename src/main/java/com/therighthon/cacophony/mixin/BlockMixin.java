@@ -31,7 +31,7 @@ abstract class BlockMixin
         // Yeah, sometimes I write hard to read things in an attempt to optimize the number of times I call a random int
         // Does it make anything faster? No idea. Deal with it.
         final int rInt = random.nextInt(5000);
-        if (rInt < 16)
+        if (rInt < 25)
         {
             final Block block = state.getBlock();
             if (rInt == 0)
@@ -49,7 +49,7 @@ abstract class BlockMixin
             {
                 SoundPlayers.playSoundFromRange(state, level, pos, random, SnowRanges.values());
             }
-            else if (Helpers.isBlock(block, Tags.Blocks.SANDS) || Helpers.isBlock(block, Tags.Blocks.GRAVELS) || Helpers.isBlock(block, TFCTags.Blocks.MUD) || Helpers.isFluid(state.getFluidState(), TFCTags.Fluids.ANY_INFINITE_WATER))
+            else if (rInt < 5 && Helpers.isFluid(state.getFluidState(), TFCTags.Fluids.ANY_INFINITE_WATER) || Helpers.isBlock(block, Tags.Blocks.SANDS) || Helpers.isBlock(block, Tags.Blocks.GRAVELS) || Helpers.isBlock(block, TFCTags.Blocks.MUD))
             {
                 SoundPlayers.playSoundFromRange(state, level, pos.above(25), random, ShoreRanges.values());
             }

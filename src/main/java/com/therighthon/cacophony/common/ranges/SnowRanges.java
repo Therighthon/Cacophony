@@ -11,26 +11,27 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.biome.Biome;
 
 import net.dries007.tfc.util.climate.KoppenClimateClassification;
+import net.dries007.tfc.world.chunkdata.ForestType;
 
 public enum SnowRanges implements RegistryRange
 {
-    SNOW_BUNTING_SUMMER(Sounds.SNOW_BUNTING.get(), 5, new Noise1D(32052, 10, 300), List.of(DayTime.DAWN, DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.ET, KoppenClimateClassification.EF, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD, KoppenClimateClassification.DWC, KoppenClimateClassification.DWD), 0.333333333333333f, 0.75f, 60, 200),
-    SNOW_BUNTING_WINTER(Sounds.SNOW_BUNTING.get(), 5, new Noise1D(32053, 10, 300), List.of(DayTime.DAWN, DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DFA, KoppenClimateClassification.DFB, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD, KoppenClimateClassification.DWA, KoppenClimateClassification.DWB, KoppenClimateClassification.DWC, KoppenClimateClassification.DWD), 0.75f, 0.333333333333333f, 60, 200),
-    WHITE_WINGED_SNOWFINCH(Sounds.WHITE_WINGED_SNOWFINCH.get(), 5, new Noise1D(32033, 10, 300), List.of(DayTime.DAWN, DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.ET), 0f, 1f, 120, 320),
-    COMMON_STARLING_BREEDING(Sounds.COMMON_STARLING.get(), 5, new Noise1D(32050, 10, 300), List.of(DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.ET, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD, KoppenClimateClassification.DSC, KoppenClimateClassification.DSD), 0.333333333333333f, 0.666666666666667f, 60, 200),
-    COMMON_STARLING_RESIDENT(Sounds.COMMON_STARLING.get(), 5, new Noise1D(32051, 10, 300), List.of(DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DFA, KoppenClimateClassification.DFB, KoppenClimateClassification.CFB, KoppenClimateClassification.CFC, KoppenClimateClassification.CSB, KoppenClimateClassification.CSC, KoppenClimateClassification.DSA, KoppenClimateClassification.DSB), 0f, 1f, 60, 200),
-    PATAGONIAN_SIERRA_FINCH(Sounds.PATAGONIAN_SIERRA_FINCH.get(), 5, new Noise1D(32038, 10, 300), List.of(DayTime.DAWN, DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DSD, KoppenClimateClassification.DWD, KoppenClimateClassification.DFD, KoppenClimateClassification.DWC, KoppenClimateClassification.DSC, KoppenClimateClassification.DFC), 0f, 1f, 110, 320);
+    SNOW_BUNTING_SUMMER(Sounds.SNOW_BUNTING.get(), 3, new Noise1D(32052, 10, 300), List.of(DayTime.DAWN, DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.ET, KoppenClimateClassification.EF, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD, KoppenClimateClassification.DWC, KoppenClimateClassification.DWD), 0.333333333333333f, 0.75f, 60, 200, 0, 4, 24, 0.3f),
+    SNOW_BUNTING_WINTER(Sounds.SNOW_BUNTING.get(), 3, new Noise1D(32053, 10, 300), List.of(DayTime.DAWN, DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DFA, KoppenClimateClassification.DFB, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD, KoppenClimateClassification.DWA, KoppenClimateClassification.DWB, KoppenClimateClassification.DWC, KoppenClimateClassification.DWD), 0.75f, 0.333333333333333f, 60, 200, 0, 4, 24, 0.3f),
+    WHITE_WINGED_SNOWFINCH(Sounds.WHITE_WINGED_SNOWFINCH.get(), 3, new Noise1D(32033, 10, 300), List.of(DayTime.DAWN, DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.ET), 0f, 1f, 120, 320, 0, 4, 24, 0.3f),
+    COMMON_STARLING_BREEDING(Sounds.COMMON_STARLING.get(), 3, new Noise1D(32050, 10, 300), List.of(DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.ET, KoppenClimateClassification.DFC, KoppenClimateClassification.DFD, KoppenClimateClassification.DSC, KoppenClimateClassification.DSD), 0.333333333333333f, 0.666666666666667f, 60, 200, 0, 2, 24, 0.3f),
+    COMMON_STARLING_RESIDENT(Sounds.COMMON_STARLING.get(), 3, new Noise1D(32051, 10, 300), List.of(DayTime.DAY, DayTime.DUSK), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DFA, KoppenClimateClassification.DFB, KoppenClimateClassification.CFB, KoppenClimateClassification.CFC, KoppenClimateClassification.CSB, KoppenClimateClassification.CSC, KoppenClimateClassification.DSA, KoppenClimateClassification.DSB), 0f, 1f, 60, 200, 0, 2, 24, 0.3f),
+    PATAGONIAN_SIERRA_FINCH(Sounds.PATAGONIAN_SIERRA_FINCH.get(), 3, new Noise1D(32038, 10, 300), List.of(DayTime.DAWN, DayTime.DAY), List.of(Biome.Precipitation.NONE), List.of(KoppenClimateClassification.DSD, KoppenClimateClassification.DWD, KoppenClimateClassification.DFD, KoppenClimateClassification.DWC, KoppenClimateClassification.DSC, KoppenClimateClassification.DFC), 0f, 1f, 110, 320, 0, 3, 24, 0.3f);
 
     private final String serializedName;
     final SoundEvent sound;
     final List<DayTime> times;
     final List<Biome.Precipitation> weathers;
     final List<KoppenClimateClassification> climates;
-    final float startYearFraction, endYearFraction;
-    final int minElevation, maxElevation, chance;
+    final float startYearFraction, endYearFraction, volumeVariance;
+    final int minElevation, maxElevation, chance, minForest, maxForest, minDistance;
     final Noise1D weight;
 
-    SnowRanges(SoundEvent sound, int chance, Noise1D weight, List<DayTime> times, List<Biome.Precipitation> weathers, List<KoppenClimateClassification> climates, float startYearFraction, float endYearFraction, int minElevation, int maxElevation)
+    SnowRanges(SoundEvent sound, int chance, Noise1D weight, List<DayTime> times, List<Biome.Precipitation> weathers, List<KoppenClimateClassification> climates, float startYearFraction, float endYearFraction, int minElevation, int maxElevation, int minForest, int maxForest, int minDistance, float volumeVariance)
     {
         this.serializedName = name().toLowerCase(Locale.ROOT);
         this.sound = sound;
@@ -43,6 +44,10 @@ public enum SnowRanges implements RegistryRange
         this.endYearFraction = endYearFraction;
         this.minElevation = minElevation;
         this.maxElevation = maxElevation;
+        this.minForest = minForest;
+        this.maxForest = maxForest;
+        this.minDistance = minDistance;
+        this.volumeVariance = volumeVariance;
     }
 
     @Override
@@ -118,5 +123,24 @@ public enum SnowRanges implements RegistryRange
     public String getSerializedName()
     {
         return serializedName;
+    }
+
+    @Override
+    public boolean isValidForest(ForestType forest)
+    {
+        final int density = forest.getDensity();
+        return density <= maxForest && density >= minForest;
+    }
+
+    @Override
+    public int getMinDistance()
+    {
+        return this.minDistance;
+    }
+
+    @Override
+    public float getVolumeVariance()
+    {
+        return this.volumeVariance;
     }
 }

@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
+import net.dries007.tfc.client.ClientHelpers;
 import net.dries007.tfc.client.ClimateRenderCache;
 import net.dries007.tfc.client.overworld.SolarCalculator;
 import net.dries007.tfc.common.TFCTags;
@@ -26,6 +27,7 @@ import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.climate.Climate;
 import net.dries007.tfc.util.climate.KoppenClimateClassification;
 import net.dries007.tfc.util.tracker.WeatherHelpers;
+import net.dries007.tfc.world.chunkdata.ChunkData;
 
 public class SoundPlayers
 {
@@ -79,10 +81,11 @@ public class SoundPlayers
 
             if (dayTime.shouldPlayRandomSound(random))
             {
-                final SoundEvent sound = getValidSound(level, pos, random, dayTime, ranges);
-                if (sound != null)
+                final RegistryRange species = getAnimalFromRanges(level, pos, random, dayTime, ranges);
+
+                if (species != null)
                 {
-                    playLocalSound(level, pos, sound);
+                    playLocalSound(level, pos, species.sound(), 1 - random.nextFloat() * species.getVolumeVariance());
                 }
             }
         }
@@ -110,11 +113,11 @@ public class SoundPlayers
 
             if (time.shouldPlayRandomSound(random))
             {
-                final SoundEvent sound = getValidSound(level, pos, random, time, LeavesRanges.values());
+                final RegistryRange species = getAnimalFromRanges(level, pos, random, time, LeavesRanges.values());
 
-                if (sound != null)
+                if (species != null)
                 {
-                    playLocalSound(level, pos, sound);
+                    playLocalSound(level, pos, species.sound(), 1 - random.nextFloat() * species.getVolumeVariance());
                 }
             }
         }
@@ -127,17 +130,17 @@ public class SoundPlayers
 
         if (time.shouldPlayRandomSound(random))
         {
-            final SoundEvent sound = getValidSound(level, pos, random, time, range);
+            final RegistryRange species = getAnimalFromRanges(level, pos, random, time, range);
 
-            if (sound != null)
+            if (species != null)
             {
-                playLocalSound(level, pos, sound);
+                playLocalSound(level, pos, species.sound(), 1 - random.nextFloat() * species.getVolumeVariance());
             }
         }
     }
 
     @Nullable
-    public static SoundEvent getValidSound(Level level, BlockPos pos, RandomSource random, DayTime time, RegistryRange[] array)
+    public static RegistryRange getAnimalFromRanges(Level level, BlockPos pos, RandomSource random, DayTime time, RegistryRange[] array)
     {
         ArrayList<RegistryRange> possibleSounds = new ArrayList<>(List.of());
         final long ticks = Calendars.CLIENT.getTicks();
@@ -161,7 +164,8 @@ public class SoundPlayers
                             // Check current weather
                             Biome.Precipitation precipitation = WeatherHelpers.getPrecipitationAt(level, pos, Biome.Precipitation.NONE);
 
-                            if (species.validWeathers().contains(precipitation))
+                            // And forest density
+                            if (species.validWeathers().contains(precipitation) && species.isValidForest(ChunkData.get(level, pos).getForestType()))
                             {
                                 // Finally, check climate
                                 final float rain = ClimateRenderCache.INSTANCE.getAverageRainfall();
@@ -193,9 +197,15 @@ public class SoundPlayers
 
         final RegistryRange species = possibleSounds.get(random.nextInt(possibleSounds.size()));
 
+        // Check probability
         if (species.shouldRandomlyCall(random))
         {
-            return species.sound();
+            // Check distance
+            if (pos.distManhattan(ClientHelpers.getPlayer().blockPosition()) >= species.getMinDistance())
+            {
+                return species;
+            }
+
         }
 
         return null;
@@ -205,6 +215,12 @@ public class SoundPlayers
     {
         playLocalSound(level, pos, sound, 1f, 1f, false);
     }
+
+    public static void playLocalSound(Level level, BlockPos pos, SoundEvent sound, float volume)
+    {
+        playLocalSound(level, pos, sound, volume, 1f, false);
+    }
+
     public static void playLocalSound(Level level, BlockPos pos, SoundEvent sound, float volume, float pitch, boolean distanceDelay)
     {
         // TODO: Config value to scale volume

@@ -10,6 +10,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 
 import net.dries007.tfc.util.climate.KoppenClimateClassification;
+import net.dries007.tfc.world.chunkdata.ForestType;
 
 public interface RegistryRange extends StringRepresentable
 {
@@ -39,4 +40,10 @@ public interface RegistryRange extends StringRepresentable
     {
         return true;
     }
+
+    boolean isValidForest(ForestType forest);
+
+    int getMinDistance();
+
+    float getVolumeVariance();
 }

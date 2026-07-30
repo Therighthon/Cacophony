@@ -31,7 +31,7 @@ abstract class BlockMixin
         // Yeah, sometimes I write hard to read things in an attempt to optimize the number of times I call a random int
         // Does it make anything faster? No idea. Deal with it.
         final int rInt = random.nextInt(5000);
-        if (rInt < 14)
+        if (rInt < 16)
         {
             final Block block = state.getBlock();
             if (rInt == 0)

@@ -59,7 +59,7 @@ public class SoundPlayers
             // If no wind sound, check blocks
             final Block block = state.getBlock();
             final RegistryRange[] ranges;
-            if (rInt < 6 && (Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_EMERGENT_PLANTS) || Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_FLOATING_PLANTS)))
+            if (rInt < 4 && (Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_EMERGENT_PLANTS) || Helpers.isBlock(block, CacophonyTags.Blocks.FRESH_FLOATING_PLANTS)))
             {
                 ranges = FreshWaterEmergentRanges.values();
             }
@@ -67,7 +67,7 @@ public class SoundPlayers
             {
                 ranges = GrassRanges.values();
             }
-            else if (rInt < 6 && (Helpers.isBlock(block, TFCTags.Blocks.HALOPHYTE)))
+            else if (rInt < 4 && (Helpers.isBlock(block, TFCTags.Blocks.HALOPHYTE)))
             {
                 // Not using salty floating plants as those are also on beaches
                 ranges = SaltMarshRanges.values();

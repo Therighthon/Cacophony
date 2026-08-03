@@ -3,7 +3,7 @@ loaderVersion="[4,)"
 license="EUPL, other"
 [[mods]] #mandatory
 modId="cacophony" #mandatory
-version="0.0.0-1.21.1" #mandatory
+version="0.1.0-1.21.1" #mandatory
 displayName="Cacophony" #mandatory
 logoFile="examplemod.png" #optional
 authors="Therighthon" #optional
@@ -13,7 +13,7 @@ An addon for TerraFirmaCraft adding ambient sounds.
 [[dependencies.cacophony]]
 modId="tfc"
 mandatory=true
-versionRange="[0,)"
+versionRange="[4.2.7,)"
 ordering="AFTER"
 side="BOTH"
 [[dependencies.cacophony]]

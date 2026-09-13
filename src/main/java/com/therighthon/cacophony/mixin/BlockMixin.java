@@ -45,14 +45,13 @@ abstract class BlockMixin
                     SoundPlayers.playLocalSound(level, pos, Sounds.ICE_CREAK.get());
                 }
             }
-            else if (rInt < 11)
+            else if (rInt < 11 && block instanceof SnowLayerBlock)
             {
-                if (block instanceof SnowLayerBlock)
-                    SoundPlayers.playSoundFromRange(state, level, pos, random, SnowRanges.values());
-                else if ((Helpers.isFluid(state.getFluidState(), TFCTags.Fluids.ANY_INFINITE_WATER) || Helpers.isBlock(block, Tags.Blocks.SANDS) || Helpers.isBlock(block, Tags.Blocks.GRAVELS) || Helpers.isBlock(block, TFCTags.Blocks.MUD)))
-                {
-                    SoundPlayers.playSoundFromRange(state, level, pos.above(25), random, ShoreRanges.values());
-                }
+                SoundPlayers.playSoundFromRange(state, level, pos, random, SnowRanges.values());
+            }
+            else if (rInt < 7 && (Helpers.isFluid(state.getFluidState(), TFCTags.Fluids.ANY_INFINITE_WATER) || Helpers.isBlock(block, Tags.Blocks.SANDS) || Helpers.isBlock(block, Tags.Blocks.GRAVELS) || Helpers.isBlock(block, TFCTags.Blocks.MUD)))
+            {
+                SoundPlayers.playSoundFromRange(state, level, pos.above(25), random, ShoreRanges.values());
             }
         }
     }

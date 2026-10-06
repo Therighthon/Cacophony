@@ -164,7 +164,7 @@ public enum GrassRanges implements RegistryRange
     @Override
     public int getNoisyWeight(long ticks)
     {
-        return this.weight.noise(ticks);
+        return this.weight.discreteNoise(ticks);
     }
 
     @Override

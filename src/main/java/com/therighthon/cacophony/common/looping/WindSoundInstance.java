@@ -1,5 +1,6 @@
 package com.therighthon.cacophony.common.looping;
 
+import com.therighthon.cacophony.common.Noise1D;
 import net.minecraft.client.resources.sounds.AbstractTickableSoundInstance;
 import net.minecraft.client.resources.sounds.SoundInstance;
 import net.minecraft.sounds.SoundEvent;
@@ -8,8 +9,10 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec2;
+import org.checkerframework.checker.units.qual.N;
 
 import net.dries007.tfc.client.ClientHelpers;
+import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.climate.Climate;
 
 import static com.therighthon.cacophony.common.SoundPlayers.*;
@@ -17,6 +20,8 @@ import static com.therighthon.cacophony.common.SoundPlayers.*;
 // Based on vanilla class BeeSoundInstance
 public class WindSoundInstance extends AbstractTickableSoundInstance
 {
+    final Noise1D gustNoise = new Noise1D(42069, 3, 64);
+
     public WindSoundInstance(SoundEvent sound, SoundSource source)
     {
         super(sound, source,  SoundInstance.createUnseededRandom());
@@ -43,8 +48,9 @@ public class WindSoundInstance extends AbstractTickableSoundInstance
                 this.x = player.getX() - 2 * Math.signum(wind.x) * wind.x * wind.x / windSq;
                 this.y = player.getY() + 1;
                 this.z = player.getZ() - 2 * Math.signum(wind.y) * wind.y * wind.y / windSq;
-                this.pitch = Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.5f, 1.4f);
-                this.volume = Mth.clampedMap(windSq, 0.07f, 0.2f, 0.05f, 0.5f);
+                final float scale = (float) gustNoise.windGustNoise(Calendars.CLIENT.getTicks(), 3);
+                this.pitch = Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.4f + 0.5f * scale, 0.8f + scale);
+                this.volume = Mth.clampedMap(windSq, 0.07f, 0.2f, 0.05f + 0.1f * scale, 0.15f + 0.2f * scale);
             }
             else
             {

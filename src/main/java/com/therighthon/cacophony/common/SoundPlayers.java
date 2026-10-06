@@ -46,11 +46,11 @@ public class SoundPlayers
             {
                 if (Climate.get(level).getWind(level, pos).lengthSquared() > STRONG_WIND_NOISE_THRESHOLD && random.nextInt(2) == 0)
                 {
-                    playLocalSound(level, pos, Sounds.WIND_IN_GRASS_STRONG.get(), Mth.clampedMap(windSq, 0.07f, 0.2f, 0.1f, 1.5f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
+                    playLocalSound(level, pos, Sounds.WIND_IN_GRASS_STRONG.get(), Mth.clampedMap(windSq, 0.07f, 0.2f, 0.05f, 0.7f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
                 }
                 else
                 {
-                    playLocalSound(level, pos, Sounds.WIND_IN_GRASS.get(), Mth.clampedMap(windSq, 0.07f, 0.2f, 0.1f, 1.5f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
+                    playLocalSound(level, pos, Sounds.WIND_IN_GRASS.get(), Mth.clampedMap(windSq, 0.07f, 0.2f, 0.05f, 0.7f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
                 }
             }
         }
@@ -99,11 +99,11 @@ public class SoundPlayers
         {
             if (Climate.get(level).getWind(level, pos).lengthSquared() > STRONG_WIND_NOISE_THRESHOLD && random.nextInt(2) == 0)
             {
-                playLocalSound(level, pos, Sounds.LEAVES_IN_WIND_STRONG.get(), Mth.clampedMap(windSq, 0.07f, 0.2f, 0.1f, 1.5f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
+                playLocalSound(level, pos, Sounds.LEAVES_IN_WIND_STRONG.get(), Mth.clampedMap(windSq, 0.07f, 0.2f, 0.05f, 0.7f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
             }
             else
             {
-                playLocalSound(level, pos, Sounds.LEAVES_IN_WIND.get(), Mth.clampedMap(windSq, 0.07f, 0.2f, 0.1f, 1.5f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
+                playLocalSound(level, pos, Sounds.LEAVES_IN_WIND.get(), Mth.clampedMap(windSq, 0.07f, 0.2f, 0.05f, 0.7f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
             }
         }
         else

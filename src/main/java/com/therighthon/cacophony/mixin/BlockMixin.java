@@ -49,7 +49,7 @@ abstract class BlockMixin
             {
                 SoundPlayers.playSoundFromRange(state, level, pos, random, SnowRanges.values());
             }
-            else if (rInt < 7 && (Helpers.isFluid(state.getFluidState(), TFCTags.Fluids.ANY_INFINITE_WATER) || Helpers.isBlock(block, Tags.Blocks.SANDS) || Helpers.isBlock(block, Tags.Blocks.GRAVELS) || Helpers.isBlock(block, TFCTags.Blocks.MUD)))
+            else if (rInt < 5 && (Helpers.isFluid(state.getFluidState(), TFCTags.Fluids.ANY_INFINITE_WATER) || Helpers.isBlock(block, Tags.Blocks.SANDS) || Helpers.isBlock(block, Tags.Blocks.GRAVELS) || Helpers.isBlock(block, TFCTags.Blocks.MUD)))
             {
                 SoundPlayers.playSoundFromRange(state, level, pos.above(25), random, ShoreRanges.values());
             }

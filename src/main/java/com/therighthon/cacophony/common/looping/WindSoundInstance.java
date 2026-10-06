@@ -44,7 +44,7 @@ public class WindSoundInstance extends AbstractTickableSoundInstance
                 this.y = player.getY() + 1;
                 this.z = player.getZ() - 2 * Math.signum(wind.y) * wind.y * wind.y / windSq;
                 this.pitch = Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.5f, 1.4f);
-                this.volume = Mth.clampedMap(windSq, 0.07f, 0.2f, 0.1f, 1.5f);
+                this.volume = Mth.clampedMap(windSq, 0.07f, 0.2f, 0.05f, 0.5f);
             }
             else
             {

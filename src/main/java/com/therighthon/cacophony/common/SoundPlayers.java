@@ -224,6 +224,6 @@ public class SoundPlayers
     public static void playLocalSound(Level level, BlockPos pos, SoundEvent sound, float volume, float pitch, boolean distanceDelay)
     {
         // TODO: Config value to scale volume
-        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), sound, SoundSource.AMBIENT, volume, pitch, distanceDelay);
+        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), sound, SoundSource.AMBIENT, 0.33f * volume, pitch, distanceDelay);
     }
 }

@@ -41,8 +41,8 @@ public class CacophonyClientConfig extends BaseConfig
     {
         builder.push("general");
 
-        ambientSoundsScale = builder.comment("Scale all sounds in Cacophony, without affecting ambient sounds added by Vanilla or other mods").define("ambientSoundsScale", 0.4, 0.0, 1.0);
-        windSoundsScale = builder.comment("Scale wind sounds in Cacophony, without affecting other ambient sounds").define("windSoundsScale", 0.4, 0.0, 1.0);
+        ambientSoundsScale = builder.comment("Scale all sounds in Cacophony, without affecting ambient sounds added by Vanilla or other mods").define("ambientSoundsScale", 0.7, 0.0, 1.0);
+        windSoundsScale = builder.comment("Scale wind sounds in Cacophony, without affecting other ambient sounds").define("windSoundsScale", 0.7, 0.0, 1.0);
 
         dayTimeSoundRarities = Helpers.mapOf(DayTime.class, type -> builder.comment("Rarity modifier for sounds at this time of day. 1/n chance of playing. 0 to disable.".formatted(getUserFriendlyName(type)))
             .define(getConfigName(type, "SoundRarity"), type.defaultRarity(), 0, 100));
@@ -52,43 +52,43 @@ public class CacophonyClientConfig extends BaseConfig
             .define(getConfigName(type, "SoundRarity"), type.defaultRarity(), 0, 100));
         builder.swap("freshwater_volumes");
         freshwaterSoundVolumes = Helpers.mapOf(FreshWaterEmergentRanges.class, type -> builder.comment("Volume modifier for sounds of this animal, as a percentage. 0 to mute.".formatted(getUserFriendlyName(type)))
-            .define(getConfigName(type, "SoundVolume"), 33, 0, 100));
+            .define(getConfigName(type, "SoundVolume"), 50, 0, 100));
 
         builder.swap("grass_rarities");
         grassSoundRarities = Helpers.mapOf(GrassRanges.class, type -> builder.comment("Rarity modifier for sounds of this animal. 1/n chance of playing. 0 to disable. Note that seasonal/migratory animals may have multiple entries.".formatted(getUserFriendlyName(type)))
             .define(getConfigName(type, "SoundRarity"), type.defaultRarity(), 0, 100)); builder.swap("grass_rarities");
         builder.swap("grass_volumes");
         grassSoundVolumes = Helpers.mapOf(GrassRanges.class, type -> builder.comment("Volume modifier for sounds of this animal, as a percentage. 0 to mute.".formatted(getUserFriendlyName(type)))
-            .define(getConfigName(type, "SoundVolume"), 33, 0, 100));
+            .define(getConfigName(type, "SoundVolume"), 50, 0, 100));
 
 
         builder.swap("leaves_rarities");
         leavesSoundRarities = Helpers.mapOf(LeavesRanges.class, type -> builder.comment("Rarity modifier for sounds of this animal. 1/n chance of playing. 0 to disable. Note that seasonal/migratory animals may have multiple entries.".formatted(getUserFriendlyName(type)))
             .define(getConfigName(type, "SoundRarity"), type.defaultRarity(), 0, 100));
-        builder.swap("leavesvolumes");
+        builder.swap("leaves_volumes");
         leavesSoundVolumes = Helpers.mapOf(LeavesRanges.class, type -> builder.comment("Volume modifier for sounds of this animal, as a percentage. 0 to mute.".formatted(getUserFriendlyName(type)))
-            .define(getConfigName(type, "SoundVolume"), 33, 0, 100));
+            .define(getConfigName(type, "SoundVolume"), 50, 0, 100));
 
         builder.swap("salt_marsh_rarities");
         saltmarshSoundRarities = Helpers.mapOf(SaltMarshRanges.class, type -> builder.comment("Rarity modifier for sounds of this animal. 1/n chance of playing. 0 to disable. Note that seasonal/migratory animals may have multiple entries.".formatted(getUserFriendlyName(type)))
             .define(getConfigName(type, "SoundRarity"), type.defaultRarity(), 0, 100));
         builder.swap("salt_marsh_volumes");
         saltmarshSoundVolumes = Helpers.mapOf(SaltMarshRanges.class, type -> builder.comment("Volume modifier for sounds of this animal, as a percentage. 0 to mute.".formatted(getUserFriendlyName(type)))
-            .define(getConfigName(type, "SoundVolume"), 33, 0, 100));
+            .define(getConfigName(type, "SoundVolume"), 50, 0, 100));
 
         builder.swap("shore_rarities");
         shoreSoundRarities = Helpers.mapOf(ShoreRanges.class, type -> builder.comment("Rarity modifier for sounds of this animal. 1/n chance of playing. 0 to disable. Note that seasonal/migratory animals may have multiple entries.".formatted(getUserFriendlyName(type)))
             .define(getConfigName(type, "SoundRarity"), type.defaultRarity(), 0, 100));
         builder.swap("shore_volumes");
         shoreSoundVolumes = Helpers.mapOf(ShoreRanges.class, type -> builder.comment("Volume modifier for sounds of this animal, as a percentage. 0 to mute.".formatted(getUserFriendlyName(type)))
-            .define(getConfigName(type, "SoundVolume"), 33, 0, 100));
+            .define(getConfigName(type, "SoundVolume"), 50, 0, 100));
 
         builder.swap("snow_rarities");
         snowSoundRarities = Helpers.mapOf(SnowRanges.class, type -> builder.comment("Rarity modifier for sounds of this animal. 1/n chance of playing. 0 to disable. Note that seasonal/migratory animals may have multiple entries.".formatted(getUserFriendlyName(type)))
         .define(getConfigName(type, "SoundRarity"), type.defaultRarity(), 0, 100));
         builder.swap("snow_volumes");
         snowSoundVolumes = Helpers.mapOf(SnowRanges.class, type -> builder.comment("Volume modifier for sounds of this animal, as a percentage. 0 to mute.".formatted(getUserFriendlyName(type)))
-            .define(getConfigName(type, "SoundVolume"), 33, 0, 100));
+            .define(getConfigName(type, "SoundVolume"), 50, 0, 100));
 
         builder.pop();
     }

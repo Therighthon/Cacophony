@@ -119,7 +119,7 @@ public class ConfigBuilder
 
     private ModConfigSpec.Builder begin(String path)
     {
-        builder.translation("tfc.config." + translationKeyPrefix + "." + path);
+        builder.translation("cacophony.config." + translationKeyPrefix + "." + path);
         emptyLineAdded = false;
         return builder;
     }

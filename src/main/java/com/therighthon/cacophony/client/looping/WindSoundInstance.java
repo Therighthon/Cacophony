@@ -75,34 +75,49 @@ public class WindSoundInstance extends AbstractTickableSoundInstance
 
     // This method is pulled, nearly verbatim, from Nyonyix's Thermia mod, which is also under EUPL as of copying this (Oct 6, 2026)
     // https://github.com/Nyonyix/Thermia/blob/1.21.1/src/main/java/com/nyonyix/thermia/util/BlockSearch.java
-    public static float getWindOcclusion(Level level, BlockPos pos)
+    public static float getWindOcclusion(Level level, BlockPos playerPos)
     {
-        Vec2 windVector = Climate.get(level).getWind(level, pos);
+        Vec2 windVector = Climate.get(level).getWind(level, playerPos);
 
         float direction = (float) Math.atan2(windVector.y, windVector.x);
         float directionX = -(float) Math.cos(direction);
         float directionZ = -(float) Math.sin(direction);
 
-        boolean canSeeSky = isExposedToSky(level, pos);
-        double distance = canSeeSky ? 6.0 : 12.0;
+        float out = 0;
 
-        Vec3 startVec = Vec3.atCenterOf(pos.above());
-        Vec3 endVec = startVec.add(directionX * distance, 0, directionZ * distance);
-
-        ClipContext context = new ClipContext(startVec, endVec, ClipContext.Block.COLLIDER, ClipContext.Fluid.ANY, CollisionContext.empty());
-        BlockHitResult hit = level.clip(context);
-
-        if (hit.getType() != HitResult.Type.MISS)
+        // Run for four locations
+        for (int dx = 2; dx >= -2; dx = dx - 4)
         {
-            float hitDist = (float) startVec.distanceTo(hit.getLocation());
+            for (int dz = 2; dz >= -2; dz = dz - 4)
+            {
+                final BlockPos pos = playerPos.offset(dx, 0, dz);
 
-            float min = canSeeSky ? 0.5f : 0.25f;
-            float surcharge = canSeeSky ? 0.5f : 0.75f;
+                boolean canSeeSky = isExposedToSky(level, pos);
+                double distance = canSeeSky ? 6.0 : 12.0;
 
-            return Mth.clamp((float) (min + (hitDist / distance) * surcharge), min, min + surcharge);
+                Vec3 startVec = Vec3.atCenterOf(pos.above());
+                Vec3 endVec = startVec.add(directionX * distance, 0, directionZ * distance);
+
+                ClipContext context = new ClipContext(startVec, endVec, ClipContext.Block.COLLIDER, ClipContext.Fluid.ANY, CollisionContext.empty());
+                BlockHitResult hit = level.clip(context);
+
+                if (hit.getType() != HitResult.Type.MISS)
+                {
+                    float hitDist = (float) startVec.distanceTo(hit.getLocation());
+
+                    float min = canSeeSky ? 0.5f : 0.2f;
+                    float surcharge = canSeeSky ? 0.5f : 0.8f;
+
+                    out += Mth.clamp((float) (min + (hitDist / distance) * surcharge), min, min + surcharge);
+                }
+                else
+                {
+                    out += 1f;
+                }
+            }
         }
 
-        return 1f;
+        return out / 4f;
     }
 
     // This method is pulled, nearly verbatim, from Nyonyix's Thermia mod, which is also under EUPL as of copying this (Oct 6, 2026)

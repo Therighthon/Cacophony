@@ -1,12 +1,11 @@
-package com.therighthon.cacophony.common.ranges;
+package com.therighthon.cacophony.client.ranges;
 
-import com.therighthon.cacophony.common.DayTime;
+import com.therighthon.cacophony.client.DayTime;
 import java.util.List;
 import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.StringRepresentable;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 
 import net.dries007.tfc.util.climate.KoppenClimateClassification;

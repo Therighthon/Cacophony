@@ -1,9 +1,7 @@
 package com.therighthon.cacophony.mixin;
 
-import com.therighthon.cacophony.common.SoundPlayers;
+import com.therighthon.cacophony.client.SoundPlayers;
 import net.minecraft.core.BlockPos;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;

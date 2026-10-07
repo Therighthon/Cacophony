@@ -1,4 +1,4 @@
-package com.therighthon.cacophony.common;
+package com.therighthon.cacophony.client;
 
 import com.therighthon.cacophony.Cacophony;
 import net.minecraft.core.registries.Registries;

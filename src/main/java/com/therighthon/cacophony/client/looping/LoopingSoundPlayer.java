@@ -1,6 +1,6 @@
-package com.therighthon.cacophony.common.looping;
+package com.therighthon.cacophony.client.looping;
 
-import com.therighthon.cacophony.common.Sounds;
+import com.therighthon.cacophony.client.Sounds;
 import javax.annotation.Nullable;
 import net.minecraft.client.Minecraft;
 import net.minecraft.sounds.SoundSource;

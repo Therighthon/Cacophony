@@ -1,8 +1,8 @@
-package com.therighthon.cacophony.common.ranges;
+package com.therighthon.cacophony.client.ranges;
 
-import com.therighthon.cacophony.common.DayTime;
-import com.therighthon.cacophony.common.Noise1D;
-import com.therighthon.cacophony.common.Sounds;
+import com.therighthon.cacophony.client.DayTime;
+import com.therighthon.cacophony.client.Noise1D;
+import com.therighthon.cacophony.client.Sounds;
 import java.util.List;
 import java.util.Locale;
 import net.minecraft.sounds.SoundEvent;

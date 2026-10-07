@@ -5,9 +5,6 @@ import java.util.function.Function;
 import net.neoforged.neoforge.common.ModConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 
-import net.dries007.tfc.config.BaseConfig;
-import net.dries007.tfc.config.ConfigBuilder;
-
 public class CacophonyConfig
 {
     public static final CacophonyClientConfig CLIENT = register(CacophonyClientConfig::new, ConfigBuilder.ClientValue::new, "client");

@@ -1,6 +1,6 @@
-package com.therighthon.cacophony.common.looping;
+package com.therighthon.cacophony.client.looping;
 
-import com.therighthon.cacophony.common.Noise1D;
+import com.therighthon.cacophony.client.Noise1D;
 import net.minecraft.client.resources.sounds.AbstractTickableSoundInstance;
 import net.minecraft.client.resources.sounds.SoundInstance;
 import net.minecraft.core.BlockPos;
@@ -16,13 +16,12 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import org.checkerframework.checker.units.qual.N;
 
 import net.dries007.tfc.client.ClientHelpers;
 import net.dries007.tfc.util.calendar.Calendars;
 import net.dries007.tfc.util.climate.Climate;
 
-import static com.therighthon.cacophony.common.SoundPlayers.*;
+import static com.therighthon.cacophony.client.SoundPlayers.*;
 
 // Based on vanilla class BeeSoundInstance
 public class WindSoundInstance extends AbstractTickableSoundInstance

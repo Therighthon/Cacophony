@@ -1,12 +1,11 @@
 package com.therighthon.cacophony.mixin;
 
-import com.therighthon.cacophony.common.CacophonyTags;
-import com.therighthon.cacophony.common.SoundPlayers;
-import com.therighthon.cacophony.common.Sounds;
-import com.therighthon.cacophony.common.ranges.ShoreRanges;
-import com.therighthon.cacophony.common.ranges.SnowRanges;
+import com.therighthon.cacophony.client.CacophonyTags;
+import com.therighthon.cacophony.client.SoundPlayers;
+import com.therighthon.cacophony.client.Sounds;
+import com.therighthon.cacophony.client.ranges.ShoreRanges;
+import com.therighthon.cacophony.client.ranges.SnowRanges;
 import net.minecraft.core.BlockPos;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;

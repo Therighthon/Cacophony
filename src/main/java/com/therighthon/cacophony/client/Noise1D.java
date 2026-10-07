@@ -1,4 +1,4 @@
-package com.therighthon.cacophony.common;
+package com.therighthon.cacophony.client;
 
 import net.minecraft.util.Mth;
 

@@ -1,10 +1,10 @@
-package com.therighthon.cacophony.common;
+package com.therighthon.cacophony.client;
 
-import com.therighthon.cacophony.common.ranges.FreshWaterEmergentRanges;
-import com.therighthon.cacophony.common.ranges.GrassRanges;
-import com.therighthon.cacophony.common.ranges.LeavesRanges;
-import com.therighthon.cacophony.common.ranges.RegistryRange;
-import com.therighthon.cacophony.common.ranges.SaltMarshRanges;
+import com.therighthon.cacophony.client.ranges.FreshWaterEmergentRanges;
+import com.therighthon.cacophony.client.ranges.GrassRanges;
+import com.therighthon.cacophony.client.ranges.LeavesRanges;
+import com.therighthon.cacophony.client.ranges.RegistryRange;
+import com.therighthon.cacophony.client.ranges.SaltMarshRanges;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.core.BlockPos;

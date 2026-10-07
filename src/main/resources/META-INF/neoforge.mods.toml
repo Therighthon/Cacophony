@@ -9,6 +9,10 @@ logoFile="examplemod.png" #optional
 authors="Therighthon" #optional
 description='''
 An addon for TerraFirmaCraft adding ambient sounds.
+
+Frequency and Volumes of individual sounds can be adjusted through the configuration menu, or by manually modifying the config file. You may find it easiest to first identify the sound you wish to adjust by turning on subtitles, and then opening the config file in a text editor and searching for that sound. Some sounds may have multiple sources and this occur multiple times.
+
+If you do find youself turning down or disabling an annoying sound, please let me know with a comment on CurseForge, an issue on GitHub, or a message in the TFC discord so that I can adjust the default configs for other players.
 '''
 [[dependencies.cacophony]]
 modId="tfc"

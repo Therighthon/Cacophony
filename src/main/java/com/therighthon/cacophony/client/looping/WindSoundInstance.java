@@ -1,5 +1,6 @@
 package com.therighthon.cacophony.client.looping;
 
+import com.therighthon.cacophony.CacophonyConfig;
 import com.therighthon.cacophony.client.Noise1D;
 import net.minecraft.client.resources.sounds.AbstractTickableSoundInstance;
 import net.minecraft.client.resources.sounds.SoundInstance;
@@ -57,7 +58,7 @@ public class WindSoundInstance extends AbstractTickableSoundInstance
                 final float scale = (float) gustNoise.windGustNoise(Calendars.CLIENT.getTicks(), 3);
                 this.pitch = Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.4f + 0.5f * scale, 0.8f + scale);
                 final float occlusionScale = getWindOcclusion(level, player.blockPosition());
-                this.volume = Mth.clampedMap(windSq, 0.07f, 0.2f, 0.05f + 0.1f * scale, 0.15f + 0.2f * scale) * occlusionScale;
+                this.volume = Mth.clampedMap(windSq, 0.07f, 0.2f, 0.05f + 0.1f * scale, 0.15f + 0.2f * scale) * CacophonyConfig.CLIENT.windSoundsScale.get().floatValue() * occlusionScale;
             }
             else
             {

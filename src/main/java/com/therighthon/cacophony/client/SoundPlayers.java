@@ -1,5 +1,7 @@
 package com.therighthon.cacophony.client;
 
+import com.therighthon.cacophony.CacophonyClientConfig;
+import com.therighthon.cacophony.CacophonyConfig;
 import com.therighthon.cacophony.client.ranges.FreshWaterEmergentRanges;
 import com.therighthon.cacophony.client.ranges.GrassRanges;
 import com.therighthon.cacophony.client.ranges.LeavesRanges;
@@ -8,7 +10,6 @@ import com.therighthon.cacophony.client.ranges.SaltMarshRanges;
 import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.core.BlockPos;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
@@ -46,11 +47,11 @@ public class SoundPlayers
             {
                 if (Climate.get(level).getWind(level, pos).lengthSquared() > STRONG_WIND_NOISE_THRESHOLD && random.nextInt(2) == 0)
                 {
-                    playLocalSound(level, pos, Sounds.WIND_IN_GRASS_STRONG.get(), Mth.clampedMap(windSq, 0.07f, 0.2f, 0.05f, 0.7f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
+                    playLocalSound(level, pos, Sounds.WIND_IN_GRASS_STRONG, Mth.clampedMap(windSq, 0.07f, 0.2f, 0.05f, 0.7f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
                 }
                 else
                 {
-                    playLocalSound(level, pos, Sounds.WIND_IN_GRASS.get(), Mth.clampedMap(windSq, 0.07f, 0.2f, 0.05f, 0.7f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
+                    playLocalSound(level, pos, Sounds.WIND_IN_GRASS, Mth.clampedMap(windSq, 0.07f, 0.2f, 0.05f, 0.7f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
                 }
             }
         }
@@ -85,7 +86,7 @@ public class SoundPlayers
 
                 if (species != null)
                 {
-                    playLocalSound(level, pos, species.sound(), 1 - random.nextFloat() * species.getVolumeVariance());
+                    playLocalSound(level, pos, species.sound(), (1 - random.nextFloat() * species.getVolumeVariance()) * species.getConfiguredVolume());
                 }
             }
         }
@@ -99,11 +100,11 @@ public class SoundPlayers
         {
             if (Climate.get(level).getWind(level, pos).lengthSquared() > STRONG_WIND_NOISE_THRESHOLD && random.nextInt(2) == 0)
             {
-                playLocalSound(level, pos, Sounds.LEAVES_IN_WIND_STRONG.get(), Mth.clampedMap(windSq, 0.07f, 0.2f, 0.05f, 0.7f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
+                playLocalSound(level, pos, Sounds.LEAVES_IN_WIND_STRONG, Mth.clampedMap(windSq, 0.07f, 0.2f, 0.05f, 0.7f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
             }
             else
             {
-                playLocalSound(level, pos, Sounds.LEAVES_IN_WIND.get(), Mth.clampedMap(windSq, 0.07f, 0.2f, 0.05f, 0.7f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
+                playLocalSound(level, pos, Sounds.LEAVES_IN_WIND, Mth.clampedMap(windSq, 0.07f, 0.2f, 0.05f, 0.7f), Mth.lerp(Mth.clamp(windSq, WIND_NOISE_THRESHOLD, STRONG_WIND_NOISE_THRESHOLD), 0.8f, 1.2f), false);
             }
         }
         else
@@ -117,7 +118,7 @@ public class SoundPlayers
 
                 if (species != null)
                 {
-                    playLocalSound(level, pos, species.sound(), 1 - random.nextFloat() * species.getVolumeVariance());
+                    playLocalSound(level, pos, species.sound(), (1 - random.nextFloat() * species.getVolumeVariance()) * species.getConfiguredVolume());
                 }
             }
         }
@@ -134,7 +135,7 @@ public class SoundPlayers
 
             if (species != null)
             {
-                playLocalSound(level, pos, species.sound(), 1 - random.nextFloat() * species.getVolumeVariance());
+                playLocalSound(level, pos, species.sound(), (1 - random.nextFloat() * species.getVolumeVariance()) * species.getConfiguredVolume());
             }
         }
     }
@@ -211,19 +212,18 @@ public class SoundPlayers
         return null;
     }
 
-    public static void playLocalSound(Level level, BlockPos pos, SoundEvent sound)
+    public static void playLocalSound(Level level, BlockPos pos, Sounds.Id sound)
     {
-        playLocalSound(level, pos, sound, 1f, 1f, false);
+        playLocalSound(level, pos, sound, 0.33f, 1f, false);
     }
 
-    public static void playLocalSound(Level level, BlockPos pos, SoundEvent sound, float volume)
+    public static void playLocalSound(Level level, BlockPos pos, Sounds.Id sound, float volume)
     {
         playLocalSound(level, pos, sound, volume, 1f, false);
     }
 
-    public static void playLocalSound(Level level, BlockPos pos, SoundEvent sound, float volume, float pitch, boolean distanceDelay)
+    public static void playLocalSound(Level level, BlockPos pos, Sounds.Id sound, float volume, float pitch, boolean distanceDelay)
     {
-        // TODO: Config value to scale volume
-        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), sound, SoundSource.AMBIENT, 0.33f * volume, pitch, distanceDelay);
+        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), sound.get(), SoundSource.AMBIENT, volume * CacophonyConfig.CLIENT.ambientSoundsScale.get().floatValue(), pitch, distanceDelay);
     }
 }

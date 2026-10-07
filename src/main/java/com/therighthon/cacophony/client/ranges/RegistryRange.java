@@ -1,6 +1,7 @@
 package com.therighthon.cacophony.client.ranges;
 
 import com.therighthon.cacophony.client.DayTime;
+import com.therighthon.cacophony.client.Sounds;
 import java.util.List;
 import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;
@@ -19,7 +20,7 @@ public interface RegistryRange extends StringRepresentable
 
     List<Biome.Precipitation> validWeathers();
 
-    SoundEvent sound();
+    Sounds.Id sound();
 
     float startYearFraction();
 
@@ -30,6 +31,10 @@ public interface RegistryRange extends StringRepresentable
     int getMaxElevation();
 
     int defaultRarity();
+
+    int getRarity();
+
+    float getConfiguredVolume();
 
     public boolean shouldRandomlyCall(RandomSource random);
 

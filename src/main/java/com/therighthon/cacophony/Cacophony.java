@@ -25,20 +25,14 @@ public class Cacophony
 
     public Cacophony(ModContainer modContainer, IEventBus modBus)
     {
-        modBus.addListener(this::clientSetup);
-        modContainer.registerConfig(ModConfig.Type.CLIENT, CacophonyConfig.CLIENT.spec());
         if (FMLEnvironment.dist == Dist.CLIENT)
         {
+            LOGGER.info("CACOPHONY CLIENT SETUP");
             NeoForge.EVENT_BUS.register(new LoopingSoundPlayer(Minecraft.getInstance()));
             Sounds.SOUNDS.register(modBus);
+            modContainer.registerConfig(ModConfig.Type.CLIENT, CacophonyConfig.CLIENT.spec());
             modContainer.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
         }
     }
-
-    private void clientSetup(final FMLClientSetupEvent event)
-    {
-        LOGGER.info("CACOPHONY CLIENT SETUP");
-    }
-
 
 }
